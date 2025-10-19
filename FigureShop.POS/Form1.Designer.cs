@@ -108,6 +108,7 @@ partial class Form1
         btnSearch.TabIndex = 1;
         btnSearch.Text = "Search";
         btnSearch.UseVisualStyleBackColor = true;
+        btnSearch.Click += btnSearch_Click;
         // 
         // txtSearch
         // 
