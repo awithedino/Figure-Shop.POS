@@ -39,7 +39,12 @@ partial class Form1
         label2 = new System.Windows.Forms.Label();
         label1 = new System.Windows.Forms.Label();
         txtSearch = new System.Windows.Forms.TextBox();
+        groupBoxCart = new System.Windows.Forms.GroupBox();
+        panelCartActions = new System.Windows.Forms.Panel();
+        dgvCart = new System.Windows.Forms.DataGridView();
         groupBoxDetails = new System.Windows.Forms.GroupBox();
+        txtImagePath = new System.Windows.Forms.TextBox();
+        txtStock = new System.Windows.Forms.TextBox();
         txtPrice = new System.Windows.Forms.TextBox();
         txtDescription = new System.Windows.Forms.TextBox();
         txtProductName = new System.Windows.Forms.TextBox();
@@ -59,14 +64,19 @@ partial class Form1
         btnDelete = new System.Windows.Forms.Button();
         btnSave = new System.Windows.Forms.Button();
         btnAddNew = new System.Windows.Forms.Button();
-        txtStock = new System.Windows.Forms.TextBox();
-        txtImagePath = new System.Windows.Forms.TextBox();
+        btnRemoveFromCart = new System.Windows.Forms.Button();
+        btnCheckout = new System.Windows.Forms.Button();
+        lblTotal = new System.Windows.Forms.Label();
+        btnAddToCart = new System.Windows.Forms.Button();
         ((System.ComponentModel.ISupportInitialize)splitContainerMain).BeginInit();
         splitContainerMain.Panel1.SuspendLayout();
         splitContainerMain.Panel2.SuspendLayout();
         splitContainerMain.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
         panel1.SuspendLayout();
+        groupBoxCart.SuspendLayout();
+        panelCartActions.SuspendLayout();
+        ((System.ComponentModel.ISupportInitialize)dgvCart).BeginInit();
         groupBoxDetails.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)picProductImage).BeginInit();
         groupBoxFunctions.SuspendLayout();
@@ -77,7 +87,7 @@ partial class Form1
         menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
         menuStrip1.Location = new System.Drawing.Point(0, 0);
         menuStrip1.Name = "menuStrip1";
-        menuStrip1.Size = new System.Drawing.Size(1177, 24);
+        menuStrip1.Size = new System.Drawing.Size(1305, 24);
         menuStrip1.TabIndex = 0;
         menuStrip1.Text = "menuStripMain";
         // 
@@ -95,10 +105,11 @@ partial class Form1
         // 
         // splitContainerMain.Panel2
         // 
+        splitContainerMain.Panel2.Controls.Add(groupBoxCart);
         splitContainerMain.Panel2.Controls.Add(groupBoxDetails);
         splitContainerMain.Panel2.Controls.Add(groupBoxFunctions);
-        splitContainerMain.Size = new System.Drawing.Size(1177, 696);
-        splitContainerMain.SplitterDistance = 406;
+        splitContainerMain.Size = new System.Drawing.Size(1305, 935);
+        splitContainerMain.SplitterDistance = 445;
         splitContainerMain.TabIndex = 1;
         // 
         // dgvProducts
@@ -113,7 +124,7 @@ partial class Form1
         dgvProducts.Name = "dgvProducts";
         dgvProducts.ReadOnly = true;
         dgvProducts.RowHeadersWidth = 62;
-        dgvProducts.Size = new System.Drawing.Size(404, 480);
+        dgvProducts.Size = new System.Drawing.Size(443, 719);
         dgvProducts.TabIndex = 1;
         // 
         // panel1
@@ -126,7 +137,7 @@ partial class Form1
         panel1.Dock = System.Windows.Forms.DockStyle.Top;
         panel1.Location = new System.Drawing.Point(0, 0);
         panel1.Name = "panel1";
-        panel1.Size = new System.Drawing.Size(404, 214);
+        panel1.Size = new System.Drawing.Size(443, 214);
         panel1.TabIndex = 0;
         // 
         // cboCategoriesFilter
@@ -172,6 +183,44 @@ partial class Form1
         txtSearch.TabIndex = 0;
         txtSearch.TextChanged += textBox1_TextChanged;
         // 
+        // groupBoxCart
+        // 
+        groupBoxCart.Controls.Add(panelCartActions);
+        groupBoxCart.Controls.Add(dgvCart);
+        groupBoxCart.Dock = System.Windows.Forms.DockStyle.Bottom;
+        groupBoxCart.Location = new System.Drawing.Point(0, 699);
+        groupBoxCart.Name = "groupBoxCart";
+        groupBoxCart.Size = new System.Drawing.Size(854, 234);
+        groupBoxCart.TabIndex = 2;
+        groupBoxCart.TabStop = false;
+        groupBoxCart.Text = "Giỏ hàng";
+        // 
+        // panelCartActions
+        // 
+        panelCartActions.Controls.Add(btnAddToCart);
+        panelCartActions.Controls.Add(lblTotal);
+        panelCartActions.Controls.Add(btnCheckout);
+        panelCartActions.Controls.Add(btnRemoveFromCart);
+        panelCartActions.Dock = System.Windows.Forms.DockStyle.Bottom;
+        panelCartActions.Location = new System.Drawing.Point(3, 159);
+        panelCartActions.Name = "panelCartActions";
+        panelCartActions.Size = new System.Drawing.Size(848, 72);
+        panelCartActions.TabIndex = 1;
+        // 
+        // dgvCart
+        // 
+        dgvCart.AllowUserToAddRows = false;
+        dgvCart.AllowUserToDeleteRows = false;
+        dgvCart.ColumnHeadersHeight = 34;
+        dgvCart.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvCart.Location = new System.Drawing.Point(3, 27);
+        dgvCart.MultiSelect = false;
+        dgvCart.Name = "dgvCart";
+        dgvCart.ReadOnly = true;
+        dgvCart.RowHeadersWidth = 62;
+        dgvCart.Size = new System.Drawing.Size(848, 204);
+        dgvCart.TabIndex = 0;
+        // 
         // groupBoxDetails
         // 
         groupBoxDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
@@ -193,17 +242,35 @@ partial class Form1
         groupBoxDetails.Controls.Add(picProductImage);
         groupBoxDetails.Location = new System.Drawing.Point(0, 0);
         groupBoxDetails.Name = "groupBoxDetails";
-        groupBoxDetails.Size = new System.Drawing.Size(765, 507);
+        groupBoxDetails.Size = new System.Drawing.Size(851, 522);
         groupBoxDetails.TabIndex = 1;
         groupBoxDetails.TabStop = false;
         groupBoxDetails.Text = "Thông tin chi tiết sản phẩm";
+        // 
+        // txtImagePath
+        // 
+        txtImagePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        txtImagePath.Location = new System.Drawing.Point(180, 451);
+        txtImagePath.Name = "txtImagePath";
+        txtImagePath.ReadOnly = true;
+        txtImagePath.Size = new System.Drawing.Size(398, 31);
+        txtImagePath.TabIndex = 15;
+        // 
+        // txtStock
+        // 
+        txtStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+        txtStock.Location = new System.Drawing.Point(180, 402);
+        txtStock.Name = "txtStock";
+        txtStock.Size = new System.Drawing.Size(398, 31);
+        txtStock.TabIndex = 14;
+        txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
         // txtPrice
         // 
         txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         txtPrice.Location = new System.Drawing.Point(180, 354);
         txtPrice.Name = "txtPrice";
-        txtPrice.Size = new System.Drawing.Size(312, 31);
+        txtPrice.Size = new System.Drawing.Size(398, 31);
         txtPrice.TabIndex = 13;
         txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
         // 
@@ -214,7 +281,7 @@ partial class Form1
         txtDescription.Multiline = true;
         txtDescription.Name = "txtDescription";
         txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-        txtDescription.Size = new System.Drawing.Size(312, 126);
+        txtDescription.Size = new System.Drawing.Size(398, 126);
         txtDescription.TabIndex = 12;
         // 
         // txtProductName
@@ -222,7 +289,7 @@ partial class Form1
         txtProductName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
         txtProductName.Location = new System.Drawing.Point(180, 83);
         txtProductName.Name = "txtProductName";
-        txtProductName.Size = new System.Drawing.Size(315, 31);
+        txtProductName.Size = new System.Drawing.Size(401, 31);
         txtProductName.TabIndex = 11;
         // 
         // cboCategoryDetail
@@ -232,7 +299,7 @@ partial class Form1
         cboCategoryDetail.FormattingEnabled = true;
         cboCategoryDetail.Location = new System.Drawing.Point(180, 131);
         cboCategoryDetail.Name = "cboCategoryDetail";
-        cboCategoryDetail.Size = new System.Drawing.Size(312, 33);
+        cboCategoryDetail.Size = new System.Drawing.Size(398, 33);
         cboCategoryDetail.TabIndex = 10;
         cboCategoryDetail.SelectedIndexChanged += cboCategoryDetail_SelectedIndexChanged;
         // 
@@ -242,7 +309,7 @@ partial class Form1
         txtProductID.Location = new System.Drawing.Point(180, 34);
         txtProductID.Name = "txtProductID";
         txtProductID.ReadOnly = true;
-        txtProductID.Size = new System.Drawing.Size(312, 31);
+        txtProductID.Size = new System.Drawing.Size(398, 31);
         txtProductID.TabIndex = 9;
         // 
         // label9
@@ -304,7 +371,7 @@ partial class Form1
         // btnBrowseImage
         // 
         btnBrowseImage.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
-        btnBrowseImage.Location = new System.Drawing.Point(522, 224);
+        btnBrowseImage.Location = new System.Drawing.Point(608, 224);
         btnBrowseImage.Name = "btnBrowseImage";
         btnBrowseImage.Size = new System.Drawing.Size(175, 34);
         btnBrowseImage.TabIndex = 1;
@@ -315,7 +382,7 @@ partial class Form1
         // 
         picProductImage.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
         picProductImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-        picProductImage.Location = new System.Drawing.Point(522, 30);
+        picProductImage.Location = new System.Drawing.Point(608, 30);
         picProductImage.Name = "picProductImage";
         picProductImage.Size = new System.Drawing.Size(175, 175);
         picProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -329,9 +396,9 @@ partial class Form1
         groupBoxFunctions.Controls.Add(btnDelete);
         groupBoxFunctions.Controls.Add(btnSave);
         groupBoxFunctions.Controls.Add(btnAddNew);
-        groupBoxFunctions.Location = new System.Drawing.Point(0, 513);
+        groupBoxFunctions.Location = new System.Drawing.Point(0, 528);
         groupBoxFunctions.Name = "groupBoxFunctions";
-        groupBoxFunctions.Size = new System.Drawing.Size(765, 182);
+        groupBoxFunctions.Size = new System.Drawing.Size(851, 165);
         groupBoxFunctions.TabIndex = 0;
         groupBoxFunctions.TabStop = false;
         groupBoxFunctions.Text = "Chức năng";
@@ -339,17 +406,18 @@ partial class Form1
         // btnCancel
         // 
         btnCancel.Enabled = false;
-        btnCancel.Location = new System.Drawing.Point(604, 83);
+        btnCancel.Location = new System.Drawing.Point(608, 76);
         btnCancel.Name = "btnCancel";
         btnCancel.Size = new System.Drawing.Size(102, 36);
         btnCancel.TabIndex = 3;
         btnCancel.Text = "&Hủy";
         btnCancel.UseVisualStyleBackColor = true;
+        btnCancel.Click += btnCancel_Click;
         // 
         // btnDelete
         // 
         btnDelete.Enabled = false;
-        btnDelete.Location = new System.Drawing.Point(433, 83);
+        btnDelete.Location = new System.Drawing.Point(433, 76);
         btnDelete.Name = "btnDelete";
         btnDelete.Size = new System.Drawing.Size(102, 36);
         btnDelete.TabIndex = 2;
@@ -359,7 +427,7 @@ partial class Form1
         // btnSave
         // 
         btnSave.Enabled = false;
-        btnSave.Location = new System.Drawing.Point(270, 83);
+        btnSave.Location = new System.Drawing.Point(265, 76);
         btnSave.Name = "btnSave";
         btnSave.Size = new System.Drawing.Size(97, 36);
         btnSave.TabIndex = 1;
@@ -368,36 +436,55 @@ partial class Form1
         // 
         // btnAddNew
         // 
-        btnAddNew.Location = new System.Drawing.Point(112, 83);
+        btnAddNew.Location = new System.Drawing.Point(112, 76);
         btnAddNew.Name = "btnAddNew";
         btnAddNew.Size = new System.Drawing.Size(97, 36);
         btnAddNew.TabIndex = 0;
         btnAddNew.Text = "&Thêm mới";
         btnAddNew.UseVisualStyleBackColor = true;
         // 
-        // txtStock
+        // btnRemoveFromCart
         // 
-        txtStock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        txtStock.Location = new System.Drawing.Point(180, 402);
-        txtStock.Name = "txtStock";
-        txtStock.Size = new System.Drawing.Size(312, 31);
-        txtStock.TabIndex = 14;
-        txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+        btnRemoveFromCart.Location = new System.Drawing.Point(3, 14);
+        btnRemoveFromCart.Name = "btnRemoveFromCart";
+        btnRemoveFromCart.Size = new System.Drawing.Size(168, 38);
+        btnRemoveFromCart.TabIndex = 0;
+        btnRemoveFromCart.Text = "Xóa khỏi giỏ";
+        btnRemoveFromCart.UseVisualStyleBackColor = true;
         // 
-        // txtImagePath
+        // btnCheckout
         // 
-        txtImagePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
-        txtImagePath.Location = new System.Drawing.Point(180, 451);
-        txtImagePath.Name = "txtImagePath";
-        txtImagePath.ReadOnly = true;
-        txtImagePath.Size = new System.Drawing.Size(312, 31);
-        txtImagePath.TabIndex = 15;
+        btnCheckout.Location = new System.Drawing.Point(197, 14);
+        btnCheckout.Name = "btnCheckout";
+        btnCheckout.Size = new System.Drawing.Size(197, 38);
+        btnCheckout.TabIndex = 1;
+        btnCheckout.Text = "Thanh toán";
+        btnCheckout.UseVisualStyleBackColor = true;
+        // 
+        // lblTotal
+        // 
+        lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+        lblTotal.Location = new System.Drawing.Point(419, 14);
+        lblTotal.Name = "lblTotal";
+        lblTotal.Size = new System.Drawing.Size(221, 38);
+        lblTotal.TabIndex = 2;
+        lblTotal.Text = "Tổng tiền: 0 đ";
+        lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+        // 
+        // btnAddToCart
+        // 
+        btnAddToCart.Location = new System.Drawing.Point(656, 14);
+        btnAddToCart.Name = "btnAddToCart";
+        btnAddToCart.Size = new System.Drawing.Size(167, 38);
+        btnAddToCart.TabIndex = 3;
+        btnAddToCart.Text = "Thêm vào &giỏ";
+        btnAddToCart.UseVisualStyleBackColor = true;
         // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        ClientSize = new System.Drawing.Size(1177, 720);
+        ClientSize = new System.Drawing.Size(1305, 959);
         Controls.Add(splitContainerMain);
         Controls.Add(menuStrip1);
         Icon = ((System.Drawing.Icon)resources.GetObject("$this.Icon"));
@@ -412,6 +499,9 @@ partial class Form1
         ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
         panel1.ResumeLayout(false);
         panel1.PerformLayout();
+        groupBoxCart.ResumeLayout(false);
+        panelCartActions.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dgvCart).EndInit();
         groupBoxDetails.ResumeLayout(false);
         groupBoxDetails.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)picProductImage).EndInit();
@@ -419,6 +509,20 @@ partial class Form1
         ResumeLayout(false);
         PerformLayout();
     }
+
+    private System.Windows.Forms.Button btnAddToCart;
+
+    private System.Windows.Forms.Label lblTotal;
+
+    private System.Windows.Forms.Button btnCheckout;
+
+    private System.Windows.Forms.Button btnRemoveFromCart;
+
+    private System.Windows.Forms.Panel panelCartActions;
+
+    private System.Windows.Forms.DataGridView dgvCart;
+
+    private System.Windows.Forms.GroupBox groupBoxCart;
 
     private System.Windows.Forms.TextBox txtPrice;
 
