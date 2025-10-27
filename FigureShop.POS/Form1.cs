@@ -3,130 +3,218 @@ using System.Collections.Generic;
 using System.ComponentModel; // For BindingList
 using System.Linq;
 using System.Windows.Forms;
-using FigureShop.POS.Models;
-using Microsoft.EntityFrameworkCore;
+// using FigureShop.POS.Models; // Uncomment if your Models namespace is correct
+// using Microsoft.EntityFrameworkCore; // Uncomment if needed later
 
 namespace FigureShop.POS
 {
     public partial class Form1 : Form
     {
-        private BindingList<CartItem> shoppingCartItems = new BindingList<CartItem>();
+        // --- MenuStrip variables ---
+        private MenuStrip menuStripMain;
+        private ToolStripMenuItem userToolStripMenuItem;
+        private ToolStripMenuItem loginToolStripMenuItem;
+        private ToolStripMenuItem logoutToolStripMenuItem;
+        private ToolStripMenuItem manageToolStripMenuItem;
+        private ToolStripMenuItem productsToolStripMenuItem;
+        private ToolStripMenuItem categoriesToolStripMenuItem;
+        private ToolStripMenuItem ordersToolStripMenuItem;
+        private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem aboutToolStripMenuItem;
+        // --- End MenuStrip variables ---
+
+
+        // private BindingList<CartItem> shoppingCartItems = new BindingList<CartItem>(); // Uncomment later
 
         public Form1()
         {
-            InitializeComponent();
-            this.Load += new EventHandler(Form1_Load);
+            InitializeComponent(); // Initializes controls defined in the Designer (if any)
 
-            // Set up the shopping cart DataGridView
-            dgvShoppingCart.AutoGenerateColumns = true; // Let it generate columns from CartItem properties
-            dgvShoppingCart.DataSource = shoppingCartItems;
+            InitializeCustomMenuStrip(); // Add the MenuStrip programmatically
 
-            // Optional: Customize shopping cart columns
-            dgvShoppingCart.Columns["FigureId"]!.Visible = false; // Hide the ID column
-            dgvShoppingCart.Columns["FigureName"]!.HeaderText = "Product";
-            dgvShoppingCart.Columns["UnitPrice"]!.HeaderText = "Price";
-            dgvShoppingCart.Columns["Quantity"]!.HeaderText = "Qty";
-            dgvShoppingCart.Columns["TotalPrice"]!.HeaderText = "Subtotal";
-            dgvShoppingCart.Columns["TotalPrice"]!.DefaultCellStyle.Format = "C"; // Currency format
-            dgvShoppingCart.Columns["UnitPrice"]!.DefaultCellStyle.Format = "C"; // Currency format
+            // this.Load += new EventHandler(Form1_Load); // Uncomment later
+
+            // Set up the shopping cart DataGridView (Uncomment later)
+            // dgvShoppingCart.AutoGenerateColumns = true;
+            // dgvShoppingCart.DataSource = shoppingCartItems;
+            // ... (rest of cart setup)
         }
 
-        private async void Form1_Load(object sender, EventArgs e)
+        // --- Method to initialize the MenuStrip ---
+        private void InitializeCustomMenuStrip()
         {
-            await LoadFiguresAsync();
-            UpdateTotalPrice();
-        }
+            // Create MenuStrip main object
+            menuStripMain = new MenuStrip();
+            menuStripMain.Name = "menuStripMain";
 
-        private async Task LoadFiguresAsync(string? searchTerm = null)
+            // Create "User" menu
+            userToolStripMenuItem = new ToolStripMenuItem();
+            userToolStripMenuItem.Name = "userToolStripMenuItem";
+            userToolStripMenuItem.Text = "&User";
+
+            // Create "Login" sub-item
+            loginToolStripMenuItem = new ToolStripMenuItem();
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
+            loginToolStripMenuItem.Text = "&Login";
+            loginToolStripMenuItem.Click += LoginToolStripMenuItem_Click; // Assign event handler
+
+            // Create "Logout" sub-item
+            logoutToolStripMenuItem = new ToolStripMenuItem();
+            logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            logoutToolStripMenuItem.Text = "&Logout";
+            logoutToolStripMenuItem.Click += LogoutToolStripMenuItem_Click; // Assign event handler
+            logoutToolStripMenuItem.Enabled = false; // Initially disabled
+
+            // Add Login/Logout to User menu
+            userToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {
+                loginToolStripMenuItem,
+                logoutToolStripMenuItem
+            });
+
+            // Create "Manage" menu
+            manageToolStripMenuItem = new ToolStripMenuItem();
+            manageToolStripMenuItem.Name = "manageToolStripMenuItem";
+            manageToolStripMenuItem.Text = "&Manage";
+
+            // Create "Products" sub-item
+            productsToolStripMenuItem = new ToolStripMenuItem();
+            productsToolStripMenuItem.Name = "productsToolStripMenuItem";
+            productsToolStripMenuItem.Text = "&Products";
+            productsToolStripMenuItem.Click += ProductsToolStripMenuItem_Click; // Assign event handler
+
+            // Create "Categories" sub-item
+            categoriesToolStripMenuItem = new ToolStripMenuItem();
+            categoriesToolStripMenuItem.Name = "categoriesToolStripMenuItem";
+            categoriesToolStripMenuItem.Text = "&Categories";
+            categoriesToolStripMenuItem.Click += CategoriesToolStripMenuItem_Click; // Assign event handler
+
+            // Create "Orders" sub-item
+            ordersToolStripMenuItem = new ToolStripMenuItem();
+            ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            ordersToolStripMenuItem.Text = "&Orders";
+            ordersToolStripMenuItem.Click += OrdersToolStripMenuItem_Click; // Assign event handler
+
+            // Add sub-items to Manage menu
+            manageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {
+                productsToolStripMenuItem,
+                categoriesToolStripMenuItem,
+                ordersToolStripMenuItem
+            });
+
+            // Create "Help" menu
+            helpToolStripMenuItem = new ToolStripMenuItem();
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Text = "&Help";
+
+            // Create "About" sub-item
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Text = "&About";
+            aboutToolStripMenuItem.Click += AboutToolStripMenuItem_Click; // Assign event handler
+
+            // Add About to Help menu
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] {
+                aboutToolStripMenuItem
+            });
+
+            // Add top-level menus to the MenuStrip
+            menuStripMain.Items.AddRange(new ToolStripItem[] {
+                userToolStripMenuItem,
+                manageToolStripMenuItem,
+                helpToolStripMenuItem
+            });
+
+            // Add the MenuStrip to the Form's controls and set it as the MainMenuStrip
+            this.Controls.Add(menuStripMain);
+            this.MainMenuStrip = menuStripMain;
+
+            // Optional: Ensure it docks correctly if other controls are docked Top
+            // menuStripMain.Dock = DockStyle.Top; // Usually handles automatically
+            // this.Controls.SetChildIndex(menuStripMain, 0); // Bring to front if needed
+        }
+        // --- End Method to initialize the MenuStrip ---
+
+
+        // --- Placeholder Event Handlers for Menu Items ---
+        private void LoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var connectionString = "Server=localhost;Database=FigureShopDb;User ID=sa;Password=P@ssw0rd123;MultipleActiveResultSets=true;TrustServerCertificate=True";
-
-            var optionsBuilder = new DbContextOptionsBuilder<FigureShopDbContext>();
-            optionsBuilder.UseSqlServer(connectionString);
-
-            using (var context = new FigureShopDbContext(optionsBuilder.Options))
-            {
-                try
-                {
-                    IQueryable<Figure> query = context.Figures
-                                                        .Include(f => f.Branch)
-                                                        .Include(f => f.Category);
-
-                    // Apply search term if provided
-                    if (!string.IsNullOrWhiteSpace(searchTerm))
-                    {
-                        query = query.Where(f => f.Name.Contains(searchTerm) ||
-                                                 f.Description.Contains(searchTerm)); // Or other fields
-                    }
-
-                    var figures = await query.ToListAsync();
-
-                    // This makes sure the DataGridView reflects changes
-                    dgvFigures.DataSource = null; // Unbind first
-                    dgvFigures.DataSource = figures;
-
-                    dgvFigures.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error loading figures: {ex.Message}\n\n{ex.InnerException?.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            MessageBox.Show("Login Clicked!");
+            // TODO: Implement login logic
+            // loginToolStripMenuItem.Enabled = false;
+            // logoutToolStripMenuItem.Enabled = true;
         }
 
-        // Event handler for the Search button
-        private async void btnSearch_Click(object sender, EventArgs e)
+        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string searchTerm = txtSearch.Text.Trim();
-            await LoadFiguresAsync(searchTerm);
+            MessageBox.Show("Logout Clicked!");
+            // TODO: Implement logout logic
+            // loginToolStripMenuItem.Enabled = true;
+            // logoutToolStripMenuItem.Enabled = false;
         }
 
-        // Event handler for the Add to Cart button
-        private void btnAddSelectedToCart_Click(object sender, EventArgs e)
+        private void ProductsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dgvFigures.SelectedRows.Count > 0)
-            {
-                // Get the first selected row (assuming one item at a time for simplicity)
-                var selectedRow = dgvFigures.SelectedRows[0];
-                var selectedFigure = selectedRow.DataBoundItem as Figure;
-
-                if (selectedFigure != null)
-                {
-                    // Check if item is already in cart
-                    var existingCartItem = shoppingCartItems.FirstOrDefault(item => item.FigureId == selectedFigure.Id);
-
-                    if (existingCartItem != null)
-                    {
-                        // Increment quantity if already in cart
-                        existingCartItem.Quantity++;
-                    }
-                    else
-                    {
-                        // Add new item to cart
-                        var newCartItem = new CartItem
-                        {
-                            FigureId = selectedFigure.Id,
-                            FigureName = selectedFigure.Name,
-                            UnitPrice = selectedFigure.Price, // Consider sale price here if applicable
-                            Quantity = 1
-                        };
-                        shoppingCartItems.Add(newCartItem);
-                    }
-                    UpdateTotalPrice();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please select a figure to add to the cart.", "No Figure Selected", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            MessageBox.Show("Manage Products Clicked!");
+            // TODO: Open Product Management Form or Panel
         }
 
-        // Method to update the total price label
-        private void UpdateTotalPrice()
+        private void CategoriesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            double total = shoppingCartItems.Sum(item => item.TotalPrice);
-            lblTotalPrice.Text = $"Total: {total:C}"; // Format as currency
+            MessageBox.Show("Manage Categories Clicked!");
+            // TODO: Open Category Management Form or Panel
         }
-        
-    }
-}
+
+        private void OrdersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Manage Orders Clicked!");
+            // TODO: Open Order Management Form or Panel
+        }
+
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Figure & Gundam Shop POS\nVersion 1.0", "About");
+        }
+        // --- End Placeholder Event Handlers ---
+
+
+        // --- Existing commented-out code ---
+        // private async void Form1_Load(object sender, EventArgs e) { ... }
+        // private async Task LoadFiguresAsync(string? searchTerm = null) { ... }
+        // private async void btnSearch_Click(object sender, EventArgs e) { ... } // Note: Duplicates btnSearch_Click below
+        // private void btnAddSelectedToCart_Click(object sender, EventArgs e) { ... } // Note: Duplicates btnAddSelectedToCart_Click below
+        // private void UpdateTotalPrice() { ... }
+        // --- End Existing commented-out code ---
+
+
+        // --- Your existing empty event handlers ---
+        public void btnAddSelectedToCart_Click(object sender, EventArgs e)
+        {
+            // TODO: Implement Add to Cart logic (perhaps uncomment the version above)
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // TODO: Implement Search logic (perhaps uncomment the async version above)
+        }
+        // --- End Your existing empty event handlers ---
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void cboCategoryDetail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+    } // End Form1 class
+} // End namespace
