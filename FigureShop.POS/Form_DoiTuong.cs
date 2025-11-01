@@ -1,8 +1,8 @@
 ﻿namespace FigureShop.POS;
 
-public partial class Form1 : Form
+public partial class Form_DoiTuong : Form
 {
-    public Form1()
+    public Form_DoiTuong()
     {
         InitializeComponent();
     }

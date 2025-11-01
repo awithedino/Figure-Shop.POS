@@ -16,4 +16,61 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.21" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="Form_SanPham.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_BanHang.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_NhanVien.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_NhapHang.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form1.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_NhaCungCap.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_CongViec.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_Report.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_TheLoai.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_TyLe.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_ChatLieu.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_Series.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_DoiTuong.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_NoiSX.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_DetailsSP.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_TraCuuHoaDon.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_HienThiMatHang.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form_Menu.cs">
+        <SubType>Form</SubType>
+      </Compile>
+    </ItemGroup>
+
 </Project>

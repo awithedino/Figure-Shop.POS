@@ -2,7 +2,7 @@
 
 namespace FigureShop.POS;
 
-partial class Form1
+partial class Form_SanPham
 {
     /// <summary>
     /// Required designer variable.
@@ -31,11 +31,28 @@ partial class Form1
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+        panel1 = new System.Windows.Forms.Panel();
+        SuspendLayout();
+        // 
+        // panel1
+        // 
+        panel1.Dock = System.Windows.Forms.DockStyle.Left;
+        panel1.Location = new System.Drawing.Point(0, 0);
+        panel1.Name = "panel1";
+        panel1.Size = new System.Drawing.Size(150, 894);
+        panel1.TabIndex = 0;
+        // 
+        // Form_SanPham
+        // 
+        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        ClientSize = new System.Drawing.Size(1458, 894);
+        Controls.Add(panel1);
+        Text = "Form_SanPham";
+        ResumeLayout(false);
     }
+
+    private System.Windows.Forms.Panel panel1;
 
     #endregion
 }
