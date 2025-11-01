@@ -6,4 +6,7 @@ public partial class Form_BanHang : Form
     {
         InitializeComponent();
     }
+
+
+    
 }

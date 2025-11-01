@@ -6,4 +6,7 @@ public partial class Form_HienThiMatHang : Form
     {
         InitializeComponent();
     }
+
+
+    
 }
