@@ -75,9 +75,9 @@ partial class UserControl_CongViec
         // 
         label1.Dock = System.Windows.Forms.DockStyle.Fill;
         label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(3, 23);
+        label1.Location = new System.Drawing.Point(3, 27);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(1015, 79);
+        label1.Size = new System.Drawing.Size(1015, 75);
         label1.TabIndex = 0;
         label1.Text = "Công việc";
         label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -104,7 +104,7 @@ partial class UserControl_CongViec
         textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         textBox3.Location = new System.Drawing.Point(89, 71);
         textBox3.Name = "textBox3";
-        textBox3.Size = new System.Drawing.Size(149, 27);
+        textBox3.Size = new System.Drawing.Size(149, 31);
         textBox3.TabIndex = 11;
         // 
         // textBox4
@@ -112,7 +112,7 @@ partial class UserControl_CongViec
         textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         textBox4.Location = new System.Drawing.Point(89, 37);
         textBox4.Name = "textBox4";
-        textBox4.Size = new System.Drawing.Size(149, 27);
+        textBox4.Size = new System.Drawing.Size(149, 31);
         textBox4.TabIndex = 12;
         // 
         // groupBox5
@@ -226,9 +226,9 @@ partial class UserControl_CongViec
         // 
         splitter1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
         splitter1.Dock = System.Windows.Forms.DockStyle.Right;
-        splitter1.Location = new System.Drawing.Point(250, 26);
+        splitter1.Location = new System.Drawing.Point(250, 31);
         splitter1.Name = "splitter1";
-        splitter1.Size = new System.Drawing.Size(10, 599);
+        splitter1.Size = new System.Drawing.Size(10, 594);
         splitter1.TabIndex = 0;
         splitter1.TabStop = false;
         // 
@@ -249,10 +249,10 @@ partial class UserControl_CongViec
         // 
         dataGridView1.ColumnHeadersHeight = 29;
         dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-        dataGridView1.Location = new System.Drawing.Point(3, 128);
+        dataGridView1.Location = new System.Drawing.Point(3, 133);
         dataGridView1.Name = "dataGridView1";
         dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(752, 497);
+        dataGridView1.Size = new System.Drawing.Size(752, 492);
         dataGridView1.TabIndex = 1;
         // 
         // groupBox6
@@ -261,7 +261,7 @@ partial class UserControl_CongViec
         groupBox6.Controls.Add(textBox1);
         groupBox6.Controls.Add(label9);
         groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
-        groupBox6.Location = new System.Drawing.Point(3, 26);
+        groupBox6.Location = new System.Drawing.Point(3, 31);
         groupBox6.Name = "groupBox6";
         groupBox6.Size = new System.Drawing.Size(752, 102);
         groupBox6.TabIndex = 0;
@@ -272,9 +272,9 @@ partial class UserControl_CongViec
         button8.BackColor = System.Drawing.Color.SteelBlue;
         button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         button8.ForeColor = System.Drawing.Color.White;
-        button8.Location = new System.Drawing.Point(561, 44);
+        button8.Location = new System.Drawing.Point(560, 43);
         button8.Name = "button8";
-        button8.Size = new System.Drawing.Size(96, 29);
+        button8.Size = new System.Drawing.Size(96, 39);
         button8.TabIndex = 2;
         button8.Text = "Tìm kiếm";
         button8.UseVisualStyleBackColor = false;
@@ -283,35 +283,35 @@ partial class UserControl_CongViec
         // 
         textBox1.Location = new System.Drawing.Point(253, 43);
         textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(286, 30);
+        textBox1.Size = new System.Drawing.Size(286, 35);
         textBox1.TabIndex = 1;
         // 
         // label9
         // 
         label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label9.Location = new System.Drawing.Point(77, 46);
+        label9.Location = new System.Drawing.Point(52, 42);
         label9.Name = "label9";
-        label9.Size = new System.Drawing.Size(159, 24);
+        label9.Size = new System.Drawing.Size(195, 31);
         label9.TabIndex = 0;
         label9.Text = "Tên/Mã công việc:";
         // 
         // UserControl_CongViec
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         Controls.Add(groupBox3);
         Controls.Add(groupBox2);
         Controls.Add(groupBox1);
-        Name = "UserControl_CongViec";
+        Margin = new System.Windows.Forms.Padding(4);
         Size = new System.Drawing.Size(1021, 733);
         groupBox1.ResumeLayout(false);
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
         groupBox5.ResumeLayout(false);
         groupBox3.ResumeLayout(false);
+        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         groupBox6.ResumeLayout(false);
         groupBox6.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
         ResumeLayout(false);
     }
 

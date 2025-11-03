@@ -20,18 +20,6 @@
       <Compile Update="Form_Menu.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="UserControl_TraCuuHoaDon.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_SanPham.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_NhapHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_DetailsSP.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
       <Compile Update="Done\UserControl_NoiSX.cs">
         <SubType>UserControl</SubType>
       </Compile>
@@ -42,9 +30,6 @@
         <SubType>UserControl</SubType>
       </Compile>
       <Compile Update="Done\UserControl_Series.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_BanHang.cs">
         <SubType>UserControl</SubType>
       </Compile>
       <Compile Update="Done\UserControl_HienThiMatHang.cs">
@@ -63,6 +48,15 @@
         <SubType>UserControl</SubType>
       </Compile>
       <Compile Update="Done\UserControl_NhaCungCap.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_BanHang.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_NhapHang.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_TraCuuHoaDon.cs">
         <SubType>UserControl</SubType>
       </Compile>
     </ItemGroup>
