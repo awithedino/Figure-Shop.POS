@@ -2,7 +2,11 @@
 
 namespace FigureShop.POS;
 
+<<<<<<<< HEAD:FigureShop.POS/UserControl_CongViec.Designer.cs
+partial class UserControl_CongViec
+========
 partial class UserControl_SanPham
+>>>>>>>> origin/Ari_Coding:FigureShop.POS/UserControl_SanPham.Designer.cs
 {
     /// <summary> 
     /// Required designer variable.

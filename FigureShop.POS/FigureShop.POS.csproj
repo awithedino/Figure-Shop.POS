@@ -17,58 +17,52 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Form_BanHang.cs">
-        <SubType>Form</SubType>
-      </Compile>
-      <Compile Update="Form1.cs">
-        <SubType>Form</SubType>
-      </Compile>
-      <Compile Update="Form_HienThiMatHang.cs">
-        <SubType>Form</SubType>
-      </Compile>
       <Compile Update="Form_Menu.cs">
         <SubType>Form</SubType>
       </Compile>
-      <Compile Update="UserControl_NhaCungCap.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_ChatLieu.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_CongViec.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_DetailsSP.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_DoiTuong.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_NhanVien.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_NhapHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_NoiSX.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_Report.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl_Series.cs">
+      <Compile Update="UserControl_TraCuuHoaDon.cs">
         <SubType>UserControl</SubType>
       </Compile>
       <Compile Update="UserControl_SanPham.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="UserControl_TheLoai.cs">
+      <Compile Update="UserControl_NhapHang.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="UserControl_TraCuuHoaDon.cs">
+      <Compile Update="UserControl_DetailsSP.cs">
         <SubType>UserControl</SubType>
       </Compile>
-      <Compile Update="UserControl_TyLe.cs">
+      <Compile Update="Done\UserControl_NoiSX.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_TyLe.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_TheLoai.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_Series.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_BanHang.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_HienThiMatHang.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_KhachHang.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_ChatLieu.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_CongViec.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_NhanVien.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
+      <Compile Update="Done\UserControl_NhaCungCap.cs">
         <SubType>UserControl</SubType>
       </Compile>
     </ItemGroup>

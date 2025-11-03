@@ -2,7 +2,11 @@
 
 namespace FigureShop.POS;
 
+<<<<<<<< HEAD:FigureShop.POS/UserControl_ChatLieu.Designer.cs
 partial class UserControl_ChatLieu
+========
+partial class UserControl_NhapHang
+>>>>>>>> origin/Ari_Coding:FigureShop.POS/UserControl_NhapHang.Designer.cs
 {
     /// <summary> 
     /// Required designer variable.

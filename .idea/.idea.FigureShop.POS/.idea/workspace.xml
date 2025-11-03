@@ -8,34 +8,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabd7a02-8fc4-4fef-8684-d56d889aa95d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_ChatLieu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_CongViec.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_ChatLieu.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_ChatLieu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_CongViec.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_CongViec.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_KhachHang.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_KhachHang.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhaCungCap.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhaCungCap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhanVien.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhanVien.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NoiSX.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NoiSX.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_Series.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_Series.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TheLoai.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TheLoai.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TyLe.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TyLe.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.Designer.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_Report.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_Report.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.Designer.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_Series.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_Series.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.Designer.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form1.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_ChatLieu.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_ChatLieu.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_CongViec.Designer.cs" beforeDir="false" />
@@ -44,8 +49,8 @@
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_DetailsSP.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_DoiTuong.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_DoiTuong.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NhaCungCap.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NhaCungCap.cs" beforeDir="false" />
@@ -53,19 +58,19 @@
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NhanVien.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NhapHang.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NhapHang.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NoiSX.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_CongViec.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NoiSX.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_NoiSX.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Report.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Report.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Report.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_SanPham.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_SanPham.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Series.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Series.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Series.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TheLoai.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TheLoai.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TraCuuHoaDon.Designer.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TraCuuHoaDon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TyLe.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl_ChatLieu.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TyLe.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_TyLe.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,13 +84,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;awithedino&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/awithedino/Figure-Shop.POS&quot;,
+    &quot;accountId&quot;: &quot;041c89e9-6525-4ccd-ac0f-04c7e33ab671&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_BanHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_BanHang.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_KhachHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/FigureShop.POS/Done/UserControl_KhachHang.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_Menu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/Form_Menu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_ChatLieu.Designer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -94,28 +111,18 @@
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_CongViec.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_Report.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_Report.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_Series.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_Series.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -133,12 +140,14 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Mạnh",
+    "git-widget-placeholder": "Ari__Coding",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -178,7 +187,11 @@
       <workItem from="1761569617876" duration="1310000" />
       <workItem from="1761924377175" duration="31000" />
       <workItem from="1761998147874" duration="4684000" />
-      <workItem from="1762003075071" duration="22105000" />
+      <workItem from="1762003075071" duration="12789000" />
+      <workItem from="1762057177913" duration="2703000" />
+      <workItem from="1762105541439" duration="2462000" />
+      <workItem from="1762154321077" duration="2141000" />
+      <workItem from="1762164029204" duration="1662000" />
     </task>
     <servers />
   </component>

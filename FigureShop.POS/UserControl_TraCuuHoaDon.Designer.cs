@@ -2,7 +2,11 @@
 
 namespace FigureShop.POS;
 
+<<<<<<<< HEAD:FigureShop.POS/UserControl_DetailsSP.Designer.cs
+partial class UserControl_DetailsSP
+========
 partial class UserControl_TraCuuHoaDon
+>>>>>>>> origin/Ari_Coding:FigureShop.POS/UserControl_TraCuuHoaDon.Designer.cs
 {
     /// <summary> 
     /// Required designer variable.

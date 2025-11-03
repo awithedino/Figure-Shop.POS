@@ -50,7 +50,7 @@ partial class Form_Menu
         panel2 = new System.Windows.Forms.Panel();
         label1 = new System.Windows.Forms.Label();
         panel3 = new System.Windows.Forms.Panel();
-        dtpNgayTruyCap = new System.Windows.Forms.DateTimePicker();
+        dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
         label4 = new System.Windows.Forms.Label();
         label3 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
@@ -246,7 +246,7 @@ partial class Form_Menu
         // panel3
         // 
         panel3.BackColor = System.Drawing.Color.DodgerBlue;
-        panel3.Controls.Add(dtpNgayTruyCap);
+        panel3.Controls.Add(dateTimePicker1);
         panel3.Controls.Add(label4);
         panel3.Controls.Add(label3);
         panel3.Controls.Add(label2);
@@ -257,12 +257,12 @@ partial class Form_Menu
         panel3.Size = new System.Drawing.Size(1306, 66);
         panel3.TabIndex = 2;
         // 
-        // dtpNgayTruyCap
+        // dateTimePicker1
         // 
-        dtpNgayTruyCap.Location = new System.Drawing.Point(995, 0);
-        dtpNgayTruyCap.Name = "dtpNgayTruyCap";
-        dtpNgayTruyCap.Size = new System.Drawing.Size(311, 31);
-        dtpNgayTruyCap.TabIndex = 4;
+        dateTimePicker1.Location = new System.Drawing.Point(995, 0);
+        dateTimePicker1.Name = "dateTimePicker1";
+        dateTimePicker1.Size = new System.Drawing.Size(311, 27);
+        dateTimePicker1.TabIndex = 4;
         // 
         // label4
         // 
@@ -290,13 +290,14 @@ partial class Form_Menu
         // 
         // Form_Menu
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1458, 894);
         Controls.Add(panel3);
         Controls.Add(panel2);
         Controls.Add(panel1);
-        Text = "Form_Menu";
+        Margin = new System.Windows.Forms.Padding(2);
+        Text = "Menu";
         panel1.ResumeLayout(false);
         flowLayoutPanel1.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -309,7 +310,7 @@ partial class Form_Menu
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.DateTimePicker dtpNgayTruyCap;
+    private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
     private System.Windows.Forms.Button btnDoiTuong;
     private System.Windows.Forms.Button btnNoiSX;

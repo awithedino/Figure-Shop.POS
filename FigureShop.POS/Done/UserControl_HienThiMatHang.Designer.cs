@@ -2,11 +2,7 @@
 
 namespace FigureShop.POS;
 
-<<<<<<<< HEAD:FigureShop.POS/UserControl_DoiTuong.Designer.cs
-partial class UserControl_DoiTuong
-========
-partial class UserControl_BanHang
->>>>>>>> origin/Ari_Coding:FigureShop.POS/Done/UserControl_BanHang.Designer.cs
+partial class UserControl_HienThiMatHang
 {
     /// <summary> 
     /// Required designer variable.

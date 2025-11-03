@@ -2,14 +2,18 @@
 
 namespace FigureShop.POS;
 
-partial class Form1
+<<<<<<<< HEAD:FigureShop.POS/UserControl_DoiTuong.Designer.cs
+partial class UserControl_DoiTuong
+========
+partial class UserControl_BanHang
+>>>>>>>> origin/Ari_Coding:FigureShop.POS/Done/UserControl_BanHang.Designer.cs
 {
-    /// <summary>
+    /// <summary> 
     /// Required designer variable.
     /// </summary>
     private IContainer components = null;
 
-    /// <summary>
+    /// <summary> 
     /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -23,18 +27,16 @@ partial class Form1
         base.Dispose(disposing);
     }
 
-    #region Windows Form Designer generated code
+    #region Component Designer generated code
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
+    /// <summary> 
+    /// Required method for Designer support - do not modify 
     /// the contents of this method with the code editor.
     /// </summary>
     private void InitializeComponent()
     {
-        this.components = new System.ComponentModel.Container();
+        components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
     }
 
     #endregion
