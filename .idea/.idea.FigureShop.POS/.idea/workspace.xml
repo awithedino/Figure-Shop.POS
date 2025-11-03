@@ -7,44 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fabd7a02-8fc4-4fef-8684-d56d889aa95d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_BanHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_CongViec.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_CongViec.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_HienThiMatHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_BanHang.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_HienThiMatHang.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_ChatLieu.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_ChatLieu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_CongViec.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_CongViec.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_DetailsSP.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_DoiTuong.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhaCungCap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhanVien.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhapHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NhapHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_NhapHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_NoiSX.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_SanPham.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_Series.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_Series.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TheLoai.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TraCuuHoaDon.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TraCuuHoaDon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Done/UserControl_TraCuuHoaDon.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl_TyLe.cs" beforeDir="false" />
-    </list>
+    <list default="true" id="fabd7a02-8fc4-4fef-8684-d56d889aa95d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
