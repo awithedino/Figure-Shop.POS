@@ -37,9 +37,6 @@ partial class Form_Menu
         btnSanPham = new System.Windows.Forms.Button();
         btnNhanVien = new System.Windows.Forms.Button();
         btnKhachhang = new System.Windows.Forms.Button();
-        pictureBox1 = new System.Windows.Forms.PictureBox();
-        panel2 = new System.Windows.Forms.Panel();
-        panel3 = new System.Windows.Forms.Panel();
         btnNhapHang = new System.Windows.Forms.Button();
         btnNcc = new System.Windows.Forms.Button();
         btnCongViec = new System.Windows.Forms.Button();
@@ -49,11 +46,14 @@ partial class Form_Menu
         btnSeries = new System.Windows.Forms.Button();
         btnDoiTuong = new System.Windows.Forms.Button();
         btnNoiSX = new System.Windows.Forms.Button();
+        pictureBox1 = new System.Windows.Forms.PictureBox();
+        panel2 = new System.Windows.Forms.Panel();
         label1 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        label4 = new System.Windows.Forms.Label();
+        panel3 = new System.Windows.Forms.Panel();
         dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+        label4 = new System.Windows.Forms.Label();
+        label3 = new System.Windows.Forms.Label();
+        label2 = new System.Windows.Forms.Label();
         panel1.SuspendLayout();
         flowLayoutPanel1.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -131,41 +131,6 @@ partial class Form_Menu
         btnKhachhang.TabIndex = 3;
         btnKhachhang.Text = "Khách Hàng";
         btnKhachhang.UseVisualStyleBackColor = true;
-        // 
-        // pictureBox1
-        // 
-        pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-        pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-        pictureBox1.Location = new System.Drawing.Point(0, 0);
-        pictureBox1.Name = "pictureBox1";
-        pictureBox1.Size = new System.Drawing.Size(152, 152);
-        pictureBox1.TabIndex = 0;
-        pictureBox1.TabStop = false;
-        // 
-        // panel2
-        // 
-        panel2.BackColor = System.Drawing.Color.DodgerBlue;
-        panel2.Controls.Add(label1);
-        panel2.Dock = System.Windows.Forms.DockStyle.Top;
-        panel2.ForeColor = System.Drawing.Color.White;
-        panel2.Location = new System.Drawing.Point(152, 0);
-        panel2.Name = "panel2";
-        panel2.Size = new System.Drawing.Size(1306, 86);
-        panel2.TabIndex = 1;
-        // 
-        // panel3
-        // 
-        panel3.BackColor = System.Drawing.Color.DodgerBlue;
-        panel3.Controls.Add(dateTimePicker1);
-        panel3.Controls.Add(label4);
-        panel3.Controls.Add(label3);
-        panel3.Controls.Add(label2);
-        panel3.Dock = System.Windows.Forms.DockStyle.Top;
-        panel3.ForeColor = System.Drawing.Color.White;
-        panel3.Location = new System.Drawing.Point(152, 86);
-        panel3.Name = "panel3";
-        panel3.Size = new System.Drawing.Size(1306, 66);
-        panel3.TabIndex = 2;
         // 
         // btnNhapHang
         // 
@@ -248,6 +213,27 @@ partial class Form_Menu
         btnNoiSX.Text = "Nơi Sản Xuất";
         btnNoiSX.UseVisualStyleBackColor = true;
         // 
+        // pictureBox1
+        // 
+        pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+        pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+        pictureBox1.Location = new System.Drawing.Point(0, 0);
+        pictureBox1.Name = "pictureBox1";
+        pictureBox1.Size = new System.Drawing.Size(152, 152);
+        pictureBox1.TabIndex = 0;
+        pictureBox1.TabStop = false;
+        // 
+        // panel2
+        // 
+        panel2.BackColor = System.Drawing.Color.DodgerBlue;
+        panel2.Controls.Add(label1);
+        panel2.Dock = System.Windows.Forms.DockStyle.Top;
+        panel2.ForeColor = System.Drawing.Color.White;
+        panel2.Location = new System.Drawing.Point(152, 0);
+        panel2.Name = "panel2";
+        panel2.Size = new System.Drawing.Size(1306, 86);
+        panel2.TabIndex = 1;
+        // 
         // label1
         // 
         label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
@@ -257,21 +243,26 @@ partial class Form_Menu
         label1.TabIndex = 0;
         label1.Text = "<TEXT>";
         // 
-        // label2
+        // panel3
         // 
-        label2.Location = new System.Drawing.Point(6, 3);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(210, 23);
-        label2.TabIndex = 0;
-        label2.Text = "Xin chào: <text>";
+        panel3.BackColor = System.Drawing.Color.DodgerBlue;
+        panel3.Controls.Add(dateTimePicker1);
+        panel3.Controls.Add(label4);
+        panel3.Controls.Add(label3);
+        panel3.Controls.Add(label2);
+        panel3.Dock = System.Windows.Forms.DockStyle.Top;
+        panel3.ForeColor = System.Drawing.Color.White;
+        panel3.Location = new System.Drawing.Point(152, 86);
+        panel3.Name = "panel3";
+        panel3.Size = new System.Drawing.Size(1306, 66);
+        panel3.TabIndex = 2;
         // 
-        // label3
+        // dateTimePicker1
         // 
-        label3.Location = new System.Drawing.Point(259, 3);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(141, 23);
-        label3.TabIndex = 1;
-        label3.Text = "Email: <text>";
+        dateTimePicker1.Location = new System.Drawing.Point(995, 0);
+        dateTimePicker1.Name = "dateTimePicker1";
+        dateTimePicker1.Size = new System.Drawing.Size(311, 27);
+        dateTimePicker1.TabIndex = 4;
         // 
         // label4
         // 
@@ -281,22 +272,32 @@ partial class Form_Menu
         label4.TabIndex = 2;
         label4.Text = "Quyền: <text>";
         // 
-        // dateTimePicker1
+        // label3
         // 
-        dateTimePicker1.Location = new System.Drawing.Point(995, 0);
-        dateTimePicker1.Name = "dateTimePicker1";
-        dateTimePicker1.Size = new System.Drawing.Size(311, 31);
-        dateTimePicker1.TabIndex = 4;
+        label3.Location = new System.Drawing.Point(259, 3);
+        label3.Name = "label3";
+        label3.Size = new System.Drawing.Size(141, 23);
+        label3.TabIndex = 1;
+        label3.Text = "Email: <text>";
+        // 
+        // label2
+        // 
+        label2.Location = new System.Drawing.Point(6, 3);
+        label2.Name = "label2";
+        label2.Size = new System.Drawing.Size(210, 23);
+        label2.TabIndex = 0;
+        label2.Text = "Xin chào: <text>";
         // 
         // Form_Menu
         // 
-        AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+        AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1458, 894);
         Controls.Add(panel3);
         Controls.Add(panel2);
         Controls.Add(panel1);
-        Text = "Form_Menu";
+        Margin = new System.Windows.Forms.Padding(2);
+        Text = "Menu";
         panel1.ResumeLayout(false);
         flowLayoutPanel1.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
