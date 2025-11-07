@@ -2,7 +2,7 @@
 
 namespace FigureShop.POS;
 
-partial class UserControl_TheLoai
+partial class UserControl_Series
 {
     /// <summary> 
     /// Required designer variable.
@@ -34,30 +34,30 @@ partial class UserControl_TheLoai
         groupBox1 = new System.Windows.Forms.GroupBox();
         label1 = new System.Windows.Forms.Label();
         groupBox2 = new System.Windows.Forms.GroupBox();
-        textBox3 = new System.Windows.Forms.TextBox();
-        textBox4 = new System.Windows.Forms.TextBox();
+        txtTenSR = new System.Windows.Forms.TextBox();
+        txtMaSR = new System.Windows.Forms.TextBox();
         groupBox5 = new System.Windows.Forms.GroupBox();
-        button7 = new System.Windows.Forms.Button();
-        button6 = new System.Windows.Forms.Button();
-        button5 = new System.Windows.Forms.Button();
-        button4 = new System.Windows.Forms.Button();
-        button3 = new System.Windows.Forms.Button();
+        btnExcel = new System.Windows.Forms.Button();
+        btnReload = new System.Windows.Forms.Button();
+        btnXoa = new System.Windows.Forms.Button();
+        btnBoQua = new System.Windows.Forms.Button();
+        btnSua = new System.Windows.Forms.Button();
         btnLuu = new System.Windows.Forms.Button();
-        button1 = new System.Windows.Forms.Button();
+        btnThem = new System.Windows.Forms.Button();
         label3 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         splitter1 = new System.Windows.Forms.Splitter();
         groupBox3 = new System.Windows.Forms.GroupBox();
-        dataGridView1 = new System.Windows.Forms.DataGridView();
+        dgvSR = new System.Windows.Forms.DataGridView();
         groupBox6 = new System.Windows.Forms.GroupBox();
-        button8 = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
+        btnTimKiem = new System.Windows.Forms.Button();
+        txtTimKiem = new System.Windows.Forms.TextBox();
         label9 = new System.Windows.Forms.Label();
         groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
         groupBox5.SuspendLayout();
         groupBox3.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvSR).BeginInit();
         groupBox6.SuspendLayout();
         SuspendLayout();
         // 
@@ -79,13 +79,13 @@ partial class UserControl_TheLoai
         label1.Name = "label1";
         label1.Size = new System.Drawing.Size(1015, 79);
         label1.TabIndex = 0;
-        label1.Text = "Thể loại";
+        label1.Text = "Series";
         label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // groupBox2
         // 
-        groupBox2.Controls.Add(textBox3);
-        groupBox2.Controls.Add(textBox4);
+        groupBox2.Controls.Add(txtTenSR);
+        groupBox2.Controls.Add(txtMaSR);
         groupBox2.Controls.Add(groupBox5);
         groupBox2.Controls.Add(label3);
         groupBox2.Controls.Add(label2);
@@ -97,34 +97,34 @@ partial class UserControl_TheLoai
         groupBox2.Size = new System.Drawing.Size(263, 628);
         groupBox2.TabIndex = 1;
         groupBox2.TabStop = false;
-        groupBox2.Text = "Thông tin thể loại";
+        groupBox2.Text = "Thông tin series";
         // 
-        // textBox3
+        // txtTenSR
         // 
-        textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox3.Location = new System.Drawing.Point(89, 71);
-        textBox3.Name = "textBox3";
-        textBox3.Size = new System.Drawing.Size(149, 27);
-        textBox3.TabIndex = 11;
+        txtTenSR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtTenSR.Location = new System.Drawing.Point(89, 71);
+        txtTenSR.Name = "txtTenSR";
+        txtTenSR.Size = new System.Drawing.Size(149, 27);
+        txtTenSR.TabIndex = 11;
         // 
-        // textBox4
+        // txtMaSR
         // 
-        textBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox4.Location = new System.Drawing.Point(89, 37);
-        textBox4.Name = "textBox4";
-        textBox4.Size = new System.Drawing.Size(149, 27);
-        textBox4.TabIndex = 12;
+        txtMaSR.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtMaSR.Location = new System.Drawing.Point(89, 37);
+        txtMaSR.Name = "txtMaSR";
+        txtMaSR.Size = new System.Drawing.Size(149, 27);
+        txtMaSR.TabIndex = 12;
         // 
         // groupBox5
         // 
         groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-        groupBox5.Controls.Add(button7);
-        groupBox5.Controls.Add(button6);
-        groupBox5.Controls.Add(button5);
-        groupBox5.Controls.Add(button4);
-        groupBox5.Controls.Add(button3);
+        groupBox5.Controls.Add(btnExcel);
+        groupBox5.Controls.Add(btnReload);
+        groupBox5.Controls.Add(btnXoa);
+        groupBox5.Controls.Add(btnBoQua);
+        groupBox5.Controls.Add(btnSua);
         groupBox5.Controls.Add(btnLuu);
-        groupBox5.Controls.Add(button1);
+        groupBox5.Controls.Add(btnThem);
         groupBox5.Location = new System.Drawing.Point(3, 337);
         groupBox5.Name = "groupBox5";
         groupBox5.Size = new System.Drawing.Size(241, 287);
@@ -132,57 +132,57 @@ partial class UserControl_TheLoai
         groupBox5.TabStop = false;
         groupBox5.Text = "Công cụ";
         // 
-        // button7
+        // btnExcel
         // 
-        button7.BackColor = System.Drawing.Color.SeaGreen;
-        button7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button7.ForeColor = System.Drawing.Color.Transparent;
-        button7.Location = new System.Drawing.Point(151, 196);
-        button7.Name = "button7";
-        button7.Size = new System.Drawing.Size(68, 33);
-        button7.TabIndex = 6;
-        button7.Text = "Excel";
-        button7.UseVisualStyleBackColor = false;
+        btnExcel.BackColor = System.Drawing.Color.SeaGreen;
+        btnExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnExcel.ForeColor = System.Drawing.Color.Transparent;
+        btnExcel.Location = new System.Drawing.Point(151, 196);
+        btnExcel.Name = "btnExcel";
+        btnExcel.Size = new System.Drawing.Size(68, 33);
+        btnExcel.TabIndex = 6;
+        btnExcel.Text = "Excel";
+        btnExcel.UseVisualStyleBackColor = false;
         // 
-        // button6
+        // btnReload
         // 
-        button6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button6.Location = new System.Drawing.Point(151, 146);
-        button6.Name = "button6";
-        button6.Size = new System.Drawing.Size(68, 33);
-        button6.TabIndex = 5;
-        button6.Text = "Reload";
-        button6.UseVisualStyleBackColor = true;
+        btnReload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnReload.Location = new System.Drawing.Point(151, 146);
+        btnReload.Name = "btnReload";
+        btnReload.Size = new System.Drawing.Size(68, 33);
+        btnReload.TabIndex = 5;
+        btnReload.Text = "Reload";
+        btnReload.UseVisualStyleBackColor = true;
         // 
-        // button5
+        // btnXoa
         // 
-        button5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button5.Location = new System.Drawing.Point(25, 146);
-        button5.Name = "button5";
-        button5.Size = new System.Drawing.Size(68, 33);
-        button5.TabIndex = 4;
-        button5.Text = "Xóa";
-        button5.UseVisualStyleBackColor = true;
+        btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnXoa.Location = new System.Drawing.Point(25, 146);
+        btnXoa.Name = "btnXoa";
+        btnXoa.Size = new System.Drawing.Size(68, 33);
+        btnXoa.TabIndex = 4;
+        btnXoa.Text = "Xóa";
+        btnXoa.UseVisualStyleBackColor = true;
         // 
-        // button4
+        // btnBoQua
         // 
-        button4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button4.Location = new System.Drawing.Point(151, 96);
-        button4.Name = "button4";
-        button4.Size = new System.Drawing.Size(68, 33);
-        button4.TabIndex = 3;
-        button4.Text = "Bỏ qua";
-        button4.UseVisualStyleBackColor = true;
+        btnBoQua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnBoQua.Location = new System.Drawing.Point(151, 96);
+        btnBoQua.Name = "btnBoQua";
+        btnBoQua.Size = new System.Drawing.Size(68, 33);
+        btnBoQua.TabIndex = 3;
+        btnBoQua.Text = "Bỏ qua";
+        btnBoQua.UseVisualStyleBackColor = true;
         // 
-        // button3
+        // btnSua
         // 
-        button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button3.Location = new System.Drawing.Point(25, 96);
-        button3.Name = "button3";
-        button3.Size = new System.Drawing.Size(68, 33);
-        button3.TabIndex = 2;
-        button3.Text = "Sửa";
-        button3.UseVisualStyleBackColor = true;
+        btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnSua.Location = new System.Drawing.Point(25, 96);
+        btnSua.Name = "btnSua";
+        btnSua.Size = new System.Drawing.Size(68, 33);
+        btnSua.TabIndex = 2;
+        btnSua.Text = "Sửa";
+        btnSua.UseVisualStyleBackColor = true;
         // 
         // btnLuu
         // 
@@ -194,15 +194,15 @@ partial class UserControl_TheLoai
         btnLuu.Text = "Lưu";
         btnLuu.UseVisualStyleBackColor = true;
         // 
-        // button1
+        // btnThem
         // 
-        button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button1.Location = new System.Drawing.Point(25, 45);
-        button1.Name = "button1";
-        button1.Size = new System.Drawing.Size(68, 33);
-        button1.TabIndex = 0;
-        button1.Text = "Thêm";
-        button1.UseVisualStyleBackColor = true;
+        btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnThem.Location = new System.Drawing.Point(25, 45);
+        btnThem.Name = "btnThem";
+        btnThem.Size = new System.Drawing.Size(68, 33);
+        btnThem.TabIndex = 0;
+        btnThem.Text = "Thêm";
+        btnThem.UseVisualStyleBackColor = true;
         // 
         // label3
         // 
@@ -211,7 +211,7 @@ partial class UserControl_TheLoai
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(77, 25);
         label3.TabIndex = 2;
-        label3.Text = "Thể loại:";
+        label3.Text = "Tên series:";
         // 
         // label2
         // 
@@ -220,7 +220,7 @@ partial class UserControl_TheLoai
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(77, 25);
         label2.TabIndex = 1;
-        label2.Text = "ID:";
+        label2.Text = "Mã series:";
         // 
         // splitter1
         // 
@@ -234,7 +234,7 @@ partial class UserControl_TheLoai
         // 
         // groupBox3
         // 
-        groupBox3.Controls.Add(dataGridView1);
+        groupBox3.Controls.Add(dgvSR);
         groupBox3.Controls.Add(groupBox6);
         groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
         groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
@@ -243,22 +243,22 @@ partial class UserControl_TheLoai
         groupBox3.Size = new System.Drawing.Size(758, 628);
         groupBox3.TabIndex = 2;
         groupBox3.TabStop = false;
-        groupBox3.Text = "Tìm kiếm thể loại";
+        groupBox3.Text = "Tìm kiếm series";
         // 
-        // dataGridView1
+        // dgvSR
         // 
-        dataGridView1.ColumnHeadersHeight = 29;
-        dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-        dataGridView1.Location = new System.Drawing.Point(3, 128);
-        dataGridView1.Name = "dataGridView1";
-        dataGridView1.RowHeadersWidth = 51;
-        dataGridView1.Size = new System.Drawing.Size(752, 497);
-        dataGridView1.TabIndex = 1;
+        dgvSR.ColumnHeadersHeight = 29;
+        dgvSR.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvSR.Location = new System.Drawing.Point(3, 128);
+        dgvSR.Name = "dgvSR";
+        dgvSR.RowHeadersWidth = 51;
+        dgvSR.Size = new System.Drawing.Size(752, 497);
+        dgvSR.TabIndex = 1;
         // 
         // groupBox6
         // 
-        groupBox6.Controls.Add(button8);
-        groupBox6.Controls.Add(textBox1);
+        groupBox6.Controls.Add(btnTimKiem);
+        groupBox6.Controls.Add(txtTimKiem);
         groupBox6.Controls.Add(label9);
         groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
         groupBox6.Location = new System.Drawing.Point(3, 26);
@@ -267,35 +267,35 @@ partial class UserControl_TheLoai
         groupBox6.TabIndex = 0;
         groupBox6.TabStop = false;
         // 
-        // button8
+        // btnTimKiem
         // 
-        button8.BackColor = System.Drawing.Color.SteelBlue;
-        button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button8.ForeColor = System.Drawing.Color.White;
-        button8.Location = new System.Drawing.Point(561, 44);
-        button8.Name = "button8";
-        button8.Size = new System.Drawing.Size(96, 29);
-        button8.TabIndex = 2;
-        button8.Text = "Tìm kiếm";
-        button8.UseVisualStyleBackColor = false;
+        btnTimKiem.BackColor = System.Drawing.Color.SteelBlue;
+        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.ForeColor = System.Drawing.Color.White;
+        btnTimKiem.Location = new System.Drawing.Point(561, 44);
+        btnTimKiem.Name = "btnTimKiem";
+        btnTimKiem.Size = new System.Drawing.Size(96, 29);
+        btnTimKiem.TabIndex = 2;
+        btnTimKiem.Text = "Tìm kiếm";
+        btnTimKiem.UseVisualStyleBackColor = false;
         // 
-        // textBox1
+        // txtTimKiem
         // 
-        textBox1.Location = new System.Drawing.Point(253, 43);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(286, 30);
-        textBox1.TabIndex = 1;
+        txtTimKiem.Location = new System.Drawing.Point(253, 43);
+        txtTimKiem.Name = "txtTimKiem";
+        txtTimKiem.Size = new System.Drawing.Size(286, 30);
+        txtTimKiem.TabIndex = 1;
         // 
         // label9
         // 
         label9.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label9.Location = new System.Drawing.Point(77, 46);
+        label9.Location = new System.Drawing.Point(108, 44);
         label9.Name = "label9";
-        label9.Size = new System.Drawing.Size(159, 24);
+        label9.Size = new System.Drawing.Size(139, 24);
         label9.TabIndex = 0;
-        label9.Text = "Tên/ID thể loại:";
+        label9.Text = "Tên/Mã series:";
         // 
-        // UserControl_TheLoai
+        // UserControl_Series
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,26 +308,26 @@ partial class UserControl_TheLoai
         groupBox2.PerformLayout();
         groupBox5.ResumeLayout(false);
         groupBox3.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvSR).EndInit();
         groupBox6.ResumeLayout(false);
         groupBox6.PerformLayout();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.Button button8;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox txtTenSR;
+    private System.Windows.Forms.TextBox txtMaSR;
+    private System.Windows.Forms.Button btnTimKiem;
+    private System.Windows.Forms.TextBox txtTimKiem;
     private System.Windows.Forms.Label label9;
-    private System.Windows.Forms.DataGridView dataGridView1;
+    private System.Windows.Forms.DataGridView dgvSR;
     private System.Windows.Forms.GroupBox groupBox6;
-    private System.Windows.Forms.Button button7;
-    private System.Windows.Forms.Button button6;
-    private System.Windows.Forms.Button button5;
-    private System.Windows.Forms.Button button4;
-    private System.Windows.Forms.Button button3;
+    private System.Windows.Forms.Button btnExcel;
+    private System.Windows.Forms.Button btnReload;
+    private System.Windows.Forms.Button btnXoa;
+    private System.Windows.Forms.Button btnBoQua;
+    private System.Windows.Forms.Button btnSua;
     private System.Windows.Forms.Button btnLuu;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnThem;
     private System.Windows.Forms.GroupBox groupBox5;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label2;

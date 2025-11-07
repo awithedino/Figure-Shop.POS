@@ -59,6 +59,9 @@
       <Compile Update="Done\UserControl_TraCuuHoaDon.cs">
         <SubType>UserControl</SubType>
       </Compile>
+      <Compile Update="UserControl\Management\UserControl_SanPham.cs">
+        <SubType>UserControl</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>

@@ -6,7 +6,4 @@ public partial class UserControl_BanHang : UserControl
     {
         InitializeComponent();
     }
-
-
-    
 }

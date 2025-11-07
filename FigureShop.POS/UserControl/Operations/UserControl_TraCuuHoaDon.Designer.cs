@@ -73,7 +73,7 @@ namespace FigureShop.POS
             // btnHienThiChiTiet
             // 
             btnHienThiChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            btnHienThiChiTiet.Location = new System.Drawing.Point(595, 164);
+            btnHienThiChiTiet.Location = new System.Drawing.Point(596, 150);
             btnHienThiChiTiet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnHienThiChiTiet.Name = "btnHienThiChiTiet";
             btnHienThiChiTiet.Size = new System.Drawing.Size(178, 80);
@@ -109,7 +109,7 @@ namespace FigureShop.POS
             txtMaKhachHang.Location = new System.Drawing.Point(200, 177);
             txtMaKhachHang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtMaKhachHang.Name = "txtMaKhachHang";
-            txtMaKhachHang.Size = new System.Drawing.Size(164, 30);
+            txtMaKhachHang.Size = new System.Drawing.Size(164, 26);
             txtMaKhachHang.TabIndex = 5;
             // 
             // lblMaKhachHang
@@ -119,7 +119,7 @@ namespace FigureShop.POS
             lblMaKhachHang.Location = new System.Drawing.Point(28, 177);
             lblMaKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaKhachHang.Name = "lblMaKhachHang";
-            lblMaKhachHang.Size = new System.Drawing.Size(154, 25);
+            lblMaKhachHang.Size = new System.Drawing.Size(129, 20);
             lblMaKhachHang.TabIndex = 4;
             lblMaKhachHang.Text = "Mã Khách Hàng";
             // 
@@ -129,7 +129,7 @@ namespace FigureShop.POS
             txtMaNhanVien.Location = new System.Drawing.Point(200, 108);
             txtMaNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtMaNhanVien.Name = "txtMaNhanVien";
-            txtMaNhanVien.Size = new System.Drawing.Size(164, 30);
+            txtMaNhanVien.Size = new System.Drawing.Size(164, 26);
             txtMaNhanVien.TabIndex = 3;
             // 
             // lblMaNhanVien
@@ -139,7 +139,7 @@ namespace FigureShop.POS
             lblMaNhanVien.Location = new System.Drawing.Point(28, 108);
             lblMaNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaNhanVien.Name = "lblMaNhanVien";
-            lblMaNhanVien.Size = new System.Drawing.Size(137, 25);
+            lblMaNhanVien.Size = new System.Drawing.Size(114, 20);
             lblMaNhanVien.TabIndex = 2;
             lblMaNhanVien.Text = "Mã Nhân Viên";
             // 
@@ -149,7 +149,7 @@ namespace FigureShop.POS
             txtMaSanPham.Location = new System.Drawing.Point(200, 38);
             txtMaSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtMaSanPham.Name = "txtMaSanPham";
-            txtMaSanPham.Size = new System.Drawing.Size(164, 30);
+            txtMaSanPham.Size = new System.Drawing.Size(164, 26);
             txtMaSanPham.TabIndex = 1;
             // 
             // lblMaSanPham
@@ -159,7 +159,7 @@ namespace FigureShop.POS
             lblMaSanPham.Location = new System.Drawing.Point(28, 38);
             lblMaSanPham.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaSanPham.Name = "lblMaSanPham";
-            lblMaSanPham.Size = new System.Drawing.Size(137, 25);
+            lblMaSanPham.Size = new System.Drawing.Size(114, 20);
             lblMaSanPham.TabIndex = 0;
             lblMaSanPham.Text = "Mã Sản Phẩm";
             // 
@@ -201,7 +201,7 @@ namespace FigureShop.POS
             colTongTien.MinimumWidth = 6;
             colTongTien.Name = "colTongTien";
             colTongTien.ReadOnly = true;
-            colTongTien.Width = 273;
+            colTongTien.Width = 274;
             // 
             // colMaNV
             // 
@@ -217,11 +217,11 @@ namespace FigureShop.POS
             colMaKhach.MinimumWidth = 6;
             colMaKhach.Name = "colMaKhach";
             colMaKhach.ReadOnly = true;
-            colMaKhach.Width = 274;
+            colMaKhach.Width = 273;
             // 
             // UserControl_TraCuuHoaDon
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.ControlLight;
             Controls.Add(dgvHoaDon);

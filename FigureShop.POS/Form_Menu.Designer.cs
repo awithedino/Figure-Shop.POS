@@ -34,18 +34,13 @@ partial class Form_Menu
         panel1 = new System.Windows.Forms.Panel();
         flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
         btnBanHang = new System.Windows.Forms.Button();
-        btnSanPham = new System.Windows.Forms.Button();
         btnNhanVien = new System.Windows.Forms.Button();
-        btnKhachhang = new System.Windows.Forms.Button();
+        btnSanPham = new System.Windows.Forms.Button();
+        btnKhachHang = new System.Windows.Forms.Button();
         btnNhapHang = new System.Windows.Forms.Button();
-        btnNcc = new System.Windows.Forms.Button();
+        btnHang = new System.Windows.Forms.Button();
         btnCongViec = new System.Windows.Forms.Button();
         btnTheLoai = new System.Windows.Forms.Button();
-        btnTyLe = new System.Windows.Forms.Button();
-        btnChatLieu = new System.Windows.Forms.Button();
-        btnSeries = new System.Windows.Forms.Button();
-        btnDoiTuong = new System.Windows.Forms.Button();
-        btnNoiSX = new System.Windows.Forms.Button();
         pictureBox1 = new System.Windows.Forms.PictureBox();
         panel2 = new System.Windows.Forms.Panel();
         label1 = new System.Windows.Forms.Label();
@@ -54,6 +49,8 @@ partial class Form_Menu
         label4 = new System.Windows.Forms.Label();
         label3 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
+        panelMainContent = new System.Windows.Forms.Panel();
+        btnHoaDon = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         flowLayoutPanel1.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -76,18 +73,14 @@ partial class Form_Menu
         // flowLayoutPanel1
         // 
         flowLayoutPanel1.Controls.Add(btnBanHang);
-        flowLayoutPanel1.Controls.Add(btnSanPham);
         flowLayoutPanel1.Controls.Add(btnNhanVien);
-        flowLayoutPanel1.Controls.Add(btnKhachhang);
+        flowLayoutPanel1.Controls.Add(btnSanPham);
+        flowLayoutPanel1.Controls.Add(btnKhachHang);
         flowLayoutPanel1.Controls.Add(btnNhapHang);
-        flowLayoutPanel1.Controls.Add(btnNcc);
+        flowLayoutPanel1.Controls.Add(btnHang);
         flowLayoutPanel1.Controls.Add(btnCongViec);
         flowLayoutPanel1.Controls.Add(btnTheLoai);
-        flowLayoutPanel1.Controls.Add(btnTyLe);
-        flowLayoutPanel1.Controls.Add(btnChatLieu);
-        flowLayoutPanel1.Controls.Add(btnSeries);
-        flowLayoutPanel1.Controls.Add(btnDoiTuong);
-        flowLayoutPanel1.Controls.Add(btnNoiSX);
+        flowLayoutPanel1.Controls.Add(btnHoaDon);
         flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
         flowLayoutPanel1.ForeColor = System.Drawing.Color.Black;
         flowLayoutPanel1.Location = new System.Drawing.Point(0, 152);
@@ -104,33 +97,37 @@ partial class Form_Menu
         btnBanHang.TabIndex = 0;
         btnBanHang.Text = "Bán Hàng";
         btnBanHang.UseVisualStyleBackColor = true;
-        // 
-        // btnSanPham
-        // 
-        btnSanPham.Location = new System.Drawing.Point(3, 59);
-        btnSanPham.Name = "btnSanPham";
-        btnSanPham.Size = new System.Drawing.Size(145, 50);
-        btnSanPham.TabIndex = 1;
-        btnSanPham.Text = "Sản Phẩm";
-        btnSanPham.UseVisualStyleBackColor = true;
+        btnBanHang.Click += btnBanHang_Click;
         // 
         // btnNhanVien
         // 
-        btnNhanVien.Location = new System.Drawing.Point(3, 115);
+        btnNhanVien.Location = new System.Drawing.Point(3, 59);
         btnNhanVien.Name = "btnNhanVien";
         btnNhanVien.Size = new System.Drawing.Size(145, 50);
         btnNhanVien.TabIndex = 2;
         btnNhanVien.Text = "Nhân Viên";
         btnNhanVien.UseVisualStyleBackColor = true;
+        btnNhanVien.Click += btnNhanVien_Click;
         // 
-        // btnKhachhang
+        // btnSanPham
         // 
-        btnKhachhang.Location = new System.Drawing.Point(3, 171);
-        btnKhachhang.Name = "btnKhachhang";
-        btnKhachhang.Size = new System.Drawing.Size(145, 50);
-        btnKhachhang.TabIndex = 3;
-        btnKhachhang.Text = "Khách Hàng";
-        btnKhachhang.UseVisualStyleBackColor = true;
+        btnSanPham.Location = new System.Drawing.Point(3, 115);
+        btnSanPham.Name = "btnSanPham";
+        btnSanPham.Size = new System.Drawing.Size(145, 50);
+        btnSanPham.TabIndex = 10;
+        btnSanPham.Text = "Sản Phẩm";
+        btnSanPham.UseVisualStyleBackColor = true;
+        btnSanPham.Click += btnSanPham_Click;
+        // 
+        // btnKhachHang
+        // 
+        btnKhachHang.Location = new System.Drawing.Point(3, 171);
+        btnKhachHang.Name = "btnKhachHang";
+        btnKhachHang.Size = new System.Drawing.Size(145, 50);
+        btnKhachHang.TabIndex = 3;
+        btnKhachHang.Text = "Khách Hàng";
+        btnKhachHang.UseVisualStyleBackColor = true;
+        btnKhachHang.Click += btnKhachHang_Click;
         // 
         // btnNhapHang
         // 
@@ -140,15 +137,17 @@ partial class Form_Menu
         btnNhapHang.TabIndex = 4;
         btnNhapHang.Text = "Nhập Hàng";
         btnNhapHang.UseVisualStyleBackColor = true;
+        btnNhapHang.Click += btnNhapHang_Click;
         // 
-        // btnNcc
+        // btnHang
         // 
-        btnNcc.Location = new System.Drawing.Point(3, 283);
-        btnNcc.Name = "btnNcc";
-        btnNcc.Size = new System.Drawing.Size(145, 50);
-        btnNcc.TabIndex = 5;
-        btnNcc.Text = "Nhà Cung Cấp";
-        btnNcc.UseVisualStyleBackColor = true;
+        btnHang.Location = new System.Drawing.Point(3, 283);
+        btnHang.Name = "btnHang";
+        btnHang.Size = new System.Drawing.Size(145, 50);
+        btnHang.TabIndex = 5;
+        btnHang.Text = "Hãng";
+        btnHang.UseVisualStyleBackColor = true;
+        btnHang.Click += btnHang_Click;
         // 
         // btnCongViec
         // 
@@ -158,6 +157,7 @@ partial class Form_Menu
         btnCongViec.TabIndex = 6;
         btnCongViec.Text = "Công Việc";
         btnCongViec.UseVisualStyleBackColor = true;
+        btnCongViec.Click += btnCongViec_Click;
         // 
         // btnTheLoai
         // 
@@ -167,51 +167,7 @@ partial class Form_Menu
         btnTheLoai.TabIndex = 7;
         btnTheLoai.Text = "Thể Loại";
         btnTheLoai.UseVisualStyleBackColor = true;
-        // 
-        // btnTyLe
-        // 
-        btnTyLe.Location = new System.Drawing.Point(3, 451);
-        btnTyLe.Name = "btnTyLe";
-        btnTyLe.Size = new System.Drawing.Size(145, 50);
-        btnTyLe.TabIndex = 8;
-        btnTyLe.Text = "Tỷ Lệ";
-        btnTyLe.UseVisualStyleBackColor = true;
-        // 
-        // btnChatLieu
-        // 
-        btnChatLieu.Location = new System.Drawing.Point(3, 507);
-        btnChatLieu.Name = "btnChatLieu";
-        btnChatLieu.Size = new System.Drawing.Size(145, 50);
-        btnChatLieu.TabIndex = 9;
-        btnChatLieu.Text = "Chất Liệu";
-        btnChatLieu.UseVisualStyleBackColor = true;
-        // 
-        // btnSeries
-        // 
-        btnSeries.Location = new System.Drawing.Point(3, 563);
-        btnSeries.Name = "btnSeries";
-        btnSeries.Size = new System.Drawing.Size(145, 50);
-        btnSeries.TabIndex = 10;
-        btnSeries.Text = "Series";
-        btnSeries.UseVisualStyleBackColor = true;
-        // 
-        // btnDoiTuong
-        // 
-        btnDoiTuong.Location = new System.Drawing.Point(3, 619);
-        btnDoiTuong.Name = "btnDoiTuong";
-        btnDoiTuong.Size = new System.Drawing.Size(145, 50);
-        btnDoiTuong.TabIndex = 11;
-        btnDoiTuong.Text = "Đối Tượng";
-        btnDoiTuong.UseVisualStyleBackColor = true;
-        // 
-        // btnNoiSX
-        // 
-        btnNoiSX.Location = new System.Drawing.Point(3, 675);
-        btnNoiSX.Name = "btnNoiSX";
-        btnNoiSX.Size = new System.Drawing.Size(145, 50);
-        btnNoiSX.TabIndex = 12;
-        btnNoiSX.Text = "Nơi Sản Xuất";
-        btnNoiSX.UseVisualStyleBackColor = true;
+        btnTheLoai.Click += btnTheLoai_Click;
         // 
         // pictureBox1
         // 
@@ -236,12 +192,13 @@ partial class Form_Menu
         // 
         // label1
         // 
-        label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(330, 19);
+        label1.Font = new System.Drawing.Font("Segoe UI", 19.800001F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(524, 18);
         label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(168, 54);
+        label1.Size = new System.Drawing.Size(294, 54);
         label1.TabIndex = 0;
-        label1.Text = "<TEXT>";
+        label1.Text = "<text>";
+        label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
         // 
         // panel3
         // 
@@ -259,6 +216,7 @@ partial class Form_Menu
         // 
         // dateTimePicker1
         // 
+        dateTimePicker1.Enabled = false;
         dateTimePicker1.Location = new System.Drawing.Point(995, 0);
         dateTimePicker1.Name = "dateTimePicker1";
         dateTimePicker1.Size = new System.Drawing.Size(311, 27);
@@ -288,11 +246,29 @@ partial class Form_Menu
         label2.TabIndex = 0;
         label2.Text = "Xin chào: <text>";
         // 
+        // panelMainContent
+        // 
+        panelMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
+        panelMainContent.Location = new System.Drawing.Point(152, 152);
+        panelMainContent.Name = "panelMainContent";
+        panelMainContent.Size = new System.Drawing.Size(1306, 742);
+        panelMainContent.TabIndex = 3;
+        // 
+        // btnHoaDon
+        // 
+        btnHoaDon.Location = new System.Drawing.Point(3, 451);
+        btnHoaDon.Name = "btnHoaDon";
+        btnHoaDon.Size = new System.Drawing.Size(145, 50);
+        btnHoaDon.TabIndex = 11;
+        btnHoaDon.Text = "Hóa Đơn";
+        btnHoaDon.UseVisualStyleBackColor = true;
+        // 
         // Form_Menu
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(1458, 894);
+        Controls.Add(panelMainContent);
         Controls.Add(panel3);
         Controls.Add(panel2);
         Controls.Add(panel1);
@@ -306,32 +282,28 @@ partial class Form_Menu
         ResumeLayout(false);
     }
 
+    private System.Windows.Forms.Button btnHoaDon;
+
+    private System.Windows.Forms.Panel panelMainContent;
+
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
-    private System.Windows.Forms.Button btnDoiTuong;
-    private System.Windows.Forms.Button btnNoiSX;
-
-    private System.Windows.Forms.Button btnSeries;
-
-    private System.Windows.Forms.Button btnChatLieu;
+    private System.Windows.Forms.Button btnSanPham;
 
     private System.Windows.Forms.Button btnTheLoai;
-    private System.Windows.Forms.Button btnTyLe;
 
     private System.Windows.Forms.Button btnCongViec;
 
     private System.Windows.Forms.Button btnNhapHang;
-    private System.Windows.Forms.Button btnNcc;
+    private System.Windows.Forms.Button btnHang;
 
-    private System.Windows.Forms.Button btnKhachhang;
+    private System.Windows.Forms.Button btnKhachHang;
 
     private System.Windows.Forms.Button btnNhanVien;
-
-    private System.Windows.Forms.Button btnSanPham;
 
     private System.Windows.Forms.Button btnBanHang;
 
