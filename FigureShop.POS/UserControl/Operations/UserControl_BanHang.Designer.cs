@@ -128,7 +128,7 @@ namespace FigureShop.POS
             lblTienThua.Location = new System.Drawing.Point(38, 760);
             lblTienThua.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTienThua.Name = "lblTienThua";
-            lblTienThua.Size = new System.Drawing.Size(185, 25);
+            lblTienThua.Size = new System.Drawing.Size(157, 20);
             lblTienThua.TabIndex = 21;
             lblTienThua.Text = "Tiền thừa trả khách:";
             // 
@@ -138,7 +138,7 @@ namespace FigureShop.POS
             txtKhachThanhToan.Location = new System.Drawing.Point(432, 683);
             txtKhachThanhToan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtKhachThanhToan.Name = "txtKhachThanhToan";
-            txtKhachThanhToan.Size = new System.Drawing.Size(164, 30);
+            txtKhachThanhToan.Size = new System.Drawing.Size(164, 26);
             txtKhachThanhToan.TabIndex = 20;
             txtKhachThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -149,7 +149,7 @@ namespace FigureShop.POS
             lblKhachThanhToan.Location = new System.Drawing.Point(38, 688);
             lblKhachThanhToan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblKhachThanhToan.Name = "lblKhachThanhToan";
-            lblKhachThanhToan.Size = new System.Drawing.Size(172, 25);
+            lblKhachThanhToan.Size = new System.Drawing.Size(144, 20);
             lblKhachThanhToan.TabIndex = 19;
             lblKhachThanhToan.Text = "Khách thanh toán:";
             // 
@@ -172,7 +172,7 @@ namespace FigureShop.POS
             lblTongCong.Location = new System.Drawing.Point(37, 613);
             lblTongCong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTongCong.Name = "lblTongCong";
-            lblTongCong.Size = new System.Drawing.Size(145, 29);
+            lblTongCong.Size = new System.Drawing.Size(122, 25);
             lblTongCong.TabIndex = 17;
             lblTongCong.Text = "Tổng cộng:";
             // 
@@ -248,7 +248,7 @@ namespace FigureShop.POS
             lblThanhTien.Location = new System.Drawing.Point(38, 369);
             lblThanhTien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblThanhTien.Name = "lblThanhTien";
-            lblThanhTien.Size = new System.Drawing.Size(96, 22);
+            lblThanhTien.Size = new System.Drawing.Size(76, 18);
             lblThanhTien.TabIndex = 11;
             lblThanhTien.Text = "Thành tiền";
             // 
@@ -268,7 +268,7 @@ namespace FigureShop.POS
             lblGiamGia.Location = new System.Drawing.Point(38, 310);
             lblGiamGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiamGia.Name = "lblGiamGia";
-            lblGiamGia.Size = new System.Drawing.Size(81, 22);
+            lblGiamGia.Size = new System.Drawing.Size(67, 18);
             lblGiamGia.TabIndex = 9;
             lblGiamGia.Text = "Giảm giá";
             // 
@@ -288,7 +288,7 @@ namespace FigureShop.POS
             lblDonGia.Location = new System.Drawing.Point(308, 252);
             lblDonGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblDonGia.Name = "lblDonGia";
-            lblDonGia.Size = new System.Drawing.Size(72, 22);
+            lblDonGia.Size = new System.Drawing.Size(59, 18);
             lblDonGia.TabIndex = 7;
             lblDonGia.Text = "Đơn giá";
             // 
@@ -297,7 +297,7 @@ namespace FigureShop.POS
             numSoLuong.Location = new System.Drawing.Point(142, 250);
             numSoLuong.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             numSoLuong.Name = "numSoLuong";
-            numSoLuong.Size = new System.Drawing.Size(127, 28);
+            numSoLuong.Size = new System.Drawing.Size(127, 24);
             numSoLuong.TabIndex = 6;
             // 
             // lblSoLuong
@@ -306,7 +306,7 @@ namespace FigureShop.POS
             lblSoLuong.Location = new System.Drawing.Point(38, 252);
             lblSoLuong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblSoLuong.Name = "lblSoLuong";
-            lblSoLuong.Size = new System.Drawing.Size(81, 22);
+            lblSoLuong.Size = new System.Drawing.Size(67, 18);
             lblSoLuong.TabIndex = 5;
             lblSoLuong.Text = "Số lượng";
             // 
@@ -316,7 +316,7 @@ namespace FigureShop.POS
             txtTenSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtTenSanPham.Name = "txtTenSanPham";
             txtTenSanPham.ReadOnly = true;
-            txtTenSanPham.Size = new System.Drawing.Size(393, 28);
+            txtTenSanPham.Size = new System.Drawing.Size(393, 24);
             txtTenSanPham.TabIndex = 4;
             // 
             // lblTenSanPham
@@ -325,7 +325,7 @@ namespace FigureShop.POS
             lblTenSanPham.Location = new System.Drawing.Point(33, 150);
             lblTenSanPham.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTenSanPham.Name = "lblTenSanPham";
-            lblTenSanPham.Size = new System.Drawing.Size(130, 22);
+            lblTenSanPham.Size = new System.Drawing.Size(106, 18);
             lblTenSanPham.TabIndex = 3;
             lblTenSanPham.Text = "Tên Sản Phẩm";
             // 
@@ -335,7 +335,7 @@ namespace FigureShop.POS
             cboMaSanPham.Location = new System.Drawing.Point(185, 62);
             cboMaSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboMaSanPham.Name = "cboMaSanPham";
-            cboMaSanPham.Size = new System.Drawing.Size(393, 30);
+            cboMaSanPham.Size = new System.Drawing.Size(393, 26);
             cboMaSanPham.TabIndex = 1;
             // 
             // lblMaSanPham
@@ -344,7 +344,7 @@ namespace FigureShop.POS
             lblMaSanPham.Location = new System.Drawing.Point(33, 67);
             lblMaSanPham.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaSanPham.Name = "lblMaSanPham";
-            lblMaSanPham.Size = new System.Drawing.Size(122, 22);
+            lblMaSanPham.Size = new System.Drawing.Size(102, 18);
             lblMaSanPham.TabIndex = 0;
             lblMaSanPham.Text = "Mã Sản Phẩm";
             // 
@@ -379,7 +379,7 @@ namespace FigureShop.POS
             txtTenNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtTenNhanVien.Name = "txtTenNhanVien";
             txtTenNhanVien.ReadOnly = true;
-            txtTenNhanVien.Size = new System.Drawing.Size(244, 28);
+            txtTenNhanVien.Size = new System.Drawing.Size(244, 24);
             txtTenNhanVien.TabIndex = 10;
             // 
             // lblTenNhanVien
@@ -388,7 +388,7 @@ namespace FigureShop.POS
             lblTenNhanVien.Location = new System.Drawing.Point(419, 229);
             lblTenNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTenNhanVien.Name = "lblTenNhanVien";
-            lblTenNhanVien.Size = new System.Drawing.Size(131, 22);
+            lblTenNhanVien.Size = new System.Drawing.Size(104, 18);
             lblTenNhanVien.TabIndex = 9;
             lblTenNhanVien.Text = "Tên Nhân Viên";
             // 
@@ -411,7 +411,7 @@ namespace FigureShop.POS
             cboKhachHang.Location = new System.Drawing.Point(580, 148);
             cboKhachHang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboKhachHang.Name = "cboKhachHang";
-            cboKhachHang.Size = new System.Drawing.Size(191, 30);
+            cboKhachHang.Size = new System.Drawing.Size(191, 26);
             cboKhachHang.TabIndex = 7;
             // 
             // lblKhachHang
@@ -420,7 +420,7 @@ namespace FigureShop.POS
             lblKhachHang.Location = new System.Drawing.Point(428, 150);
             lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblKhachHang.Name = "lblKhachHang";
-            lblKhachHang.Size = new System.Drawing.Size(106, 22);
+            lblKhachHang.Size = new System.Drawing.Size(86, 18);
             lblKhachHang.TabIndex = 6;
             lblKhachHang.Text = "Khách hàng";
             // 
@@ -430,7 +430,7 @@ namespace FigureShop.POS
             cboMaNhanVien.Location = new System.Drawing.Point(147, 226);
             cboMaNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboMaNhanVien.Name = "cboMaNhanVien";
-            cboMaNhanVien.Size = new System.Drawing.Size(247, 30);
+            cboMaNhanVien.Size = new System.Drawing.Size(247, 26);
             cboMaNhanVien.TabIndex = 5;
             // 
             // lblMaNhanVien
@@ -439,7 +439,7 @@ namespace FigureShop.POS
             lblMaNhanVien.Location = new System.Drawing.Point(10, 229);
             lblMaNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaNhanVien.Name = "lblMaNhanVien";
-            lblMaNhanVien.Size = new System.Drawing.Size(123, 22);
+            lblMaNhanVien.Size = new System.Drawing.Size(100, 18);
             lblMaNhanVien.TabIndex = 4;
             lblMaNhanVien.Text = "Mã Nhân Viên";
             // 
@@ -449,7 +449,7 @@ namespace FigureShop.POS
             dtpNgayBan.Location = new System.Drawing.Point(147, 146);
             dtpNgayBan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             dtpNgayBan.Name = "dtpNgayBan";
-            dtpNgayBan.Size = new System.Drawing.Size(247, 28);
+            dtpNgayBan.Size = new System.Drawing.Size(247, 24);
             dtpNgayBan.TabIndex = 3;
             // 
             // lblNgayBan
@@ -458,7 +458,7 @@ namespace FigureShop.POS
             lblNgayBan.Location = new System.Drawing.Point(14, 150);
             lblNgayBan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblNgayBan.Name = "lblNgayBan";
-            lblNgayBan.Size = new System.Drawing.Size(87, 22);
+            lblNgayBan.Size = new System.Drawing.Size(70, 18);
             lblNgayBan.TabIndex = 2;
             lblNgayBan.Text = "Ngày bán";
             // 
@@ -468,7 +468,7 @@ namespace FigureShop.POS
             txtMaHoaDon.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtMaHoaDon.Name = "txtMaHoaDon";
             txtMaHoaDon.ReadOnly = true;
-            txtMaHoaDon.Size = new System.Drawing.Size(247, 28);
+            txtMaHoaDon.Size = new System.Drawing.Size(247, 24);
             txtMaHoaDon.TabIndex = 1;
             txtMaHoaDon.Text = "HDB171120220007";
             // 
@@ -478,7 +478,7 @@ namespace FigureShop.POS
             lblMaHoaDon.Location = new System.Drawing.Point(14, 67);
             lblMaHoaDon.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblMaHoaDon.Name = "lblMaHoaDon";
-            lblMaHoaDon.Size = new System.Drawing.Size(104, 22);
+            lblMaHoaDon.Size = new System.Drawing.Size(87, 18);
             lblMaHoaDon.TabIndex = 0;
             lblMaHoaDon.Text = "Mã hoá đơn";
             // 
@@ -500,7 +500,7 @@ namespace FigureShop.POS
             // 
             // UserControl_BanHang
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.SystemColors.ControlLight;
             Controls.Add(dgvGioHang);

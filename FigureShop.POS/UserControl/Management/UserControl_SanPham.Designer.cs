@@ -1,4 +1,5 @@
 ﻿// Paste this code into your UserControl_SanPham.Designer.cs file
+// THIS IS THE CORRECTED VERSION (Nov 8, 2025)
 
 namespace FigureShop.POS 
 {
@@ -24,447 +25,508 @@ namespace FigureShop.POS
 
         #region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
+        /// <summary>
+        /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvFigures = new System.Windows.Forms.DataGridView();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.panelButtons = new System.Windows.Forms.Panel();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.panelInputs = new System.Windows.Forms.Panel();
-            this.tlpInputs = new System.Windows.Forms.TableLayoutPanel();
-            this.lblTen = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.lblBranch = new System.Windows.Forms.Label();
-            this.cmbBranch = new System.Windows.Forms.ComboBox();
-            this.lblCategory = new System.Windows.Forms.Label();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.lblPrice = new System.Windows.Forms.Label();
-            this.numPrice = new System.Windows.Forms.NumericUpDown();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.numQuantity = new System.Windows.Forms.NumericUpDown();
-            this.lblSalePercent = new System.Windows.Forms.Label();
-            this.numSalePercent = new System.Windows.Forms.NumericUpDown();
-            this.lblSaleFrom = new System.Windows.Forms.Label();
-            this.dtpSaleFrom = new System.Windows.Forms.DateTimePicker();
-            this.lblSaleTo = new System.Windows.Forms.Label();
-            this.dtpSaleTo = new System.Windows.Forms.DateTimePicker();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.TextBox();
-            this.panelImage = new System.Windows.Forms.Panel();
-            this.picFigure = new System.Windows.Forms.PictureBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFigures)).BeginInit();
-            this.panelTop.SuspendLayout();
-            this.panelButtons.SuspendLayout();
-            this.panelInputs.SuspendLayout();
-            this.tlpInputs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSalePercent)).BeginInit();
-            this.panelImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picFigure)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // dgvFigures
-            // 
-            this.dgvFigures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFigures.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFigures.Location = new System.Drawing.Point(0, 300);
-            this.dgvFigures.Name = "dgvFigures";
-            this.dgvFigures.Size = new System.Drawing.Size(900, 300);
-            this.dgvFigures.TabIndex = 1;
+            panelTop = new System.Windows.Forms.Panel();
+            panelInputs = new System.Windows.Forms.Panel();
+            tlpInputs = new System.Windows.Forms.TableLayoutPanel();
+            lblTen = new System.Windows.Forms.Label();
+            txtName = new System.Windows.Forms.TextBox();
+            lblBranch = new System.Windows.Forms.Label();
+            cmbBranch = new System.Windows.Forms.ComboBox();
+            lblCategory = new System.Windows.Forms.Label();
+            cmbCategory = new System.Windows.Forms.ComboBox();
+            lblPrice = new System.Windows.Forms.Label();
+            numPrice = new System.Windows.Forms.NumericUpDown();
+            lblQuantity = new System.Windows.Forms.Label();
+            numQuantity = new System.Windows.Forms.NumericUpDown();
+            lblSalePercent = new System.Windows.Forms.Label();
+            numSalePercent = new System.Windows.Forms.NumericUpDown();
+            lblSaleFrom = new System.Windows.Forms.Label();
+            dtpSaleFrom = new System.Windows.Forms.DateTimePicker();
+            lblSaleTo = new System.Windows.Forms.Label();
+            dtpSaleTo = new System.Windows.Forms.DateTimePicker();
+            lblDescription = new System.Windows.Forms.Label();
+            txtDescription = new System.Windows.Forms.TextBox();
+            panelImage = new System.Windows.Forms.Panel();
+            picFigure = new System.Windows.Forms.PictureBox();
+            btnBrowse = new System.Windows.Forms.Button();
+            panelButtons = new System.Windows.Forms.Panel();
+            btnBoQua = new System.Windows.Forms.Button();
+            btnLuu = new System.Windows.Forms.Button();
+            btnLamMoi = new System.Windows.Forms.Button();
+            btnXoa = new System.Windows.Forms.Button();
+            btnSua = new System.Windows.Forms.Button();
+            btnThem = new System.Windows.Forms.Button();
+            dgvFigures = new System.Windows.Forms.DataGridView();
+            panel1 = new System.Windows.Forms.Panel();
+            txtTimKiem = new System.Windows.Forms.TextBox();
+            btnTimKiem = new System.Windows.Forms.Button();
+            panelTop.SuspendLayout();
+            panelInputs.SuspendLayout();
+            tlpInputs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numPrice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numQuantity).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numSalePercent).BeginInit();
+            panelImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picFigure).BeginInit();
+            panelButtons.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvFigures).BeginInit();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // panelTop
             // 
-            this.panelTop.Controls.Add(this.panelInputs);
-            this.panelTop.Controls.Add(this.panelButtons);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.MinimumSize = new System.Drawing.Size(0, 300);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Padding = new System.Windows.Forms.Padding(10);
-            this.panelTop.Size = new System.Drawing.Size(900, 300);
-            this.panelTop.TabIndex = 0;
-            // 
-            // panelButtons
-            // 
-            this.panelButtons.Controls.Add(this.btnTimKiem);
-            this.panelButtons.Controls.Add(this.btnLamMoi);
-            this.panelButtons.Controls.Add(this.btnXoa);
-            this.panelButtons.Controls.Add(this.btnSua);
-            this.panelButtons.Controls.Add(this.btnThem);
-            this.panelButtons.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelButtons.Location = new System.Drawing.Point(770, 10);
-            this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(120, 280);
-            this.panelButtons.TabIndex = 1;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTimKiem.Location = new System.Drawing.Point(5, 129);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(110, 35);
-            this.btnTimKiem.TabIndex = 3;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLamMoi.Location = new System.Drawing.Point(5, 170);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(110, 35);
-            this.btnLamMoi.TabIndex = 4;
-            this.btnLamMoi.Text = "Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(5, 88);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(110, 35);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(5, 47);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(110, 35);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(5, 6);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(110, 35);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            panelTop.Controls.Add(panelInputs);
+            panelTop.Controls.Add(panelButtons);
+            panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            panelTop.Location = new System.Drawing.Point(0, 0);
+            panelTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panelTop.MinimumSize = new System.Drawing.Size(0, 400);
+            panelTop.Name = "panelTop";
+            panelTop.Padding = new System.Windows.Forms.Padding(11, 13, 11, 13);
+            panelTop.Size = new System.Drawing.Size(1029, 417);
+            panelTop.TabIndex = 0;
             // 
             // panelInputs
             // 
-            this.panelInputs.Controls.Add(this.tlpInputs);
-            this.panelInputs.Controls.Add(this.panelImage);
-            this.panelInputs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInputs.Location = new System.Drawing.Point(10, 10);
-            this.panelInputs.Name = "panelInputs";
-            this.panelInputs.Size = new System.Drawing.Size(760, 280);
-            this.panelInputs.TabIndex = 0;
+            panelInputs.Controls.Add(tlpInputs);
+            panelInputs.Controls.Add(panelImage);
+            panelInputs.Dock = System.Windows.Forms.DockStyle.Fill;
+            panelInputs.Location = new System.Drawing.Point(11, 13);
+            panelInputs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panelInputs.Name = "panelInputs";
+            panelInputs.Size = new System.Drawing.Size(870, 391);
+            panelInputs.TabIndex = 0;
             // 
             // tlpInputs
             // 
-            this.tlpInputs.ColumnCount = 4;
-            this.tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
-            this.tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpInputs.Controls.Add(this.lblTen, 0, 0);
-            this.tlpInputs.Controls.Add(this.txtName, 1, 0);
-            this.tlpInputs.Controls.Add(this.lblBranch, 0, 1);
-            this.tlpInputs.Controls.Add(this.cmbBranch, 1, 1);
-            this.tlpInputs.Controls.Add(this.lblCategory, 2, 1);
-            this.tlpInputs.Controls.Add(this.cmbCategory, 3, 1);
-            this.tlpInputs.Controls.Add(this.lblPrice, 0, 2);
-            this.tlpInputs.Controls.Add(this.numPrice, 1, 2);
-            this.tlpInputs.Controls.Add(this.lblQuantity, 2, 2);
-            this.tlpInputs.Controls.Add(this.numQuantity, 3, 2);
-            this.tlpInputs.Controls.Add(this.lblSalePercent, 0, 3);
-            this.tlpInputs.Controls.Add(this.numSalePercent, 1, 3);
-            this.tlpInputs.Controls.Add(this.lblSaleFrom, 0, 4);
-            this.tlpInputs.Controls.Add(this.dtpSaleFrom, 1, 4);
-            this.tlpInputs.Controls.Add(this.lblSaleTo, 2, 4);
-            this.tlpInputs.Controls.Add(this.dtpSaleTo, 3, 4);
-            this.tlpInputs.Controls.Add(this.lblDescription, 0, 5);
-            this.tlpInputs.Controls.Add(this.txtDescription, 1, 5);
-            this.tlpInputs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpInputs.Location = new System.Drawing.Point(170, 0);
-            this.tlpInputs.Name = "tlpInputs";
-            this.tlpInputs.RowCount = 6;
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpInputs.Size = new System.Drawing.Size(590, 280);
-            this.tlpInputs.TabIndex = 1;
+            tlpInputs.ColumnCount = 4;
+            tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
+            tlpInputs.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            tlpInputs.Controls.Add(lblTen, 0, 0);
+            tlpInputs.Controls.Add(txtName, 1, 0);
+            tlpInputs.Controls.Add(lblBranch, 0, 1);
+            tlpInputs.Controls.Add(cmbBranch, 1, 1);
+            tlpInputs.Controls.Add(lblCategory, 2, 1);
+            tlpInputs.Controls.Add(cmbCategory, 3, 1);
+            tlpInputs.Controls.Add(lblPrice, 0, 2);
+            tlpInputs.Controls.Add(numPrice, 1, 2);
+            tlpInputs.Controls.Add(lblQuantity, 2, 2);
+            tlpInputs.Controls.Add(numQuantity, 3, 2);
+            tlpInputs.Controls.Add(lblSalePercent, 0, 3);
+            tlpInputs.Controls.Add(numSalePercent, 1, 3);
+            tlpInputs.Controls.Add(lblSaleFrom, 0, 4);
+            tlpInputs.Controls.Add(dtpSaleFrom, 1, 4);
+            tlpInputs.Controls.Add(lblSaleTo, 2, 4);
+            tlpInputs.Controls.Add(dtpSaleTo, 3, 4);
+            tlpInputs.Controls.Add(lblDescription, 0, 5);
+            tlpInputs.Controls.Add(txtDescription, 1, 5);
+            tlpInputs.Dock = System.Windows.Forms.DockStyle.Fill;
+            tlpInputs.Location = new System.Drawing.Point(194, 0);
+            tlpInputs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            tlpInputs.Name = "tlpInputs";
+            tlpInputs.RowCount = 7;
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            tlpInputs.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            tlpInputs.Size = new System.Drawing.Size(676, 391);
+            tlpInputs.TabIndex = 1;
             // 
             // lblTen
             // 
-            this.lblTen.AutoSize = true;
-            this.lblTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTen.Location = new System.Drawing.Point(3, 0);
-            this.lblTen.Name = "lblTen";
-            this.lblTen.Size = new System.Drawing.Size(84, 35);
-            this.lblTen.TabIndex = 0;
-            this.lblTen.Text = "Tên Figure:";
-            this.lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblTen.AutoSize = true;
+            lblTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblTen.Location = new System.Drawing.Point(3, 0);
+            lblTen.Name = "lblTen";
+            lblTen.Size = new System.Drawing.Size(97, 47);
+            lblTen.TabIndex = 0;
+            lblTen.Text = "Tên Figure:";
+            lblTen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtName
             // 
-            this.tlpInputs.SetColumnSpan(this.txtName, 3);
-            this.txtName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtName.Location = new System.Drawing.Point(93, 6);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(494, 23);
-            this.txtName.TabIndex = 0;
+            tlpInputs.SetColumnSpan(txtName, 3);
+            txtName.Dock = System.Windows.Forms.DockStyle.Fill;
+            txtName.Location = new System.Drawing.Point(106, 8);
+            txtName.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            txtName.Name = "txtName";
+            txtName.Size = new System.Drawing.Size(567, 27);
+            txtName.TabIndex = 0;
             // 
             // lblBranch
             // 
-            this.lblBranch.AutoSize = true;
-            this.lblBranch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblBranch.Location = new System.Drawing.Point(3, 35);
-            this.lblBranch.Name = "lblBranch";
-            this.lblBranch.Size = new System.Drawing.Size(84, 35);
-            this.lblBranch.TabIndex = 2;
-            this.lblBranch.Text = "Hãng (Branch):";
-            this.lblBranch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblBranch.AutoSize = true;
+            lblBranch.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblBranch.Location = new System.Drawing.Point(3, 47);
+            lblBranch.Name = "lblBranch";
+            lblBranch.Size = new System.Drawing.Size(97, 47);
+            lblBranch.TabIndex = 2;
+            lblBranch.Text = "Hãng (Branch):";
+            lblBranch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbBranch
             // 
-            this.cmbBranch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbBranch.FormattingEnabled = true;
-            this.cmbBranch.Location = new System.Drawing.Point(93, 41);
-            this.cmbBranch.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.cmbBranch.Name = "cmbBranch";
-            this.cmbBranch.Size = new System.Drawing.Size(199, 23);
-            this.cmbBranch.TabIndex = 1;
+            cmbBranch.Dock = System.Windows.Forms.DockStyle.Fill;
+            cmbBranch.FormattingEnabled = true;
+            cmbBranch.Location = new System.Drawing.Point(106, 55);
+            cmbBranch.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            cmbBranch.Name = "cmbBranch";
+            cmbBranch.Size = new System.Drawing.Size(229, 28);
+            cmbBranch.TabIndex = 1;
             // 
             // lblCategory
             // 
-            this.lblCategory.AutoSize = true;
-            this.lblCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblCategory.Location = new System.Drawing.Point(298, 35);
-            this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(84, 35);
-            this.lblCategory.TabIndex = 4;
-            this.lblCategory.Text = "Thế Loại:";
-            this.lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblCategory.AutoSize = true;
+            lblCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblCategory.Location = new System.Drawing.Point(341, 47);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new System.Drawing.Size(97, 47);
+            lblCategory.TabIndex = 4;
+            lblCategory.Text = "Thế Loại:";
+            lblCategory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // cmbCategory
             // 
-            this.cmbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(388, 41);
-            this.cmbCategory.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(199, 23);
-            this.cmbCategory.TabIndex = 2;
+            cmbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new System.Drawing.Point(444, 55);
+            cmbCategory.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new System.Drawing.Size(229, 28);
+            cmbCategory.TabIndex = 2;
             // 
             // lblPrice
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPrice.Location = new System.Drawing.Point(3, 70);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(84, 35);
-            this.lblPrice.TabIndex = 6;
-            this.lblPrice.Text = "Giá Bán:";
-            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblPrice.AutoSize = true;
+            lblPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblPrice.Location = new System.Drawing.Point(3, 94);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new System.Drawing.Size(97, 47);
+            lblPrice.TabIndex = 6;
+            lblPrice.Text = "Giá Bán:";
+            lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // numPrice
             // 
-            this.numPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numPrice.Location = new System.Drawing.Point(93, 76);
-            this.numPrice.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.numPrice.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-            this.numPrice.Name = "numPrice";
-            this.numPrice.Size = new System.Drawing.Size(199, 23);
-            this.numPrice.TabIndex = 3;
+            numPrice.Dock = System.Windows.Forms.DockStyle.Fill;
+            numPrice.Location = new System.Drawing.Point(106, 102);
+            numPrice.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            numPrice.Maximum = new decimal(new int[] { 100000000, 0, 0, 0 });
+            numPrice.Name = "numPrice";
+            numPrice.Size = new System.Drawing.Size(229, 27);
+            numPrice.TabIndex = 3;
             // 
             // lblQuantity
             // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblQuantity.Location = new System.Drawing.Point(298, 70);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(84, 35);
-            this.lblQuantity.TabIndex = 8;
-            this.lblQuantity.Text = "Số Lượng:";
-            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblQuantity.AutoSize = true;
+            lblQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblQuantity.Location = new System.Drawing.Point(341, 94);
+            lblQuantity.Name = "lblQuantity";
+            lblQuantity.Size = new System.Drawing.Size(97, 47);
+            lblQuantity.TabIndex = 8;
+            lblQuantity.Text = "Số Lượng:";
+            lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // numQuantity
             // 
-            this.numQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numQuantity.Location = new System.Drawing.Point(388, 76);
-            this.numQuantity.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.numQuantity.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numQuantity.Name = "numQuantity";
-            this.numQuantity.Size = new System.Drawing.Size(199, 23);
-            this.numQuantity.TabIndex = 4;
+            numQuantity.Dock = System.Windows.Forms.DockStyle.Fill;
+            numQuantity.Location = new System.Drawing.Point(444, 102);
+            numQuantity.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            numQuantity.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numQuantity.Name = "numQuantity";
+            numQuantity.Size = new System.Drawing.Size(229, 27);
+            numQuantity.TabIndex = 4;
             // 
             // lblSalePercent
             // 
-            this.lblSalePercent.AutoSize = true;
-            this.lblSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSalePercent.Location = new System.Drawing.Point(3, 105);
-            this.lblSalePercent.Name = "lblSalePercent";
-            this.lblSalePercent.Size = new System.Drawing.Size(84, 35);
-            this.lblSalePercent.TabIndex = 10;
-            this.lblSalePercent.Text = "Giảm Giá (%):";
-            this.lblSalePercent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblSalePercent.AutoSize = true;
+            lblSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblSalePercent.Location = new System.Drawing.Point(3, 141);
+            lblSalePercent.Name = "lblSalePercent";
+            lblSalePercent.Size = new System.Drawing.Size(97, 47);
+            lblSalePercent.TabIndex = 10;
+            lblSalePercent.Text = "Giảm Giá (%):";
+            lblSalePercent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // numSalePercent
             // 
-            this.numSalePercent.DecimalPlaces = 1;
-            this.numSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numSalePercent.Location = new System.Drawing.Point(93, 111);
-            this.numSalePercent.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.numSalePercent.Name = "numSalePercent";
-            this.numSalePercent.Size = new System.Drawing.Size(199, 23);
-            this.numSalePercent.TabIndex = 5;
+            numSalePercent.DecimalPlaces = 1;
+            numSalePercent.Dock = System.Windows.Forms.DockStyle.Fill;
+            numSalePercent.Location = new System.Drawing.Point(106, 149);
+            numSalePercent.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            numSalePercent.Name = "numSalePercent";
+            numSalePercent.Size = new System.Drawing.Size(229, 27);
+            numSalePercent.TabIndex = 5;
             // 
             // lblSaleFrom
             // 
-            this.lblSaleFrom.AutoSize = true;
-            this.lblSaleFrom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSaleFrom.Location = new System.Drawing.Point(3, 140);
-            this.lblSaleFrom.Name = "lblSaleFrom";
-            this.lblSaleFrom.Size = new System.Drawing.Size(84, 35);
-            this.lblSaleFrom.TabIndex = 12;
-            this.lblSaleFrom.Text = "Giảm Từ Ngày:";
-            this.lblSaleFrom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblSaleFrom.AutoSize = true;
+            lblSaleFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblSaleFrom.Location = new System.Drawing.Point(3, 188);
+            lblSaleFrom.Name = "lblSaleFrom";
+            lblSaleFrom.Size = new System.Drawing.Size(97, 47);
+            lblSaleFrom.TabIndex = 12;
+            lblSaleFrom.Text = "Giảm Từ Ngày:";
+            lblSaleFrom.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpSaleFrom
             // 
-            this.dtpSaleFrom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpSaleFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSaleFrom.Location = new System.Drawing.Point(93, 146);
-            this.dtpSaleFrom.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.dtpSaleFrom.Name = "dtpSaleFrom";
-            this.dtpSaleFrom.Size = new System.Drawing.Size(199, 23);
-            this.dtpSaleFrom.TabIndex = 6;
+            dtpSaleFrom.Dock = System.Windows.Forms.DockStyle.Fill;
+            dtpSaleFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpSaleFrom.Location = new System.Drawing.Point(106, 196);
+            dtpSaleFrom.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            dtpSaleFrom.Name = "dtpSaleFrom";
+            dtpSaleFrom.Size = new System.Drawing.Size(229, 27);
+            dtpSaleFrom.TabIndex = 6;
             // 
             // lblSaleTo
             // 
-            this.lblSaleTo.AutoSize = true;
-            this.lblSaleTo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSaleTo.Location = new System.Drawing.Point(298, 140);
-            this.lblSaleTo.Name = "lblSaleTo";
-            this.lblSaleTo.Size = new System.Drawing.Size(84, 35);
-            this.lblSaleTo.TabIndex = 14;
-            this.lblSaleTo.Text = "Đến Ngày:";
-            this.lblSaleTo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            lblSaleTo.AutoSize = true;
+            lblSaleTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblSaleTo.Location = new System.Drawing.Point(341, 188);
+            lblSaleTo.Name = "lblSaleTo";
+            lblSaleTo.Size = new System.Drawing.Size(97, 47);
+            lblSaleTo.TabIndex = 14;
+            lblSaleTo.Text = "Đến Ngày:";
+            lblSaleTo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dtpSaleTo
             // 
-            this.dtpSaleTo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtpSaleTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSaleTo.Location = new System.Drawing.Point(388, 146);
-            this.dtpSaleTo.Margin = new System.Windows.Forms.Padding(3, 6, 3, 3);
-            this.dtpSaleTo.Name = "dtpSaleTo";
-            this.dtpSaleTo.Size = new System.Drawing.Size(199, 23);
-            this.dtpSaleTo.TabIndex = 7;
+            dtpSaleTo.Dock = System.Windows.Forms.DockStyle.Fill;
+            dtpSaleTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            dtpSaleTo.Location = new System.Drawing.Point(444, 196);
+            dtpSaleTo.Margin = new System.Windows.Forms.Padding(3, 8, 3, 4);
+            dtpSaleTo.Name = "dtpSaleTo";
+            dtpSaleTo.Size = new System.Drawing.Size(229, 27);
+            dtpSaleTo.TabIndex = 7;
             // 
             // lblDescription
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblDescription.Location = new System.Drawing.Point(3, 175);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
-            this.lblDescription.Size = new System.Drawing.Size(84, 105);
-            this.lblDescription.TabIndex = 16;
-            this.lblDescription.Text = "Mô Tả:";
-            this.lblDescription.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            lblDescription.AutoSize = true;
+            lblDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            lblDescription.Location = new System.Drawing.Point(3, 235);
+            lblDescription.Name = "lblDescription";
+            lblDescription.Padding = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            lblDescription.Size = new System.Drawing.Size(97, 136);
+            lblDescription.TabIndex = 16;
+            lblDescription.Text = "Mô Tả:";
+            lblDescription.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtDescription
             // 
-            this.tlpInputs.SetColumnSpan(this.txtDescription, 3);
-            this.txtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtDescription.Location = new System.Drawing.Point(93, 178);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDescription.Size = new System.Drawing.Size(494, 99);
-            this.txtDescription.TabIndex = 8;
+            tlpInputs.SetColumnSpan(txtDescription, 3);
+            txtDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            txtDescription.Location = new System.Drawing.Point(106, 239);
+            txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            txtDescription.Size = new System.Drawing.Size(567, 128);
+            txtDescription.TabIndex = 8;
             // 
             // panelImage
             // 
-            this.panelImage.Controls.Add(this.picFigure);
-            this.panelImage.Controls.Add(this.btnBrowse);
-            this.panelImage.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelImage.Location = new System.Drawing.Point(0, 0);
-            this.panelImage.Name = "panelImage";
-            this.panelImage.Size = new System.Drawing.Size(170, 280);
-            this.panelImage.TabIndex = 0;
+            panelImage.Controls.Add(picFigure);
+            panelImage.Controls.Add(btnBrowse);
+            panelImage.Dock = System.Windows.Forms.DockStyle.Left;
+            panelImage.Location = new System.Drawing.Point(0, 0);
+            panelImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panelImage.Name = "panelImage";
+            panelImage.Size = new System.Drawing.Size(194, 391);
+            panelImage.TabIndex = 0;
             // 
             // picFigure
             // 
-            this.picFigure.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picFigure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFigure.Location = new System.Drawing.Point(3, 6);
-            this.picFigure.Name = "picFigure";
-            this.picFigure.Size = new System.Drawing.Size(164, 233);
-            this.picFigure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFigure.TabIndex = 0;
-            this.picFigure.TabStop = false;
+            picFigure.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            picFigure.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            picFigure.Location = new System.Drawing.Point(3, 8);
+            picFigure.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            picFigure.Name = "picFigure";
+            picFigure.Size = new System.Drawing.Size(187, 336);
+            picFigure.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            picFigure.TabIndex = 0;
+            picFigure.TabStop = false;
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBrowse.Location = new System.Drawing.Point(3, 245);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(164, 32);
-            this.btnBrowse.TabIndex = 0;
-            this.btnBrowse.Text = "Browse...";
-            this.btnBrowse.UseVisualStyleBackColor = true;
+            btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnBrowse.Location = new System.Drawing.Point(3, 345);
+            btnBrowse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnBrowse.Name = "btnBrowse";
+            btnBrowse.Size = new System.Drawing.Size(187, 43);
+            btnBrowse.TabIndex = 0;
+            btnBrowse.Text = "Browse...";
+            btnBrowse.UseVisualStyleBackColor = true;
+            btnBrowse.Click += btnBrowse_Click;
+            // 
+            // panelButtons
+            // 
+            panelButtons.Controls.Add(btnBoQua);
+            panelButtons.Controls.Add(btnLuu);
+            panelButtons.Controls.Add(btnLamMoi);
+            panelButtons.Controls.Add(btnXoa);
+            panelButtons.Controls.Add(btnSua);
+            panelButtons.Controls.Add(btnThem);
+            panelButtons.Dock = System.Windows.Forms.DockStyle.Right;
+            panelButtons.Location = new System.Drawing.Point(881, 13);
+            panelButtons.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            panelButtons.Name = "panelButtons";
+            panelButtons.Size = new System.Drawing.Size(137, 391);
+            panelButtons.TabIndex = 1;
+            // 
+            // btnBoQua
+            // 
+            btnBoQua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnBoQua.Location = new System.Drawing.Point(6, 228);
+            btnBoQua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnBoQua.Name = "btnBoQua";
+            btnBoQua.Size = new System.Drawing.Size(126, 47);
+            btnBoQua.TabIndex = 4;
+            btnBoQua.Text = "Bỏ qua";
+            btnBoQua.UseVisualStyleBackColor = true;
+            btnBoQua.Click += btnBoQua_Click;
+            // 
+            // btnLuu
+            // 
+            btnLuu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnLuu.Location = new System.Drawing.Point(6, 173);
+            btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new System.Drawing.Size(126, 47);
+            btnLuu.TabIndex = 3;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
+            btnLuu.Click += btnLuu_Click;
+            // 
+            // btnLamMoi
+            // 
+            btnLamMoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnLamMoi.Location = new System.Drawing.Point(6, 283);
+            btnLamMoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnLamMoi.Name = "btnLamMoi";
+            btnLamMoi.Size = new System.Drawing.Size(126, 47);
+            btnLamMoi.TabIndex = 7;
+            btnLamMoi.Text = "Làm Mới";
+            btnLamMoi.UseVisualStyleBackColor = true;
+            btnLamMoi.Click += btnLamMoi_Click;
+            // 
+            // btnXoa
+            // 
+            btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnXoa.Location = new System.Drawing.Point(6, 118);
+            btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new System.Drawing.Size(126, 47);
+            btnXoa.TabIndex = 2;
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnSua
+            // 
+            btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnSua.Location = new System.Drawing.Point(6, 63);
+            btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new System.Drawing.Size(126, 47);
+            btnSua.TabIndex = 1;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = true;
+            btnSua.Click += btnSua_Click;
+            // 
+            // btnThem
+            // 
+            btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            btnThem.Location = new System.Drawing.Point(6, 8);
+            btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new System.Drawing.Size(126, 47);
+            btnThem.TabIndex = 0;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
+            // 
+            // dgvFigures
+            // 
+            dgvFigures.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFigures.Dock = System.Windows.Forms.DockStyle.Fill;
+            dgvFigures.Location = new System.Drawing.Point(0, 457);
+            dgvFigures.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            dgvFigures.Name = "dgvFigures";
+            dgvFigures.RowHeadersWidth = 51;
+            dgvFigures.Size = new System.Drawing.Size(1029, 343);
+            dgvFigures.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(txtTimKiem);
+            panel1.Controls.Add(btnTimKiem);
+            panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            panel1.Location = new System.Drawing.Point(0, 417);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(1029, 40);
+            panel1.TabIndex = 4;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            txtTimKiem.Location = new System.Drawing.Point(229, 7);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new System.Drawing.Size(471, 27);
+            txtTimKiem.TabIndex = 7;
+            // 
+            // btnTimKiem
+            // 
+            btnTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            btnTimKiem.Location = new System.Drawing.Point(743, 7);
+            btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            btnTimKiem.Name = "btnTimKiem";
+            btnTimKiem.Size = new System.Drawing.Size(87, 28);
+            btnTimKiem.TabIndex = 6;
+            btnTimKiem.Text = "Tìm kiếm";
+            btnTimKiem.UseVisualStyleBackColor = true;
+            btnTimKiem.Click += btnTimKiem_Click;
             // 
             // UserControl_SanPham
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dgvFigures);
-            this.Controls.Add(this.panelTop);
-            this.Name = "UserControl_SanPham";
-            this.Size = new System.Drawing.Size(900, 600);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFigures)).EndInit();
-            this.panelTop.ResumeLayout(false);
-            this.panelButtons.ResumeLayout(false);
-            this.panelInputs.ResumeLayout(false);
-            this.tlpInputs.ResumeLayout(false);
-            this.tlpInputs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numSalePercent)).EndInit();
-            this.panelImage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picFigure)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(dgvFigures);
+            Controls.Add(panel1);
+            Controls.Add(panelTop);
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            Size = new System.Drawing.Size(1029, 800);
+            Load += UserControl_SanPham_Load;
+            panelTop.ResumeLayout(false);
+            panelInputs.ResumeLayout(false);
+            tlpInputs.ResumeLayout(false);
+            tlpInputs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numPrice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numQuantity).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numSalePercent).EndInit();
+            panelImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picFigure).EndInit();
+            panelButtons.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvFigures).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ResumeLayout(false);
         }
+
+        private System.Windows.Forms.TextBox txtTimKiem;
+
+        private System.Windows.Forms.Panel panel1;
 
         #endregion
 
@@ -476,6 +538,8 @@ namespace FigureShop.POS
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.Button btnBoQua;
         private System.Windows.Forms.Panel panelInputs;
         private System.Windows.Forms.TableLayoutPanel tlpInputs;
         private System.Windows.Forms.Label lblTen;

@@ -34,10 +34,8 @@ partial class UserControl_Hang
         groupBox1 = new System.Windows.Forms.GroupBox();
         label1 = new System.Windows.Forms.Label();
         groupBox2 = new System.Windows.Forms.GroupBox();
-        textBox6 = new System.Windows.Forms.TextBox();
-        txtSDT = new System.Windows.Forms.TextBox();
-        txtMaNCC = new System.Windows.Forms.TextBox();
-        txtTenNCC = new System.Windows.Forms.TextBox();
+        txtMaHang = new System.Windows.Forms.TextBox();
+        txtTenHang = new System.Windows.Forms.TextBox();
         groupBox5 = new System.Windows.Forms.GroupBox();
         btnExcel = new System.Windows.Forms.Button();
         btnReload = new System.Windows.Forms.Button();
@@ -46,22 +44,20 @@ partial class UserControl_Hang
         btnSua = new System.Windows.Forms.Button();
         btnLuu = new System.Windows.Forms.Button();
         btnThem = new System.Windows.Forms.Button();
-        txtDiaChi = new System.Windows.Forms.Label();
-        label6 = new System.Windows.Forms.Label();
         label3 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         splitter1 = new System.Windows.Forms.Splitter();
         groupBox3 = new System.Windows.Forms.GroupBox();
-        dgvNCC = new System.Windows.Forms.DataGridView();
+        dgvHang = new System.Windows.Forms.DataGridView();
         groupBox6 = new System.Windows.Forms.GroupBox();
-        button8 = new System.Windows.Forms.Button();
-        textBox1 = new System.Windows.Forms.TextBox();
+        btnTimKiem = new System.Windows.Forms.Button();
+        txtSearch = new System.Windows.Forms.TextBox();
         label9 = new System.Windows.Forms.Label();
         groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
         groupBox5.SuspendLayout();
         groupBox3.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)dgvNCC).BeginInit();
+        ((System.ComponentModel.ISupportInitialize)dgvHang).BeginInit();
         groupBox6.SuspendLayout();
         SuspendLayout();
         // 
@@ -88,13 +84,9 @@ partial class UserControl_Hang
         // 
         // groupBox2
         // 
-        groupBox2.Controls.Add(textBox6);
-        groupBox2.Controls.Add(txtSDT);
-        groupBox2.Controls.Add(txtMaNCC);
-        groupBox2.Controls.Add(txtTenNCC);
+        groupBox2.Controls.Add(txtMaHang);
+        groupBox2.Controls.Add(txtTenHang);
         groupBox2.Controls.Add(groupBox5);
-        groupBox2.Controls.Add(txtDiaChi);
-        groupBox2.Controls.Add(label6);
         groupBox2.Controls.Add(label3);
         groupBox2.Controls.Add(label2);
         groupBox2.Controls.Add(splitter1);
@@ -107,37 +99,21 @@ partial class UserControl_Hang
         groupBox2.TabStop = false;
         groupBox2.Text = "Thông tin nhà cung cấp";
         // 
-        // textBox6
+        // txtMaHang
         // 
-        textBox6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        textBox6.Location = new System.Drawing.Point(89, 143);
-        textBox6.Name = "textBox6";
-        textBox6.Size = new System.Drawing.Size(149, 27);
-        textBox6.TabIndex = 14;
+        txtMaHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtMaHang.Location = new System.Drawing.Point(89, 37);
+        txtMaHang.Name = "txtMaHang";
+        txtMaHang.Size = new System.Drawing.Size(149, 27);
+        txtMaHang.TabIndex = 12;
         // 
-        // txtSDT
+        // txtTenHang
         // 
-        txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtSDT.Location = new System.Drawing.Point(89, 106);
-        txtSDT.Name = "txtSDT";
-        txtSDT.Size = new System.Drawing.Size(149, 27);
-        txtSDT.TabIndex = 13;
-        // 
-        // txtMaNCC
-        // 
-        txtMaNCC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtMaNCC.Location = new System.Drawing.Point(89, 37);
-        txtMaNCC.Name = "txtMaNCC";
-        txtMaNCC.Size = new System.Drawing.Size(149, 27);
-        txtMaNCC.TabIndex = 12;
-        // 
-        // txtTenNCC
-        // 
-        txtTenNCC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTenNCC.Location = new System.Drawing.Point(89, 71);
-        txtTenNCC.Name = "txtTenNCC";
-        txtTenNCC.Size = new System.Drawing.Size(149, 27);
-        txtTenNCC.TabIndex = 11;
+        txtTenHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtTenHang.Location = new System.Drawing.Point(89, 71);
+        txtTenHang.Name = "txtTenHang";
+        txtTenHang.Size = new System.Drawing.Size(149, 27);
+        txtTenHang.TabIndex = 11;
         // 
         // groupBox5
         // 
@@ -167,6 +143,7 @@ partial class UserControl_Hang
         btnExcel.TabIndex = 6;
         btnExcel.Text = "Excel";
         btnExcel.UseVisualStyleBackColor = false;
+        btnExcel.Click += btnExcel_Click;
         // 
         // btnReload
         // 
@@ -177,6 +154,7 @@ partial class UserControl_Hang
         btnReload.TabIndex = 5;
         btnReload.Text = "Reload";
         btnReload.UseVisualStyleBackColor = true;
+        btnReload.Click += btnReload_Click;
         // 
         // btnXoa
         // 
@@ -187,6 +165,7 @@ partial class UserControl_Hang
         btnXoa.TabIndex = 4;
         btnXoa.Text = "Xóa";
         btnXoa.UseVisualStyleBackColor = true;
+        btnXoa.Click += btnXoa_Click;
         // 
         // btnBoQua
         // 
@@ -197,6 +176,7 @@ partial class UserControl_Hang
         btnBoQua.TabIndex = 3;
         btnBoQua.Text = "Bỏ qua";
         btnBoQua.UseVisualStyleBackColor = true;
+        btnBoQua.Click += btnBoQua_Click;
         // 
         // btnSua
         // 
@@ -207,6 +187,7 @@ partial class UserControl_Hang
         btnSua.TabIndex = 2;
         btnSua.Text = "Sửa";
         btnSua.UseVisualStyleBackColor = true;
+        btnSua.Click += btnSua_Click;
         // 
         // btnLuu
         // 
@@ -217,6 +198,7 @@ partial class UserControl_Hang
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
         btnLuu.UseVisualStyleBackColor = true;
+        btnLuu.Click += btnLuu_Click;
         // 
         // btnThem
         // 
@@ -227,24 +209,7 @@ partial class UserControl_Hang
         btnThem.TabIndex = 0;
         btnThem.Text = "Thêm";
         btnThem.UseVisualStyleBackColor = true;
-        // 
-        // txtDiaChi
-        // 
-        txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtDiaChi.Location = new System.Drawing.Point(6, 145);
-        txtDiaChi.Name = "txtDiaChi";
-        txtDiaChi.Size = new System.Drawing.Size(77, 25);
-        txtDiaChi.TabIndex = 6;
-        txtDiaChi.Text = "Địa chỉ:";
-        // 
-        // label6
-        // 
-        label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label6.Location = new System.Drawing.Point(6, 109);
-        label6.Name = "label6";
-        label6.Size = new System.Drawing.Size(77, 25);
-        label6.TabIndex = 5;
-        label6.Text = "SĐT:";
+        btnThem.Click += btnThem_Click;
         // 
         // label3
         // 
@@ -253,7 +218,7 @@ partial class UserControl_Hang
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(77, 25);
         label3.TabIndex = 2;
-        label3.Text = "Tên NCC:";
+        label3.Text = "Tên hãng:";
         // 
         // label2
         // 
@@ -262,7 +227,7 @@ partial class UserControl_Hang
         label2.Name = "label2";
         label2.Size = new System.Drawing.Size(77, 25);
         label2.TabIndex = 1;
-        label2.Text = "Mã NCC:";
+        label2.Text = "Mã hãng:";
         // 
         // splitter1
         // 
@@ -276,7 +241,7 @@ partial class UserControl_Hang
         // 
         // groupBox3
         // 
-        groupBox3.Controls.Add(dgvNCC);
+        groupBox3.Controls.Add(dgvHang);
         groupBox3.Controls.Add(groupBox6);
         groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
         groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
@@ -287,20 +252,21 @@ partial class UserControl_Hang
         groupBox3.TabStop = false;
         groupBox3.Text = "Tìm kiếm nhà cung cấp";
         // 
-        // dgvNCC
+        // dgvHang
         // 
-        dgvNCC.ColumnHeadersHeight = 29;
-        dgvNCC.Dock = System.Windows.Forms.DockStyle.Fill;
-        dgvNCC.Location = new System.Drawing.Point(3, 128);
-        dgvNCC.Name = "dgvNCC";
-        dgvNCC.RowHeadersWidth = 51;
-        dgvNCC.Size = new System.Drawing.Size(752, 497);
-        dgvNCC.TabIndex = 1;
+        dgvHang.ColumnHeadersHeight = 29;
+        dgvHang.Dock = System.Windows.Forms.DockStyle.Fill;
+        dgvHang.Location = new System.Drawing.Point(3, 128);
+        dgvHang.Name = "dgvHang";
+        dgvHang.RowHeadersWidth = 51;
+        dgvHang.Size = new System.Drawing.Size(752, 497);
+        dgvHang.TabIndex = 1;
+        dgvHang.CellClick += dgvHang_CellClick;
         // 
         // groupBox6
         // 
-        groupBox6.Controls.Add(button8);
-        groupBox6.Controls.Add(textBox1);
+        groupBox6.Controls.Add(btnTimKiem);
+        groupBox6.Controls.Add(txtSearch);
         groupBox6.Controls.Add(label9);
         groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
         groupBox6.Location = new System.Drawing.Point(3, 26);
@@ -309,24 +275,25 @@ partial class UserControl_Hang
         groupBox6.TabIndex = 0;
         groupBox6.TabStop = false;
         // 
-        // button8
+        // btnTimKiem
         // 
-        button8.BackColor = System.Drawing.Color.SteelBlue;
-        button8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        button8.ForeColor = System.Drawing.Color.White;
-        button8.Location = new System.Drawing.Point(561, 44);
-        button8.Name = "button8";
-        button8.Size = new System.Drawing.Size(96, 29);
-        button8.TabIndex = 2;
-        button8.Text = "Tìm kiếm";
-        button8.UseVisualStyleBackColor = false;
+        btnTimKiem.BackColor = System.Drawing.Color.SteelBlue;
+        btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnTimKiem.ForeColor = System.Drawing.Color.White;
+        btnTimKiem.Location = new System.Drawing.Point(561, 44);
+        btnTimKiem.Name = "btnTimKiem";
+        btnTimKiem.Size = new System.Drawing.Size(96, 29);
+        btnTimKiem.TabIndex = 2;
+        btnTimKiem.Text = "Tìm kiếm";
+        btnTimKiem.UseVisualStyleBackColor = false;
+        btnTimKiem.Click += btnTimKiem_Click;
         // 
-        // textBox1
+        // txtSearch
         // 
-        textBox1.Location = new System.Drawing.Point(253, 43);
-        textBox1.Name = "textBox1";
-        textBox1.Size = new System.Drawing.Size(286, 30);
-        textBox1.TabIndex = 1;
+        txtSearch.Location = new System.Drawing.Point(253, 43);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new System.Drawing.Size(286, 30);
+        txtSearch.TabIndex = 1;
         // 
         // label9
         // 
@@ -337,7 +304,7 @@ partial class UserControl_Hang
         label9.TabIndex = 0;
         label9.Text = "Tên/Mã nhà cung cấp:";
         // 
-        // UserControl_HangHang
+        // UserControl_Hang
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -345,25 +312,24 @@ partial class UserControl_Hang
         Controls.Add(groupBox2);
         Controls.Add(groupBox1);
         Size = new System.Drawing.Size(1021, 733);
+        Load += UserControl_Hang_Load;
         groupBox1.ResumeLayout(false);
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
         groupBox5.ResumeLayout(false);
         groupBox3.ResumeLayout(false);
-        ((System.ComponentModel.ISupportInitialize)dgvNCC).EndInit();
+        ((System.ComponentModel.ISupportInitialize)dgvHang).EndInit();
         groupBox6.ResumeLayout(false);
         groupBox6.PerformLayout();
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TextBox txtTenNCC;
-    private System.Windows.Forms.TextBox txtMaNCC;
-    private System.Windows.Forms.TextBox txtSDT;
-    private System.Windows.Forms.TextBox textBox6;
-    private System.Windows.Forms.Button button8;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox txtTenHang;
+    private System.Windows.Forms.TextBox txtMaHang;
+    private System.Windows.Forms.Button btnTimKiem;
+    private System.Windows.Forms.TextBox txtSearch;
     private System.Windows.Forms.Label label9;
-    private System.Windows.Forms.DataGridView dgvNCC;
+    private System.Windows.Forms.DataGridView dgvHang;
     private System.Windows.Forms.GroupBox groupBox6;
     private System.Windows.Forms.Button btnExcel;
     private System.Windows.Forms.Button btnReload;
@@ -373,8 +339,6 @@ partial class UserControl_Hang
     private System.Windows.Forms.Button btnLuu;
     private System.Windows.Forms.Button btnThem;
     private System.Windows.Forms.GroupBox groupBox5;
-    private System.Windows.Forms.Label txtDiaChi;
-    private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Splitter splitter1;
