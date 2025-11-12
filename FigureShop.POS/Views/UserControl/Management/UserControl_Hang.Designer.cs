@@ -31,8 +31,6 @@ partial class UserControl_Hang
     /// </summary>
     private void InitializeComponent()
     {
-        groupBox1 = new System.Windows.Forms.GroupBox();
-        label1 = new System.Windows.Forms.Label();
         groupBox2 = new System.Windows.Forms.GroupBox();
         txtMaHang = new System.Windows.Forms.TextBox();
         txtTenHang = new System.Windows.Forms.TextBox();
@@ -53,34 +51,12 @@ partial class UserControl_Hang
         btnTimKiem = new System.Windows.Forms.Button();
         txtSearch = new System.Windows.Forms.TextBox();
         label9 = new System.Windows.Forms.Label();
-        groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
         groupBox5.SuspendLayout();
         groupBox3.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvHang).BeginInit();
         groupBox6.SuspendLayout();
         SuspendLayout();
-        // 
-        // groupBox1
-        // 
-        groupBox1.Controls.Add(label1);
-        groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-        groupBox1.Location = new System.Drawing.Point(0, 0);
-        groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(1021, 105);
-        groupBox1.TabIndex = 0;
-        groupBox1.TabStop = false;
-        // 
-        // label1
-        // 
-        label1.Dock = System.Windows.Forms.DockStyle.Fill;
-        label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(3, 23);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(1015, 79);
-        label1.TabIndex = 0;
-        label1.Text = "Nhà cung cấp";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         // 
         // groupBox2
         // 
@@ -92,9 +68,9 @@ partial class UserControl_Hang
         groupBox2.Controls.Add(splitter1);
         groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
         groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox2.Location = new System.Drawing.Point(0, 105);
+        groupBox2.Location = new System.Drawing.Point(0, 0);
         groupBox2.Name = "groupBox2";
-        groupBox2.Size = new System.Drawing.Size(263, 628);
+        groupBox2.Size = new System.Drawing.Size(263, 733);
         groupBox2.TabIndex = 1;
         groupBox2.TabStop = false;
         groupBox2.Text = "Thông tin nhà cung cấp";
@@ -125,7 +101,7 @@ partial class UserControl_Hang
         groupBox5.Controls.Add(btnSua);
         groupBox5.Controls.Add(btnLuu);
         groupBox5.Controls.Add(btnThem);
-        groupBox5.Location = new System.Drawing.Point(3, 337);
+        groupBox5.Location = new System.Drawing.Point(3, 442);
         groupBox5.Name = "groupBox5";
         groupBox5.Size = new System.Drawing.Size(241, 287);
         groupBox5.TabIndex = 8;
@@ -235,7 +211,7 @@ partial class UserControl_Hang
         splitter1.Dock = System.Windows.Forms.DockStyle.Right;
         splitter1.Location = new System.Drawing.Point(250, 26);
         splitter1.Name = "splitter1";
-        splitter1.Size = new System.Drawing.Size(10, 599);
+        splitter1.Size = new System.Drawing.Size(10, 704);
         splitter1.TabIndex = 0;
         splitter1.TabStop = false;
         // 
@@ -245,9 +221,9 @@ partial class UserControl_Hang
         groupBox3.Controls.Add(groupBox6);
         groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
         groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox3.Location = new System.Drawing.Point(263, 105);
+        groupBox3.Location = new System.Drawing.Point(263, 0);
         groupBox3.Name = "groupBox3";
-        groupBox3.Size = new System.Drawing.Size(758, 628);
+        groupBox3.Size = new System.Drawing.Size(758, 733);
         groupBox3.TabIndex = 2;
         groupBox3.TabStop = false;
         groupBox3.Text = "Tìm kiếm nhà cung cấp";
@@ -259,7 +235,7 @@ partial class UserControl_Hang
         dgvHang.Location = new System.Drawing.Point(3, 128);
         dgvHang.Name = "dgvHang";
         dgvHang.RowHeadersWidth = 51;
-        dgvHang.Size = new System.Drawing.Size(752, 497);
+        dgvHang.Size = new System.Drawing.Size(752, 602);
         dgvHang.TabIndex = 1;
         dgvHang.CellClick += dgvHang_CellClick;
         // 
@@ -310,10 +286,8 @@ partial class UserControl_Hang
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         Controls.Add(groupBox3);
         Controls.Add(groupBox2);
-        Controls.Add(groupBox1);
         Size = new System.Drawing.Size(1021, 733);
         Load += UserControl_Hang_Load;
-        groupBox1.ResumeLayout(false);
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
         groupBox5.ResumeLayout(false);
@@ -344,8 +318,6 @@ partial class UserControl_Hang
     private System.Windows.Forms.Splitter splitter1;
     private System.Windows.Forms.GroupBox groupBox3;
     private System.Windows.Forms.GroupBox groupBox2;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.GroupBox groupBox1;
 
     #endregion
 }

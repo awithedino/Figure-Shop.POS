@@ -16559,13 +16559,13 @@
       <AssembliesChecksum>15142471</AssembliesChecksum>
       <Current>1</Current>
       <FileGroupsChecksum>2580033660301081</FileGroupsChecksum>
-      <Fingerprint>5.45967/EF8309BC-BF7E-494C-A32D-22D15F5563DC@5cc280322098</Fingerprint>
+      <Fingerprint>5.45972/D620AF7E-300E-4536-B5D4-C0ABE868AB61@d860b72663e0</Fingerprint>
       <Grants>5|database||1|connect|G
 5|database||0|view any column encryption key definition|G
 5|database||0|view any column master key definition|G</Grants>
       <ObjectId>5</ObjectId>
       <PermissionsCheckSum>3196235284</PermissionsCheckSum>
-      <RolesChecksum>2074684713293</RolesChecksum>
+      <RolesChecksum>2074690217230</RolesChecksum>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
     <database id="5511" parent="1" name="master">
@@ -16584,8 +16584,8 @@
       <ObjectId>2</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <linked-server id="5515" parent="1" name="5cc280322098">
-      <DataSource>5cc280322098</DataSource>
+    <linked-server id="5515" parent="1" name="d860b72663e0">
+      <DataSource>d860b72663e0</DataSource>
       <Product>SQL Server</Product>
       <ProviderName>SQLNCLI</ProviderName>
     </linked-server>
@@ -16889,9 +16889,9 @@
     <schema id="5573" parent="5510" name="dbo">
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
-      <IntrospectionTimestamp>2025-11-09.20:03:39</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2025-11-13.02:15:37</IntrospectionTimestamp>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-09.13:03:40</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-12.19:15:41</LastIntrospectionLocalTimestamp>
       <ObjectId>1</ObjectId>
     </schema>
     <schema id="5574" parent="5510" name="guest">
@@ -16901,18 +16901,18 @@
       <ObjectId>4</ObjectId>
     </schema>
     <table id="5576" parent="5573" name="Branches">
-      <CreatedTimestamp>2025-11-07.22:43:48.363</CreatedTimestamp>
+      <CreatedTimestamp>2025-11-13.02:14:40.870</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:43:48.447</ModifiedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
       <ObjectId>1237579447</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
     <table id="5577" parent="5573" name="Categories">
-      <CreatedTimestamp>2025-11-07.22:43:48.410</CreatedTimestamp>
+      <CreatedTimestamp>2025-11-13.02:14:40.873</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:43:48.447</ModifiedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
       <ObjectId>1269579561</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
@@ -16924,31 +16924,47 @@
       <ObjectId>1445580188</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
-    <table id="5579" parent="5573" name="Figures">
-      <CreatedTimestamp>2025-11-07.22:43:48.443</CreatedTimestamp>
+    <table id="5579" parent="5573" name="Comments">
+      <CreatedTimestamp>2025-11-13.02:14:40.903</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:43:48.913</ModifiedTimestamp>
-      <ObjectId>1301579675</ObjectId>
+      <ModifiedTimestamp>2025-11-13.02:14:40.920</ModifiedTimestamp>
+      <ObjectId>1605580758</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
-    <table id="5580" parent="5573" name="OrderFigures">
-      <CreatedTimestamp>2025-11-07.22:43:48.910</CreatedTimestamp>
+    <table id="5580" parent="5573" name="Figures">
+      <CreatedTimestamp>2025-11-13.02:14:40.890</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:43:48.943</ModifiedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.927</ModifiedTimestamp>
+      <ObjectId>1397580017</ObjectId>
+      <LobDataSpaceId>1</LobDataSpaceId>
+    </table>
+    <table id="5581" parent="5573" name="OrderFigures">
+      <CreatedTimestamp>2025-11-13.02:14:40.917</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.930</ModifiedTimestamp>
       <ObjectId>1733581214</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <table id="5581" parent="5573" name="Orders">
-      <CreatedTimestamp>2025-11-07.22:43:48.880</CreatedTimestamp>
+    <table id="5582" parent="5573" name="Orders">
+      <CreatedTimestamp>2025-11-13.02:14:40.900</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:43:49.013</ModifiedTimestamp>
-      <ObjectId>1669580986</ObjectId>
+      <ModifiedTimestamp>2025-11-13.02:14:40.933</ModifiedTimestamp>
+      <ObjectId>1541580530</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
-    <table id="5582" parent="5573" name="Roles">
+    <table id="5583" parent="5573" name="Roles">
+      <CreatedTimestamp>2025-11-13.02:14:40.877</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.897</ModifiedTimestamp>
+      <ObjectId>1301579675</ObjectId>
+      <LobDataSpaceId>0</LobDataSpaceId>
+    </table>
+    <table id="5584" parent="5573" name="Roles">
       <CreatedTimestamp>2025-11-07.22:43:48.553</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
@@ -16956,7 +16972,15 @@
       <ObjectId>1381579960</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <table id="5583" parent="5573" name="ShoppingCarts">
+    <table id="5585" parent="5573" name="ShoppingCarts">
+      <CreatedTimestamp>2025-11-13.02:14:40.910</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.937</ModifiedTimestamp>
+      <ObjectId>1669580986</ObjectId>
+      <LobDataSpaceId>0</LobDataSpaceId>
+    </table>
+    <table id="5586" parent="5573" name="ShoppingCarts">
       <CreatedTimestamp>2025-11-07.22:43:48.703</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
@@ -16964,7 +16988,7 @@
       <ObjectId>1509580416</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <table id="5584" parent="5573" name="UserRole">
+    <table id="5587" parent="5573" name="UserRole">
       <CreatedTimestamp>2025-11-07.22:43:48.773</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
@@ -16972,7 +16996,15 @@
       <ObjectId>1573580644</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <table id="5585" parent="5573" name="Users">
+    <table id="5588" parent="5573" name="UserRole">
+      <CreatedTimestamp>2025-11-13.02:14:40.893</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.940</ModifiedTimestamp>
+      <ObjectId>1477580302</ObjectId>
+      <LobDataSpaceId>0</LobDataSpaceId>
+    </table>
+    <table id="5589" parent="5573" name="Users">
       <CreatedTimestamp>2025-11-07.22:43:48.593</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
@@ -16980,7 +17012,15 @@
       <ObjectId>1413580074</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
-    <table id="5586" parent="5573" name="Vouchers">
+    <table id="5590" parent="5573" name="Users">
+      <CreatedTimestamp>2025-11-13.02:14:40.880</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.910</ModifiedTimestamp>
+      <ObjectId>1333579789</ObjectId>
+      <LobDataSpaceId>1</LobDataSpaceId>
+    </table>
+    <table id="5591" parent="5573" name="Vouchers">
       <CreatedTimestamp>2025-11-07.22:43:48.847</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
@@ -16988,148 +17028,156 @@
       <ObjectId>1637580872</ObjectId>
       <LobDataSpaceId>1</LobDataSpaceId>
     </table>
-    <table id="5587" parent="5573" name="__EFMigrationsHistory">
-      <CreatedTimestamp>2025-11-07.22:44:52.020</CreatedTimestamp>
+    <table id="5592" parent="5573" name="Vouchers">
+      <CreatedTimestamp>2025-11-13.02:14:40.887</CreatedTimestamp>
       <DataRetentionPeriod>-1</DataRetentionPeriod>
       <DetailsLevel>2</DetailsLevel>
-      <ModifiedTimestamp>2025-11-07.22:44:52.020</ModifiedTimestamp>
-      <ObjectId>1813581499</ObjectId>
+      <ModifiedTimestamp>2025-11-13.02:14:40.900</ModifiedTimestamp>
+      <ObjectId>1365579903</ObjectId>
+      <LobDataSpaceId>1</LobDataSpaceId>
+    </table>
+    <table id="5593" parent="5573" name="__EFMigrationsHistory">
+      <CreatedTimestamp>2025-11-13.02:14:40.710</CreatedTimestamp>
+      <DataRetentionPeriod>-1</DataRetentionPeriod>
+      <DetailsLevel>2</DetailsLevel>
+      <ModifiedTimestamp>2025-11-13.02:14:40.710</ModifiedTimestamp>
+      <ObjectId>1205579333</ObjectId>
       <LobDataSpaceId>0</LobDataSpaceId>
     </table>
-    <column id="5588" parent="5576" name="Id">
+    <column id="5594" parent="5576" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5589" parent="5576" name="Name">
+    <column id="5595" parent="5576" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5590" parent="5576" name="CreatedAt">
+    <column id="5596" parent="5576" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5591" parent="5576" name="CreatedBy">
+    <column id="5597" parent="5576" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5592" parent="5576" name="UpdatedAt">
+    <column id="5598" parent="5576" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5593" parent="5576" name="UpdatedBy">
+    <column id="5599" parent="5576" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <index id="5594" parent="5576" name="PK_Branches">
+    <index id="5600" parent="5576" name="PK_Branches">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5595" parent="5576" name="PK_Branches">
-      <CreatedTimestamp>2025-11-07.22:43:48.370</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.370</ModifiedTimestamp>
+    <key id="5601" parent="5576" name="PK_Branches">
+      <CreatedTimestamp>2025-11-13.02:14:40.870</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.870</ModifiedTimestamp>
       <ObjectId>1253579504</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Branches</UnderlyingIndexName>
     </key>
-    <column id="5596" parent="5577" name="Id">
+    <column id="5602" parent="5577" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5597" parent="5577" name="Name">
+    <column id="5603" parent="5577" name="Name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5598" parent="5577" name="CreatedAt">
+    <column id="5604" parent="5577" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5599" parent="5577" name="CreatedBy">
+    <column id="5605" parent="5577" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5600" parent="5577" name="UpdatedAt">
+    <column id="5606" parent="5577" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5601" parent="5577" name="UpdatedBy">
+    <column id="5607" parent="5577" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <index id="5602" parent="5577" name="PK_Categories">
+    <index id="5608" parent="5577" name="PK_Categories">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5603" parent="5577" name="PK_Categories">
-      <CreatedTimestamp>2025-11-07.22:43:48.413</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.413</ModifiedTimestamp>
+    <key id="5609" parent="5577" name="PK_Categories">
+      <CreatedTimestamp>2025-11-13.02:14:40.873</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.873</ModifiedTimestamp>
       <ObjectId>1285579618</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Categories</UnderlyingIndexName>
     </key>
-    <column id="5604" parent="5578" name="UserId">
+    <column id="5610" parent="5578" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5605" parent="5578" name="FigureId">
+    <column id="5611" parent="5578" name="FigureId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5606" parent="5578" name="Vote">
+    <column id="5612" parent="5578" name="Vote">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5607" parent="5578" name="Content">
+    <column id="5613" parent="5578" name="Content">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5608" parent="5578" name="Id">
+    <column id="5614" parent="5578" name="Id">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5609" parent="5578" name="CreatedAt">
+    <column id="5615" parent="5578" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5610" parent="5578" name="CreatedBy">
+    <column id="5616" parent="5578" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5611" parent="5578" name="UpdatedAt">
+    <column id="5617" parent="5578" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5612" parent="5578" name="UpdatedBy">
+    <column id="5618" parent="5578" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <foreign-key id="5613" parent="5578" name="FK_Comments_Users_UserId">
+    <foreign-key id="5619" parent="5578" name="FK_Comments_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.637</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.637</ModifiedTimestamp>
@@ -17139,7 +17187,7 @@
       <RefTableId>1413580074</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <foreign-key id="5614" parent="5578" name="FK_Comments_Figures_FigureId">
+    <foreign-key id="5620" parent="5578" name="FK_Comments_Figures_FigureId">
       <ColNames>FigureId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.637</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.637</ModifiedTimestamp>
@@ -17149,7 +17197,79 @@
       <RefTableId>1301579675</RefTableId>
       <RefTableName>Figures</RefTableName>
     </foreign-key>
-    <index id="5615" parent="5578" name="PK_Comments">
+    <key id="5621" parent="5578" name="PK_Comments">
+      <CreatedTimestamp>2025-11-07.22:43:48.637</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-07.22:43:48.637</ModifiedTimestamp>
+      <ObjectId>1461580245</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Comments</UnderlyingIndexName>
+    </key>
+    <column id="5622" parent="5579" name="UserId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5623" parent="5579" name="FigureId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5624" parent="5579" name="Vote">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="5625" parent="5579" name="Content">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5626" parent="5579" name="Id">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5627" parent="5579" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5628" parent="5579" name="CreatedBy">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5629" parent="5579" name="UpdatedAt">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5630" parent="5579" name="UpdatedBy">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <foreign-key id="5631" parent="5579" name="FK_Comments_Users_UserId">
+      <ColNames>UserId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.907</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.907</ModifiedTimestamp>
+      <ObjectId>1653580929</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1333579789</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <foreign-key id="5632" parent="5579" name="FK_Comments_Figures_FigureId">
+      <ColNames>FigureId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.907</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.907</ModifiedTimestamp>
+      <ObjectId>1637580872</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1397580017</RefTableId>
+      <RefTableName>Figures</RefTableName>
+    </foreign-key>
+    <index id="5633" parent="5579" name="PK_Comments">
       <Clustering>1</Clustering>
       <ColNames>FigureId
 UserId</ColNames>
@@ -17157,104 +17277,353 @@ UserId</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5616" parent="5578" name="IX_Comments_UserId">
+    <index id="5634" parent="5579" name="IX_Comments_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5617" parent="5578" name="PK_Comments">
-      <CreatedTimestamp>2025-11-07.22:43:48.637</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.637</ModifiedTimestamp>
-      <ObjectId>1461580245</ObjectId>
+    <key id="5635" parent="5579" name="PK_Comments">
+      <CreatedTimestamp>2025-11-13.02:14:40.903</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.903</ModifiedTimestamp>
+      <ObjectId>1621580815</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Comments</UnderlyingIndexName>
     </key>
-    <column id="5618" parent="5579" name="Id">
+    <column id="5636" parent="5580" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5619" parent="5579" name="BranchId">
+    <column id="5637" parent="5580" name="BranchId">
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5620" parent="5579" name="CategoryId">
+    <column id="5638" parent="5580" name="CategoryId">
       <Position>3</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5621" parent="5579" name="Price">
+    <column id="5639" parent="5580" name="Price">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>float|0s</StoredType>
     </column>
-    <column id="5622" parent="5579" name="ImgSrcJson">
+    <column id="5640" parent="5580" name="ImgSrcJson">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
-      <DefaultConstraintId>1365579903</DefaultConstraintId>
-      <DefaultConstraintName>DF__Figures__ImgSrcJ__5165187F</DefaultConstraintName>
+      <DefaultConstraintId>1429580131</DefaultConstraintId>
+      <DefaultConstraintName>DF__Figures__ImgSrcJ__5535A963</DefaultConstraintName>
     </column>
-    <column id="5623" parent="5579" name="SalePercent">
+    <column id="5641" parent="5580" name="SalePercent">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>float|0s</StoredType>
     </column>
-    <column id="5624" parent="5579" name="Quantity">
+    <column id="5642" parent="5580" name="Quantity">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5625" parent="5579" name="SaleFrom">
+    <column id="5643" parent="5580" name="SaleFrom">
       <Position>8</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5626" parent="5579" name="SaleTo">
+    <column id="5644" parent="5580" name="SaleTo">
       <Position>9</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5627" parent="5579" name="Description">
+    <column id="5645" parent="5580" name="Description">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5628" parent="5579" name="Vote">
+    <column id="5646" parent="5580" name="Vote">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>float|0s</StoredType>
     </column>
-    <column id="5629" parent="5579" name="Name">
+    <column id="5647" parent="5580" name="Name">
       <NotNull>1</NotNull>
       <Position>12</Position>
       <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <column id="5630" parent="5579" name="CreatedAt">
+    <column id="5648" parent="5580" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>13</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5631" parent="5579" name="CreatedBy">
+    <column id="5649" parent="5580" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>14</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5632" parent="5579" name="UpdatedAt">
+    <column id="5650" parent="5580" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>15</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5633" parent="5579" name="UpdatedBy">
+    <column id="5651" parent="5580" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>16</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <default id="5634" parent="5579" name="DF__Figures__ImgSrcJ__5165187F">
+    <default id="5652" parent="5580" name="DF__Figures__ImgSrcJ__5535A963">
+      <ColNames>ImgSrcJson</ColNames>
+      <DefaultExpression>N&apos;[]&apos;</DefaultExpression>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>1429580131</ObjectId>
+    </default>
+    <foreign-key id="5653" parent="5580" name="FK_Figures_Branches_BranchId">
+      <ColNames>BranchId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.890</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
+      <ObjectId>1445580188</ObjectId>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1237579447</RefTableId>
+      <RefTableName>Branches</RefTableName>
+    </foreign-key>
+    <foreign-key id="5654" parent="5580" name="FK_Figures_Categories_CategoryId">
+      <ColNames>CategoryId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.890</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
+      <ObjectId>1461580245</ObjectId>
+      <OnDelete>set-null</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1269579561</RefTableId>
+      <RefTableName>Categories</RefTableName>
+    </foreign-key>
+    <index id="5655" parent="5580" name="PK_Figures">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="5656" parent="5580" name="IX_Figures_BranchId">
+      <ColNames>BranchId</ColNames>
+      <Position>2</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="5657" parent="5580" name="IX_Figures_CategoryId">
+      <ColNames>CategoryId</ColNames>
+      <Position>3</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5658" parent="5580" name="PK_Figures">
+      <CreatedTimestamp>2025-11-13.02:14:40.890</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.890</ModifiedTimestamp>
+      <ObjectId>1413580074</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Figures</UnderlyingIndexName>
+    </key>
+    <column id="5659" parent="5581" name="UserId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5660" parent="5581" name="FigureId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5661" parent="5581" name="OrderId">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5662" parent="5581" name="Quantity">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="5663" parent="5581" name="Price">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5664" parent="5581" name="Id">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5665" parent="5581" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5666" parent="5581" name="CreatedBy">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5667" parent="5581" name="UpdatedAt">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5668" parent="5581" name="UpdatedBy">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <foreign-key id="5669" parent="5581" name="FK_OrderFigures_Figures_FigureId">
+      <ColNames>FigureId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.917</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.917</ModifiedTimestamp>
+      <ObjectId>1765581328</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1397580017</RefTableId>
+      <RefTableName>Figures</RefTableName>
+    </foreign-key>
+    <foreign-key id="5670" parent="5581" name="FK_OrderFigures_Orders_OrderId">
+      <ColNames>OrderId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.917</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.917</ModifiedTimestamp>
+      <ObjectId>1781581385</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1541580530</RefTableId>
+      <RefTableName>Orders</RefTableName>
+    </foreign-key>
+    <index id="5671" parent="5581" name="PK_OrderFigures">
+      <Clustering>1</Clustering>
+      <ColNames>FigureId
+UserId</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="5672" parent="5581" name="IX_OrderFigures_OrderId">
+      <ColNames>OrderId</ColNames>
+      <Position>2</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5673" parent="5581" name="PK_OrderFigures">
+      <CreatedTimestamp>2025-11-13.02:14:40.917</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.917</ModifiedTimestamp>
+      <ObjectId>1749581271</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_OrderFigures</UnderlyingIndexName>
+    </key>
+    <column id="5674" parent="5582" name="Id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5675" parent="5582" name="UserId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5676" parent="5582" name="VoucherId">
+      <Position>3</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5677" parent="5582" name="Status">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5678" parent="5582" name="TotalPrice">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5679" parent="5582" name="PaidPrice">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5680" parent="5582" name="PhoneNumber">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>nvarchar(20 char)|0s</StoredType>
+    </column>
+    <column id="5681" parent="5582" name="Address">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>nvarchar(255 char)|0s</StoredType>
+    </column>
+    <column id="5682" parent="5582" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5683" parent="5582" name="CreatedBy">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5684" parent="5582" name="UpdatedAt">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5685" parent="5582" name="UpdatedBy">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <foreign-key id="5686" parent="5582" name="FK_Orders_Users_UserId">
+      <ColNames>UserId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.900</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.900</ModifiedTimestamp>
+      <ObjectId>1573580644</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1333579789</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <foreign-key id="5687" parent="5582" name="FK_Orders_Vouchers_VoucherId">
+      <ColNames>VoucherId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.900</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.900</ModifiedTimestamp>
+      <ObjectId>1589580701</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1365579903</RefTableId>
+      <RefTableName>Vouchers</RefTableName>
+    </foreign-key>
+    <index id="5688" parent="5582" name="PK_Orders">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="5689" parent="5582" name="IX_Orders_UserId">
+      <ColNames>UserId</ColNames>
+      <Position>2</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <index id="5690" parent="5582" name="IX_Orders_VoucherId">
+      <ColNames>VoucherId</ColNames>
+      <Position>3</Position>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5691" parent="5582" name="PK_Orders">
+      <CreatedTimestamp>2025-11-13.02:14:40.900</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.900</ModifiedTimestamp>
+      <ObjectId>1557580587</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Orders</UnderlyingIndexName>
+    </key>
+    <column id="5692" parent="5583" name="Name">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>nvarchar(50 char)|0s</StoredType>
+    </column>
+    <default id="5693" parent="5583" name="DF__Figures__ImgSrcJ__5165187F">
       <ColNames>ImgSrcJson</ColNames>
       <DefaultExpression>N&apos;[]&apos;</DefaultExpression>
       <ModifiedTimestamp>2025-11-07.22:43:48.447</ModifiedTimestamp>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>1365579903</ObjectId>
     </default>
-    <foreign-key id="5635" parent="5579" name="FK_Figures_Branches_BranchId">
+    <foreign-key id="5694" parent="5583" name="FK_Figures_Branches_BranchId">
       <ColNames>BranchId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.447</ModifiedTimestamp>
@@ -17264,7 +17633,7 @@ UserId</ColNames>
       <RefTableId>1237579447</RefTableId>
       <RefTableName>Branches</RefTableName>
     </foreign-key>
-    <foreign-key id="5636" parent="5579" name="FK_Figures_Categories_CategoryId">
+    <foreign-key id="5695" parent="5583" name="FK_Figures_Categories_CategoryId">
       <ColNames>CategoryId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.447</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.447</ModifiedTimestamp>
@@ -17274,101 +17643,68 @@ UserId</ColNames>
       <RefTableId>1269579561</RefTableId>
       <RefTableName>Categories</RefTableName>
     </foreign-key>
-    <index id="5637" parent="5579" name="PK_Figures">
+    <index id="5696" parent="5583" name="PK_Roles">
       <Clustering>1</Clustering>
-      <ColNames>Id</ColNames>
+      <ColNames>Name</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5638" parent="5579" name="IX_Figures_BranchId">
-      <ColNames>BranchId</ColNames>
-      <Position>2</Position>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5639" parent="5579" name="IX_Figures_CategoryId">
-      <ColNames>CategoryId</ColNames>
-      <Position>3</Position>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5640" parent="5579" name="PK_Figures">
-      <CreatedTimestamp>2025-11-07.22:43:48.443</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.443</ModifiedTimestamp>
+    <key id="5697" parent="5583" name="PK_Roles">
+      <CreatedTimestamp>2025-11-13.02:14:40.877</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.877</ModifiedTimestamp>
       <ObjectId>1317579732</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK_Figures</UnderlyingIndexName>
+      <UnderlyingIndexName>PK_Roles</UnderlyingIndexName>
     </key>
-    <column id="5641" parent="5580" name="UserId">
+    <column id="5698" parent="5584" name="Name">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>nvarchar(50 char)|0s</StoredType>
+    </column>
+    <key id="5699" parent="5584" name="PK_Roles">
+      <CreatedTimestamp>2025-11-07.22:43:48.553</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-07.22:43:48.553</ModifiedTimestamp>
+      <ObjectId>1397580017</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Roles</UnderlyingIndexName>
+    </key>
+    <column id="5700" parent="5585" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5642" parent="5580" name="FigureId">
+    <column id="5701" parent="5585" name="FigureId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5643" parent="5580" name="OrderId">
+    <column id="5702" parent="5585" name="Quantity">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5644" parent="5580" name="Quantity">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="5645" parent="5580" name="Price">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5646" parent="5580" name="Id">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5647" parent="5580" name="CreatedAt">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5648" parent="5580" name="CreatedBy">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5649" parent="5580" name="UpdatedAt">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5650" parent="5580" name="UpdatedBy">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <foreign-key id="5651" parent="5580" name="FK_OrderFigures_Figures_FigureId">
-      <ColNames>FigureId</ColNames>
-      <CreatedTimestamp>2025-11-07.22:43:48.913</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.913</ModifiedTimestamp>
-      <ObjectId>1765581328</ObjectId>
+    <foreign-key id="5703" parent="5585" name="FK_ShoppingCarts_Users_UserId">
+      <ColNames>UserId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.910</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.910</ModifiedTimestamp>
+      <ObjectId>1717581157</ObjectId>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
-      <RefTableId>1301579675</RefTableId>
+      <RefTableId>1333579789</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <foreign-key id="5704" parent="5585" name="FK_ShoppingCarts_Figures_FigureId">
+      <ColNames>FigureId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.910</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.910</ModifiedTimestamp>
+      <ObjectId>1701581100</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1397580017</RefTableId>
       <RefTableName>Figures</RefTableName>
     </foreign-key>
-    <foreign-key id="5652" parent="5580" name="FK_OrderFigures_Orders_OrderId">
-      <ColNames>OrderId</ColNames>
-      <CreatedTimestamp>2025-11-07.22:43:48.913</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.913</ModifiedTimestamp>
-      <ObjectId>1781581385</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1669580986</RefTableId>
-      <RefTableName>Orders</RefTableName>
-    </foreign-key>
-    <index id="5653" parent="5580" name="PK_OrderFigures">
+    <index id="5705" parent="5585" name="PK_ShoppingCarts">
       <Clustering>1</Clustering>
       <ColNames>FigureId
 UserId</ColNames>
@@ -17376,156 +17712,34 @@ UserId</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5654" parent="5580" name="IX_OrderFigures_OrderId">
-      <ColNames>OrderId</ColNames>
-      <Position>2</Position>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5655" parent="5580" name="PK_OrderFigures">
-      <CreatedTimestamp>2025-11-07.22:43:48.913</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.913</ModifiedTimestamp>
-      <ObjectId>1749581271</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_OrderFigures</UnderlyingIndexName>
-    </key>
-    <column id="5656" parent="5581" name="Id">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5657" parent="5581" name="UserId">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5658" parent="5581" name="VoucherId">
-      <Position>3</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5659" parent="5581" name="Status">
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-      <StoredType>nvarchar(max)|0s</StoredType>
-    </column>
-    <column id="5660" parent="5581" name="TotalPrice">
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5661" parent="5581" name="PaidPrice">
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-      <StoredType>float|0s</StoredType>
-    </column>
-    <column id="5662" parent="5581" name="PhoneNumber">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>nvarchar(20 char)|0s</StoredType>
-    </column>
-    <column id="5663" parent="5581" name="Address">
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-      <StoredType>nvarchar(255 char)|0s</StoredType>
-    </column>
-    <column id="5664" parent="5581" name="CreatedAt">
-      <NotNull>1</NotNull>
-      <Position>9</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5665" parent="5581" name="CreatedBy">
-      <NotNull>1</NotNull>
-      <Position>10</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <column id="5666" parent="5581" name="UpdatedAt">
-      <NotNull>1</NotNull>
-      <Position>11</Position>
-      <StoredType>datetime2|0s</StoredType>
-    </column>
-    <column id="5667" parent="5581" name="UpdatedBy">
-      <NotNull>1</NotNull>
-      <Position>12</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <foreign-key id="5668" parent="5581" name="FK_Orders_Users_UserId">
-      <ColNames>UserId</ColNames>
-      <CreatedTimestamp>2025-11-07.22:43:48.880</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.880</ModifiedTimestamp>
-      <ObjectId>1701581100</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1413580074</RefTableId>
-      <RefTableName>Users</RefTableName>
-    </foreign-key>
-    <foreign-key id="5669" parent="5581" name="FK_Orders_Vouchers_VoucherId">
-      <ColNames>VoucherId</ColNames>
-      <CreatedTimestamp>2025-11-07.22:43:48.883</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.883</ModifiedTimestamp>
-      <ObjectId>1717581157</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <RefColNames>Id</RefColNames>
-      <RefTableId>1637580872</RefTableId>
-      <RefTableName>Vouchers</RefTableName>
-    </foreign-key>
-    <index id="5670" parent="5581" name="PK_Orders">
-      <Clustering>1</Clustering>
-      <ColNames>Id</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5671" parent="5581" name="IX_Orders_UserId">
+    <index id="5706" parent="5585" name="IX_ShoppingCarts_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5672" parent="5581" name="IX_Orders_VoucherId">
-      <ColNames>VoucherId</ColNames>
-      <Position>3</Position>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5673" parent="5581" name="PK_Orders">
-      <CreatedTimestamp>2025-11-07.22:43:48.880</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.880</ModifiedTimestamp>
+    <key id="5707" parent="5585" name="PK_ShoppingCarts">
+      <CreatedTimestamp>2025-11-13.02:14:40.910</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.910</ModifiedTimestamp>
       <ObjectId>1685581043</ObjectId>
       <Primary>1</Primary>
-      <UnderlyingIndexName>PK_Orders</UnderlyingIndexName>
+      <UnderlyingIndexName>PK_ShoppingCarts</UnderlyingIndexName>
     </key>
-    <column id="5674" parent="5582" name="Name">
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StoredType>nvarchar(50 char)|0s</StoredType>
-    </column>
-    <index id="5675" parent="5582" name="PK_Roles">
-      <Clustering>1</Clustering>
-      <ColNames>Name</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5676" parent="5582" name="PK_Roles">
-      <CreatedTimestamp>2025-11-07.22:43:48.553</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.553</ModifiedTimestamp>
-      <ObjectId>1397580017</ObjectId>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PK_Roles</UnderlyingIndexName>
-    </key>
-    <column id="5677" parent="5583" name="UserId">
+    <column id="5708" parent="5586" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5678" parent="5583" name="FigureId">
+    <column id="5709" parent="5586" name="FigureId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5679" parent="5583" name="Quantity">
+    <column id="5710" parent="5586" name="Quantity">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <foreign-key id="5680" parent="5583" name="FK_ShoppingCarts_Users_UserId">
+    <foreign-key id="5711" parent="5586" name="FK_ShoppingCarts_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.707</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.707</ModifiedTimestamp>
@@ -17535,7 +17749,7 @@ UserId</ColNames>
       <RefTableId>1413580074</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <foreign-key id="5681" parent="5583" name="FK_ShoppingCarts_Figures_FigureId">
+    <foreign-key id="5712" parent="5586" name="FK_ShoppingCarts_Figures_FigureId">
       <ColNames>FigureId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.707</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.707</ModifiedTimestamp>
@@ -17545,37 +17759,24 @@ UserId</ColNames>
       <RefTableId>1301579675</RefTableId>
       <RefTableName>Figures</RefTableName>
     </foreign-key>
-    <index id="5682" parent="5583" name="PK_ShoppingCarts">
-      <Clustering>1</Clustering>
-      <ColNames>FigureId
-UserId</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <index id="5683" parent="5583" name="IX_ShoppingCarts_UserId">
-      <ColNames>UserId</ColNames>
-      <Position>2</Position>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5684" parent="5583" name="PK_ShoppingCarts">
+    <key id="5713" parent="5586" name="PK_ShoppingCarts">
       <CreatedTimestamp>2025-11-07.22:43:48.707</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.707</ModifiedTimestamp>
       <ObjectId>1525580473</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_ShoppingCarts</UnderlyingIndexName>
     </key>
-    <column id="5685" parent="5584" name="RolesName">
+    <column id="5714" parent="5587" name="RolesName">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>nvarchar(50 char)|0s</StoredType>
     </column>
-    <column id="5686" parent="5584" name="UserId">
+    <column id="5715" parent="5587" name="UserId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <foreign-key id="5687" parent="5584" name="FK_UserRole_Roles_RolesName">
+    <foreign-key id="5716" parent="5587" name="FK_UserRole_Roles_RolesName">
       <ColNames>RolesName</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.777</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.777</ModifiedTimestamp>
@@ -17585,7 +17786,7 @@ UserId</ColNames>
       <RefTableId>1381579960</RefTableId>
       <RefTableName>Roles</RefTableName>
     </foreign-key>
-    <foreign-key id="5688" parent="5584" name="FK_UserRole_Users_UserId">
+    <foreign-key id="5717" parent="5587" name="FK_UserRole_Users_UserId">
       <ColNames>UserId</ColNames>
       <CreatedTimestamp>2025-11-07.22:43:48.777</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.777</ModifiedTimestamp>
@@ -17595,7 +17796,44 @@ UserId</ColNames>
       <RefTableId>1413580074</RefTableId>
       <RefTableName>Users</RefTableName>
     </foreign-key>
-    <index id="5689" parent="5584" name="PK_UserRole">
+    <key id="5718" parent="5587" name="PK_UserRole">
+      <CreatedTimestamp>2025-11-07.22:43:48.777</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-07.22:43:48.777</ModifiedTimestamp>
+      <ObjectId>1589580701</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_UserRole</UnderlyingIndexName>
+    </key>
+    <column id="5719" parent="5588" name="RolesName">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>nvarchar(50 char)|0s</StoredType>
+    </column>
+    <column id="5720" parent="5588" name="UserId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <foreign-key id="5721" parent="5588" name="FK_UserRole_Roles_RolesName">
+      <ColNames>RolesName</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.897</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.897</ModifiedTimestamp>
+      <ObjectId>1509580416</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Name</RefColNames>
+      <RefTableId>1301579675</RefTableId>
+      <RefTableName>Roles</RefTableName>
+    </foreign-key>
+    <foreign-key id="5722" parent="5588" name="FK_UserRole_Users_UserId">
+      <ColNames>UserId</ColNames>
+      <CreatedTimestamp>2025-11-13.02:14:40.897</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.897</ModifiedTimestamp>
+      <ObjectId>1525580473</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <RefColNames>Id</RefColNames>
+      <RefTableId>1333579789</RefTableId>
+      <RefTableName>Users</RefTableName>
+    </foreign-key>
+    <index id="5723" parent="5588" name="PK_UserRole">
       <Clustering>1</Clustering>
       <ColNames>RolesName
 UserId</ColNames>
@@ -17603,175 +17841,317 @@ UserId</ColNames>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <index id="5690" parent="5584" name="IX_UserRole_UserId">
+    <index id="5724" parent="5588" name="IX_UserRole_UserId">
       <ColNames>UserId</ColNames>
       <Position>2</Position>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5691" parent="5584" name="PK_UserRole">
-      <CreatedTimestamp>2025-11-07.22:43:48.777</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:43:48.777</ModifiedTimestamp>
-      <ObjectId>1589580701</ObjectId>
+    <key id="5725" parent="5588" name="PK_UserRole">
+      <CreatedTimestamp>2025-11-13.02:14:40.897</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.897</ModifiedTimestamp>
+      <ObjectId>1493580359</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_UserRole</UnderlyingIndexName>
     </key>
-    <column id="5692" parent="5585" name="Id">
+    <column id="5726" parent="5589" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5693" parent="5585" name="Email">
+    <column id="5727" parent="5589" name="Email">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5694" parent="5585" name="Password">
+    <column id="5728" parent="5589" name="Password">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5695" parent="5585" name="Status">
+    <column id="5729" parent="5589" name="Status">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5696" parent="5585" name="CreatedAt">
+    <column id="5730" parent="5589" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5697" parent="5585" name="CreatedBy">
+    <column id="5731" parent="5589" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5698" parent="5585" name="UpdatedAt">
+    <column id="5732" parent="5589" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5699" parent="5585" name="UpdatedBy">
+    <column id="5733" parent="5589" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <index id="5700" parent="5585" name="PK_Users">
-      <Clustering>1</Clustering>
-      <ColNames>Id</ColNames>
-      <Position>1</Position>
-      <Unique>1</Unique>
-      <PartitionDataSpaceId>1</PartitionDataSpaceId>
-    </index>
-    <key id="5701" parent="5585" name="PK_Users">
+    <key id="5734" parent="5589" name="PK_Users">
       <CreatedTimestamp>2025-11-07.22:43:48.593</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.593</ModifiedTimestamp>
       <ObjectId>1429580131</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Users</UnderlyingIndexName>
     </key>
-    <column id="5702" parent="5586" name="Id">
+    <column id="5735" parent="5590" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5703" parent="5586" name="MinPriceCanUse">
+    <column id="5736" parent="5590" name="Email">
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StoredType>float|0s</StoredType>
+      <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5704" parent="5586" name="MaxPriceCanDiscount">
+    <column id="5737" parent="5590" name="Password">
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>float|0s</StoredType>
+      <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5705" parent="5586" name="Description">
+    <column id="5738" parent="5590" name="Status">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>nvarchar(max)|0s</StoredType>
     </column>
-    <column id="5706" parent="5586" name="Quantity">
+    <column id="5739" parent="5590" name="CreatedAt">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StoredType>int|0s</StoredType>
+      <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5707" parent="5586" name="IsActive">
+    <column id="5740" parent="5590" name="CreatedBy">
       <NotNull>1</NotNull>
       <Position>6</Position>
-      <StoredType>bit|0s</StoredType>
+      <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5708" parent="5586" name="SalePercent">
+    <column id="5741" parent="5590" name="UpdatedAt">
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StoredType>float|0s</StoredType>
+      <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5709" parent="5586" name="UsedFrom">
+    <column id="5742" parent="5590" name="UpdatedBy">
       <NotNull>1</NotNull>
       <Position>8</Position>
-      <StoredType>datetime2|0s</StoredType>
+      <StoredType>uniqueidentifier|0s</StoredType>
     </column>
-    <column id="5710" parent="5586" name="UsedTo">
-      <NotNull>1</NotNull>
+    <column id="5743" parent="5590" name="FullName">
       <Position>9</Position>
-      <StoredType>datetime2|0s</StoredType>
+      <StoredType>nvarchar(100 char)|0s</StoredType>
     </column>
-    <column id="5711" parent="5586" name="FiguresAvailable">
-      <NotNull>1</NotNull>
+    <column id="5744" parent="5590" name="Gender">
       <Position>10</Position>
-      <StoredType>nvarchar(max)|0s</StoredType>
+      <StoredType>nvarchar(10 char)|0s</StoredType>
     </column>
-    <column id="5712" parent="5586" name="CreatedAt">
-      <NotNull>1</NotNull>
+    <column id="5745" parent="5590" name="Birthday">
       <Position>11</Position>
       <StoredType>datetime2|0s</StoredType>
     </column>
-    <column id="5713" parent="5586" name="CreatedBy">
-      <NotNull>1</NotNull>
+    <column id="5746" parent="5590" name="PhoneNumber">
       <Position>12</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
+      <StoredType>nvarchar(20 char)|0s</StoredType>
     </column>
-    <column id="5714" parent="5586" name="UpdatedAt">
-      <NotNull>1</NotNull>
+    <column id="5747" parent="5590" name="Address">
       <Position>13</Position>
-      <StoredType>datetime2|0s</StoredType>
+      <StoredType>nvarchar(255 char)|0s</StoredType>
     </column>
-    <column id="5715" parent="5586" name="UpdatedBy">
-      <NotNull>1</NotNull>
-      <Position>14</Position>
-      <StoredType>uniqueidentifier|0s</StoredType>
-    </column>
-    <index id="5716" parent="5586" name="PK_Vouchers">
+    <index id="5748" parent="5590" name="PK_Users">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5717" parent="5586" name="PK_Vouchers">
+    <key id="5749" parent="5590" name="PK_Users">
+      <CreatedTimestamp>2025-11-13.02:14:40.880</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.880</ModifiedTimestamp>
+      <ObjectId>1349579846</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Users</UnderlyingIndexName>
+    </key>
+    <column id="5750" parent="5591" name="Id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5751" parent="5591" name="MinPriceCanUse">
+      <Position>2</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5752" parent="5591" name="MaxPriceCanDiscount">
+      <Position>3</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5753" parent="5591" name="Description">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5754" parent="5591" name="Quantity">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="5755" parent="5591" name="IsActive">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bit|0s</StoredType>
+    </column>
+    <column id="5756" parent="5591" name="SalePercent">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5757" parent="5591" name="UsedFrom">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5758" parent="5591" name="UsedTo">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5759" parent="5591" name="FiguresAvailable">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5760" parent="5591" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5761" parent="5591" name="CreatedBy">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5762" parent="5591" name="UpdatedAt">
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5763" parent="5591" name="UpdatedBy">
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <key id="5764" parent="5591" name="PK_Vouchers">
       <CreatedTimestamp>2025-11-07.22:43:48.847</CreatedTimestamp>
       <ModifiedTimestamp>2025-11-07.22:43:48.847</ModifiedTimestamp>
       <ObjectId>1653580929</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_Vouchers</UnderlyingIndexName>
     </key>
-    <column id="5718" parent="5587" name="MigrationId">
+    <column id="5765" parent="5592" name="Id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5766" parent="5592" name="MinPriceCanUse">
+      <Position>2</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5767" parent="5592" name="MaxPriceCanDiscount">
+      <Position>3</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5768" parent="5592" name="Description">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5769" parent="5592" name="Quantity">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>int|0s</StoredType>
+    </column>
+    <column id="5770" parent="5592" name="IsActive">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>bit|0s</StoredType>
+    </column>
+    <column id="5771" parent="5592" name="SalePercent">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>float|0s</StoredType>
+    </column>
+    <column id="5772" parent="5592" name="UsedFrom">
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5773" parent="5592" name="UsedTo">
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5774" parent="5592" name="FiguresAvailable">
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+      <StoredType>nvarchar(max)|0s</StoredType>
+    </column>
+    <column id="5775" parent="5592" name="CreatedAt">
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5776" parent="5592" name="CreatedBy">
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <column id="5777" parent="5592" name="UpdatedAt">
+      <NotNull>1</NotNull>
+      <Position>13</Position>
+      <StoredType>datetime2|0s</StoredType>
+    </column>
+    <column id="5778" parent="5592" name="UpdatedBy">
+      <NotNull>1</NotNull>
+      <Position>14</Position>
+      <StoredType>uniqueidentifier|0s</StoredType>
+    </column>
+    <index id="5779" parent="5592" name="PK_Vouchers">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+      <PartitionDataSpaceId>1</PartitionDataSpaceId>
+    </index>
+    <key id="5780" parent="5592" name="PK_Vouchers">
+      <CreatedTimestamp>2025-11-13.02:14:40.887</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.887</ModifiedTimestamp>
+      <ObjectId>1381579960</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_Vouchers</UnderlyingIndexName>
+    </key>
+    <column id="5781" parent="5593" name="MigrationId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>nvarchar(150 char)|0s</StoredType>
     </column>
-    <column id="5719" parent="5587" name="ProductVersion">
+    <column id="5782" parent="5593" name="ProductVersion">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>nvarchar(32 char)|0s</StoredType>
     </column>
-    <index id="5720" parent="5587" name="PK___EFMigrationsHistory">
+    <index id="5783" parent="5593" name="PK___EFMigrationsHistory">
       <Clustering>1</Clustering>
       <ColNames>MigrationId</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
       <PartitionDataSpaceId>1</PartitionDataSpaceId>
     </index>
-    <key id="5721" parent="5587" name="PK___EFMigrationsHistory">
-      <CreatedTimestamp>2025-11-07.22:44:52.020</CreatedTimestamp>
-      <ModifiedTimestamp>2025-11-07.22:44:52.020</ModifiedTimestamp>
-      <ObjectId>1829581556</ObjectId>
+    <key id="5784" parent="5593" name="PK___EFMigrationsHistory">
+      <CreatedTimestamp>2025-11-13.02:14:40.713</CreatedTimestamp>
+      <ModifiedTimestamp>2025-11-13.02:14:40.713</ModifiedTimestamp>
+      <ObjectId>1221579390</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK___EFMigrationsHistory</UnderlyingIndexName>
     </key>

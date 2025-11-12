@@ -12,7 +12,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
         private User loggedInUser;
         
         // This list is bound to the DataGridView.
-        private BindingList<ImportItemViewModel> _importList;
+        private BindingList<ImportItemViewModel> importList;
 
         public UserControl_NhapHang()
         {
@@ -28,8 +28,8 @@ namespace FigureShop.POS.Views.UserControl.Operations
             loggedInUser = context.Users.FirstOrDefault(u => u.Email == "admin@figureshop.com");
 
             // Setup the grid
-            _importList = new BindingList<ImportItemViewModel>();
-            dgvNhapHang.DataSource = _importList;
+            importList = new BindingList<ImportItemViewModel>();
+            dgvNhapHang.DataSource = importList;
             
             if (dgvNhapHang.Columns.Count > 0)
             {
@@ -77,7 +77,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
         {
             txtMaHoaDonNhap.Text = $"NH-{DateTime.Now:yyyyMMdd}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}";
             dtpNgayNhap.Value = DateTime.Now;
-            _importList.Clear();
+            importList.Clear();
             ClearItemFields();
         }
 
@@ -162,7 +162,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
             }
 
             // Check if item is already in the list
-            var itemInList = _importList.FirstOrDefault(item => item.MaSP == selectedFigure.Id);
+            var itemInList = importList.FirstOrDefault(item => item.MaSP == selectedFigure.Id);
             if (itemInList != null)
             {
                 // Update existing item
@@ -172,7 +172,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
             else
             {
                 // Add new item to the list
-                _importList.Add(new ImportItemViewModel
+                importList.Add(new ImportItemViewModel
                 {
                     MaSP = selectedFigure.Id,
                     TenSP = selectedFigure.Name,
@@ -181,7 +181,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
                 });
             }
             
-            _importList.ResetBindings(); // Refresh the grid
+            importList.ResetBindings(); // Refresh the grid
             ClearItemFields();
         }
 
@@ -190,7 +190,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
             if (dgvNhapHang.CurrentRow == null) return;
             
             var selectedItem = dgvNhapHang.CurrentRow.DataBoundItem as ImportItemViewModel;
-            _importList.Remove(selectedItem);
+            importList.Remove(selectedItem);
         }
 
         private void btnSuaSanPham_Click(object sender, EventArgs e)
@@ -207,14 +207,14 @@ namespace FigureShop.POS.Views.UserControl.Operations
             txtDonGia.Text = selectedItem.DonGiaNhap.ToString("N0");
             
             // Remove from list 
-            _importList.Remove(selectedItem);
+            importList.Remove(selectedItem);
         }
 
         // Save button
         
         private void btnThemHoaDon_Click(object sender, EventArgs e)
         {
-            if (_importList.Count == 0)
+            if (importList.Count == 0)
             {
                 MessageBox.Show("Hoá đơn nhập hàng trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -237,7 +237,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
 
             try
             {
-                foreach (var item in _importList)
+                foreach (var item in importList)
                 {
                     var figureToUpdate = context.Figures.Find(item.MaSP);
                     if (figureToUpdate != null)

@@ -39,6 +39,12 @@ public partial class FigureShopDbContext : DbContext
             entity.HasOne(d => d.Figure).WithMany(p => p.Comments).HasForeignKey(d => d.FigureId);
             entity.HasOne(d => d.User).WithMany(p => p.Comments).HasForeignKey(d => d.UserId);
         });
+        
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.Property(e => e.Email).IsRequired(false);
+            entity.Property(e => e.Password).IsRequired(false);
+        });
 
         modelBuilder.Entity<Figure>(entity =>
         {
@@ -52,7 +58,7 @@ public partial class FigureShopDbContext : DbContext
 
             entity.HasOne(d => d.Category).WithMany(p => p.Figures)
                 .HasForeignKey(d => d.CategoryId)
-                .OnDelete(DeleteBehavior.SetNull);
+                .OnDelete(DeleteBehavior.SetNull);  
         });
 
         modelBuilder.Entity<Order>(entity =>

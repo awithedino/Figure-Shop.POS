@@ -31,15 +31,16 @@ partial class Form_Menu
     /// </summary>
     private void InitializeComponent()
     {
+        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menu));
         panel1 = new System.Windows.Forms.Panel();
         flpMenu = new System.Windows.Forms.FlowLayoutPanel();
         btnQuanLy = new System.Windows.Forms.Button();
         flpManagementSubmenu = new System.Windows.Forms.FlowLayoutPanel();
-        btnNhanVien = new System.Windows.Forms.Button();
         btnSanPham = new System.Windows.Forms.Button();
         btnKhachHang = new System.Windows.Forms.Button();
         btnHang = new System.Windows.Forms.Button();
         btnTheLoai = new System.Windows.Forms.Button();
+        btnNhanVien = new System.Windows.Forms.Button();
         btnCongViec = new System.Windows.Forms.Button();
         btnNghiepVu = new System.Windows.Forms.Button();
         flpOperationsSubmenu = new System.Windows.Forms.FlowLayoutPanel();
@@ -115,11 +116,11 @@ partial class Form_Menu
         flpManagementSubmenu.AutoSize = true;
         flpManagementSubmenu.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
         flpManagementSubmenu.BackColor = System.Drawing.Color.DodgerBlue;
-        flpManagementSubmenu.Controls.Add(btnNhanVien);
         flpManagementSubmenu.Controls.Add(btnSanPham);
         flpManagementSubmenu.Controls.Add(btnKhachHang);
         flpManagementSubmenu.Controls.Add(btnHang);
         flpManagementSubmenu.Controls.Add(btnTheLoai);
+        flpManagementSubmenu.Controls.Add(btnNhanVien);
         flpManagementSubmenu.Controls.Add(btnCongViec);
         flpManagementSubmenu.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
         flpManagementSubmenu.Location = new System.Drawing.Point(3, 47);
@@ -129,23 +130,6 @@ partial class Form_Menu
         flpManagementSubmenu.Visible = false;
         flpManagementSubmenu.WrapContents = false;
         // 
-        // btnNhanVien
-        // 
-        btnNhanVien.FlatAppearance.BorderSize = 0;
-        btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
-        btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
-        btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnNhanVien.ForeColor = System.Drawing.Color.White;
-        btnNhanVien.Location = new System.Drawing.Point(3, 3);
-        btnNhanVien.Name = "btnNhanVien";
-        btnNhanVien.Size = new System.Drawing.Size(146, 45);
-        btnNhanVien.TabIndex = 1;
-        btnNhanVien.Text = "Nhân Viên";
-        btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-        btnNhanVien.UseVisualStyleBackColor = true;
-        btnNhanVien.Click += btnNhanVien_Click;
-        // 
         // btnSanPham
         // 
         btnSanPham.FlatAppearance.BorderSize = 0;
@@ -154,7 +138,7 @@ partial class Form_Menu
         btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         btnSanPham.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnSanPham.ForeColor = System.Drawing.Color.White;
-        btnSanPham.Location = new System.Drawing.Point(3, 54);
+        btnSanPham.Location = new System.Drawing.Point(3, 3);
         btnSanPham.Name = "btnSanPham";
         btnSanPham.Size = new System.Drawing.Size(146, 45);
         btnSanPham.TabIndex = 0;
@@ -171,7 +155,7 @@ partial class Form_Menu
         btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnKhachHang.ForeColor = System.Drawing.Color.White;
-        btnKhachHang.Location = new System.Drawing.Point(3, 105);
+        btnKhachHang.Location = new System.Drawing.Point(3, 54);
         btnKhachHang.Name = "btnKhachHang";
         btnKhachHang.Size = new System.Drawing.Size(146, 45);
         btnKhachHang.TabIndex = 4;
@@ -188,7 +172,7 @@ partial class Form_Menu
         btnHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         btnHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnHang.ForeColor = System.Drawing.Color.White;
-        btnHang.Location = new System.Drawing.Point(3, 156);
+        btnHang.Location = new System.Drawing.Point(3, 105);
         btnHang.Name = "btnHang";
         btnHang.Size = new System.Drawing.Size(146, 45);
         btnHang.TabIndex = 3;
@@ -205,7 +189,7 @@ partial class Form_Menu
         btnTheLoai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         btnTheLoai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
         btnTheLoai.ForeColor = System.Drawing.Color.White;
-        btnTheLoai.Location = new System.Drawing.Point(3, 207);
+        btnTheLoai.Location = new System.Drawing.Point(3, 156);
         btnTheLoai.Name = "btnTheLoai";
         btnTheLoai.Size = new System.Drawing.Size(146, 45);
         btnTheLoai.TabIndex = 5;
@@ -213,6 +197,23 @@ partial class Form_Menu
         btnTheLoai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
         btnTheLoai.UseVisualStyleBackColor = true;
         btnTheLoai.Click += btnTheLoai_Click;
+        // 
+        // btnNhanVien
+        // 
+        btnNhanVien.FlatAppearance.BorderSize = 0;
+        btnNhanVien.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkBlue;
+        btnNhanVien.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+        btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        btnNhanVien.ForeColor = System.Drawing.Color.White;
+        btnNhanVien.Location = new System.Drawing.Point(3, 207);
+        btnNhanVien.Name = "btnNhanVien";
+        btnNhanVien.Size = new System.Drawing.Size(146, 45);
+        btnNhanVien.TabIndex = 1;
+        btnNhanVien.Text = "Nhân Viên";
+        btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+        btnNhanVien.UseVisualStyleBackColor = true;
+        btnNhanVien.Click += btnNhanVien_Click;
         // 
         // btnCongViec
         // 
@@ -323,9 +324,11 @@ partial class Form_Menu
         // 
         pictureBox1.BackColor = System.Drawing.SystemColors.Control;
         pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+        pictureBox1.Image = ((System.Drawing.Image)resources.GetObject("pictureBox1.Image"));
         pictureBox1.Location = new System.Drawing.Point(0, 0);
         pictureBox1.Name = "pictureBox1";
         pictureBox1.Size = new System.Drawing.Size(152, 152);
+        pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
         pictureBox1.TabIndex = 0;
         pictureBox1.TabStop = false;
         // 

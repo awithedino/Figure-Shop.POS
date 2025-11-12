@@ -31,13 +31,11 @@ partial class UserControl_NhanVien
     /// </summary>
     private void InitializeComponent()
     {
-        groupBox1 = new System.Windows.Forms.GroupBox();
-        label1 = new System.Windows.Forms.Label();
         groupBox3 = new System.Windows.Forms.GroupBox();
         dgvNhanVien = new System.Windows.Forms.DataGridView();
         groupBox6 = new System.Windows.Forms.GroupBox();
         btnTimKiem = new System.Windows.Forms.Button();
-        txtTimKiem = new System.Windows.Forms.TextBox();
+        txtSearch = new System.Windows.Forms.TextBox();
         label9 = new System.Windows.Forms.Label();
         splitter1 = new System.Windows.Forms.Splitter();
         label2 = new System.Windows.Forms.Label();
@@ -46,7 +44,6 @@ partial class UserControl_NhanVien
         label5 = new System.Windows.Forms.Label();
         label6 = new System.Windows.Forms.Label();
         label7 = new System.Windows.Forms.Label();
-        label8 = new System.Windows.Forms.Label();
         groupBox4 = new System.Windows.Forms.GroupBox();
         groupBox5 = new System.Windows.Forms.GroupBox();
         btnExcel = new System.Windows.Forms.Button();
@@ -57,14 +54,18 @@ partial class UserControl_NhanVien
         btnLuu = new System.Windows.Forms.Button();
         btnThem = new System.Windows.Forms.Button();
         dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-        txtGioiTinh = new System.Windows.Forms.TextBox();
         txtTenNV = new System.Windows.Forms.TextBox();
         txtMaNV = new System.Windows.Forms.TextBox();
         txtSDT = new System.Windows.Forms.TextBox();
         txtDiaChi = new System.Windows.Forms.TextBox();
-        txtMaCV = new System.Windows.Forms.TextBox();
         groupBox2 = new System.Windows.Forms.GroupBox();
-        groupBox1.SuspendLayout();
+        cboMaCV = new System.Windows.Forms.ComboBox();
+        label10 = new System.Windows.Forms.Label();
+        cboGioiTinh = new System.Windows.Forms.ComboBox();
+        txtPassword = new System.Windows.Forms.TextBox();
+        label8 = new System.Windows.Forms.Label();
+        txtEmail = new System.Windows.Forms.TextBox();
+        label1 = new System.Windows.Forms.Label();
         groupBox3.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
         groupBox6.SuspendLayout();
@@ -72,36 +73,15 @@ partial class UserControl_NhanVien
         groupBox2.SuspendLayout();
         SuspendLayout();
         // 
-        // groupBox1
-        // 
-        groupBox1.Controls.Add(label1);
-        groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-        groupBox1.Location = new System.Drawing.Point(0, 0);
-        groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(1021, 105);
-        groupBox1.TabIndex = 0;
-        groupBox1.TabStop = false;
-        // 
-        // label1
-        // 
-        label1.Dock = System.Windows.Forms.DockStyle.Fill;
-        label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(3, 23);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(1015, 79);
-        label1.TabIndex = 0;
-        label1.Text = "Nhân viên";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
         // groupBox3
         // 
         groupBox3.Controls.Add(dgvNhanVien);
         groupBox3.Controls.Add(groupBox6);
         groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
         groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox3.Location = new System.Drawing.Point(284, 105);
+        groupBox3.Location = new System.Drawing.Point(284, 0);
         groupBox3.Name = "groupBox3";
-        groupBox3.Size = new System.Drawing.Size(737, 628);
+        groupBox3.Size = new System.Drawing.Size(737, 733);
         groupBox3.TabIndex = 2;
         groupBox3.TabStop = false;
         groupBox3.Text = "Tìm kiếm nhân viên";
@@ -113,13 +93,13 @@ partial class UserControl_NhanVien
         dgvNhanVien.Location = new System.Drawing.Point(3, 128);
         dgvNhanVien.Name = "dgvNhanVien";
         dgvNhanVien.RowHeadersWidth = 51;
-        dgvNhanVien.Size = new System.Drawing.Size(731, 497);
+        dgvNhanVien.Size = new System.Drawing.Size(731, 602);
         dgvNhanVien.TabIndex = 1;
         // 
         // groupBox6
         // 
         groupBox6.Controls.Add(btnTimKiem);
-        groupBox6.Controls.Add(txtTimKiem);
+        groupBox6.Controls.Add(txtSearch);
         groupBox6.Controls.Add(label9);
         groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
         groupBox6.Location = new System.Drawing.Point(3, 26);
@@ -139,13 +119,14 @@ partial class UserControl_NhanVien
         btnTimKiem.TabIndex = 2;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
+        btnTimKiem.Click += btnTimKiem_Click;
         // 
-        // txtTimKiem
+        // txtSearch
         // 
-        txtTimKiem.Location = new System.Drawing.Point(253, 43);
-        txtTimKiem.Name = "txtTimKiem";
-        txtTimKiem.Size = new System.Drawing.Size(286, 30);
-        txtTimKiem.TabIndex = 1;
+        txtSearch.Location = new System.Drawing.Point(253, 43);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new System.Drawing.Size(286, 30);
+        txtSearch.TabIndex = 1;
         // 
         // label9
         // 
@@ -162,7 +143,7 @@ partial class UserControl_NhanVien
         splitter1.Dock = System.Windows.Forms.DockStyle.Right;
         splitter1.Location = new System.Drawing.Point(271, 26);
         splitter1.Name = "splitter1";
-        splitter1.Size = new System.Drawing.Size(10, 599);
+        splitter1.Size = new System.Drawing.Size(10, 704);
         splitter1.TabIndex = 0;
         splitter1.TabStop = false;
         // 
@@ -178,7 +159,7 @@ partial class UserControl_NhanVien
         // label3
         // 
         label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label3.Location = new System.Drawing.Point(6, 74);
+        label3.Location = new System.Drawing.Point(6, 73);
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(90, 25);
         label3.TabIndex = 2;
@@ -187,7 +168,7 @@ partial class UserControl_NhanVien
         // label4
         // 
         label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label4.Location = new System.Drawing.Point(6, 109);
+        label4.Location = new System.Drawing.Point(5, 106);
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(90, 25);
         label4.TabIndex = 3;
@@ -196,7 +177,7 @@ partial class UserControl_NhanVien
         // label5
         // 
         label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label5.Location = new System.Drawing.Point(6, 145);
+        label5.Location = new System.Drawing.Point(4, 138);
         label5.Name = "label5";
         label5.Size = new System.Drawing.Size(90, 25);
         label5.TabIndex = 4;
@@ -205,7 +186,7 @@ partial class UserControl_NhanVien
         // label6
         // 
         label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label6.Location = new System.Drawing.Point(6, 185);
+        label6.Location = new System.Drawing.Point(5, 172);
         label6.Name = "label6";
         label6.Size = new System.Drawing.Size(90, 25);
         label6.TabIndex = 5;
@@ -214,25 +195,16 @@ partial class UserControl_NhanVien
         // label7
         // 
         label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label7.Location = new System.Drawing.Point(6, 220);
+        label7.Location = new System.Drawing.Point(4, 271);
         label7.Name = "label7";
         label7.Size = new System.Drawing.Size(90, 25);
         label7.TabIndex = 6;
         label7.Text = "Địa chỉ:";
         // 
-        // label8
-        // 
-        label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label8.Location = new System.Drawing.Point(6, 300);
-        label8.Name = "label8";
-        label8.Size = new System.Drawing.Size(77, 25);
-        label8.TabIndex = 7;
-        label8.Text = "Mã CV:";
-        // 
         // groupBox4
         // 
         groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-        groupBox4.Location = new System.Drawing.Point(0, 650);
+        groupBox4.Location = new System.Drawing.Point(0, 755);
         groupBox4.Name = "groupBox4";
         groupBox4.Size = new System.Drawing.Size(257, 272);
         groupBox4.TabIndex = 3;
@@ -249,7 +221,7 @@ partial class UserControl_NhanVien
         groupBox5.Controls.Add(btnSua);
         groupBox5.Controls.Add(btnLuu);
         groupBox5.Controls.Add(btnThem);
-        groupBox5.Location = new System.Drawing.Point(3, 337);
+        groupBox5.Location = new System.Drawing.Point(3, 442);
         groupBox5.Name = "groupBox5";
         groupBox5.Size = new System.Drawing.Size(265, 287);
         groupBox5.TabIndex = 8;
@@ -277,6 +249,7 @@ partial class UserControl_NhanVien
         btnReload.TabIndex = 5;
         btnReload.Text = "Reload";
         btnReload.UseVisualStyleBackColor = true;
+        btnReload.Click += btnReload_Click;
         // 
         // btnXoa
         // 
@@ -287,6 +260,7 @@ partial class UserControl_NhanVien
         btnXoa.TabIndex = 4;
         btnXoa.Text = "Xóa";
         btnXoa.UseVisualStyleBackColor = true;
+        btnXoa.Click += btnXoa_Click;
         // 
         // btnBoQua
         // 
@@ -297,6 +271,7 @@ partial class UserControl_NhanVien
         btnBoQua.TabIndex = 3;
         btnBoQua.Text = "Bỏ qua";
         btnBoQua.UseVisualStyleBackColor = true;
+        btnBoQua.Click += btnBoQua_Click;
         // 
         // btnSua
         // 
@@ -307,6 +282,7 @@ partial class UserControl_NhanVien
         btnSua.TabIndex = 2;
         btnSua.Text = "Sửa";
         btnSua.UseVisualStyleBackColor = true;
+        btnSua.Click += btnSua_Click;
         // 
         // btnLuu
         // 
@@ -317,6 +293,7 @@ partial class UserControl_NhanVien
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
         btnLuu.UseVisualStyleBackColor = true;
+        btnLuu.Click += btnLuu_Click;
         // 
         // btnThem
         // 
@@ -327,29 +304,22 @@ partial class UserControl_NhanVien
         btnThem.TabIndex = 0;
         btnThem.Text = "Thêm";
         btnThem.UseVisualStyleBackColor = true;
+        btnThem.Click += btnThem_Click;
         // 
         // dtpNgaySinh
         // 
         dtpNgaySinh.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        dtpNgaySinh.Location = new System.Drawing.Point(108, 143);
+        dtpNgaySinh.Location = new System.Drawing.Point(106, 136);
         dtpNgaySinh.Name = "dtpNgaySinh";
         dtpNgaySinh.Size = new System.Drawing.Size(150, 27);
         dtpNgaySinh.TabIndex = 9;
         // 
-        // txtGioiTinh
-        // 
-        txtGioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtGioiTinh.Location = new System.Drawing.Point(108, 106);
-        txtGioiTinh.Name = "txtGioiTinh";
-        txtGioiTinh.Size = new System.Drawing.Size(149, 27);
-        txtGioiTinh.TabIndex = 10;
-        // 
         // txtTenNV
         // 
         txtTenNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtTenNV.Location = new System.Drawing.Point(108, 71);
+        txtTenNV.Location = new System.Drawing.Point(108, 70);
         txtTenNV.Name = "txtTenNV";
         txtTenNV.Size = new System.Drawing.Size(149, 27);
         txtTenNV.TabIndex = 11;
@@ -365,7 +335,7 @@ partial class UserControl_NhanVien
         // txtSDT
         // 
         txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtSDT.Location = new System.Drawing.Point(108, 182);
+        txtSDT.Location = new System.Drawing.Point(107, 169);
         txtSDT.Name = "txtSDT";
         txtSDT.Size = new System.Drawing.Size(149, 27);
         txtSDT.TabIndex = 13;
@@ -373,31 +343,28 @@ partial class UserControl_NhanVien
         // txtDiaChi
         // 
         txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtDiaChi.Location = new System.Drawing.Point(108, 217);
+        txtDiaChi.Location = new System.Drawing.Point(106, 268);
+        txtDiaChi.Multiline = true;
         txtDiaChi.Name = "txtDiaChi";
-        txtDiaChi.Size = new System.Drawing.Size(149, 27);
+        txtDiaChi.Size = new System.Drawing.Size(149, 85);
         txtDiaChi.TabIndex = 14;
-        // 
-        // txtMaCV
-        // 
-        txtMaCV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtMaCV.Location = new System.Drawing.Point(108, 297);
-        txtMaCV.Name = "txtMaCV";
-        txtMaCV.Size = new System.Drawing.Size(149, 27);
-        txtMaCV.TabIndex = 15;
         // 
         // groupBox2
         // 
-        groupBox2.Controls.Add(txtMaCV);
+        groupBox2.Controls.Add(cboMaCV);
+        groupBox2.Controls.Add(label10);
+        groupBox2.Controls.Add(cboGioiTinh);
+        groupBox2.Controls.Add(txtPassword);
+        groupBox2.Controls.Add(label8);
+        groupBox2.Controls.Add(txtEmail);
+        groupBox2.Controls.Add(label1);
         groupBox2.Controls.Add(txtDiaChi);
         groupBox2.Controls.Add(txtSDT);
         groupBox2.Controls.Add(txtMaNV);
         groupBox2.Controls.Add(txtTenNV);
-        groupBox2.Controls.Add(txtGioiTinh);
         groupBox2.Controls.Add(dtpNgaySinh);
         groupBox2.Controls.Add(groupBox5);
         groupBox2.Controls.Add(groupBox4);
-        groupBox2.Controls.Add(label8);
         groupBox2.Controls.Add(label7);
         groupBox2.Controls.Add(label6);
         groupBox2.Controls.Add(label5);
@@ -407,12 +374,71 @@ partial class UserControl_NhanVien
         groupBox2.Controls.Add(splitter1);
         groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
         groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox2.Location = new System.Drawing.Point(0, 105);
+        groupBox2.Location = new System.Drawing.Point(0, 0);
         groupBox2.Name = "groupBox2";
-        groupBox2.Size = new System.Drawing.Size(284, 628);
+        groupBox2.Size = new System.Drawing.Size(284, 733);
         groupBox2.TabIndex = 1;
         groupBox2.TabStop = false;
         groupBox2.Text = "Thông tin nhân viên";
+        // 
+        // cboMaCV
+        // 
+        cboMaCV.FormattingEnabled = true;
+        cboMaCV.Location = new System.Drawing.Point(107, 380);
+        cboMaCV.Name = "cboMaCV";
+        cboMaCV.Size = new System.Drawing.Size(148, 31);
+        cboMaCV.TabIndex = 21;
+        // 
+        // label10
+        // 
+        label10.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label10.Location = new System.Drawing.Point(5, 385);
+        label10.Name = "label10";
+        label10.Size = new System.Drawing.Size(90, 25);
+        label10.TabIndex = 20;
+        label10.Text = "Công việc:";
+        // 
+        // cboGioiTinh
+        // 
+        cboGioiTinh.FormattingEnabled = true;
+        cboGioiTinh.Location = new System.Drawing.Point(107, 101);
+        cboGioiTinh.Name = "cboGioiTinh";
+        cboGioiTinh.Size = new System.Drawing.Size(148, 31);
+        cboGioiTinh.TabIndex = 19;
+        // 
+        // txtPassword
+        // 
+        txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtPassword.Location = new System.Drawing.Point(106, 235);
+        txtPassword.Name = "txtPassword";
+        txtPassword.Size = new System.Drawing.Size(149, 27);
+        txtPassword.TabIndex = 18;
+        // 
+        // label8
+        // 
+        label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label8.Location = new System.Drawing.Point(4, 238);
+        label8.Name = "label8";
+        label8.Size = new System.Drawing.Size(90, 25);
+        label8.TabIndex = 17;
+        label8.Text = "Mật khẩu:";
+        // 
+        // txtEmail
+        // 
+        txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtEmail.Location = new System.Drawing.Point(106, 202);
+        txtEmail.Name = "txtEmail";
+        txtEmail.Size = new System.Drawing.Size(149, 27);
+        txtEmail.TabIndex = 16;
+        // 
+        // label1
+        // 
+        label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        label1.Location = new System.Drawing.Point(4, 205);
+        label1.Name = "label1";
+        label1.Size = new System.Drawing.Size(90, 25);
+        label1.TabIndex = 15;
+        label1.Text = "Email:";
         // 
         // UserControl_NhanVien
         // 
@@ -420,9 +446,8 @@ partial class UserControl_NhanVien
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         Controls.Add(groupBox3);
         Controls.Add(groupBox2);
-        Controls.Add(groupBox1);
         Size = new System.Drawing.Size(1021, 733);
-        groupBox1.ResumeLayout(false);
+        Load += UserControl_NhanVien_Load;
         groupBox3.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
         groupBox6.ResumeLayout(false);
@@ -433,6 +458,18 @@ partial class UserControl_NhanVien
         ResumeLayout(false);
     }
 
+    private System.Windows.Forms.ComboBox cboMaCV;
+    private System.Windows.Forms.Label label10;
+
+    private System.Windows.Forms.ComboBox cboGioiTinh;
+
+    private System.Windows.Forms.TextBox txtEmail;
+
+    private System.Windows.Forms.Label label8;
+
+    private System.Windows.Forms.TextBox txtPassword;
+    private System.Windows.Forms.Label label1;
+
     private System.Windows.Forms.Splitter splitter1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
@@ -440,7 +477,6 @@ partial class UserControl_NhanVien
     private System.Windows.Forms.Label label5;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label7;
-    private System.Windows.Forms.Label label8;
     private System.Windows.Forms.GroupBox groupBox4;
     private System.Windows.Forms.GroupBox groupBox5;
     private System.Windows.Forms.Button btnThem;
@@ -451,17 +487,15 @@ partial class UserControl_NhanVien
     private System.Windows.Forms.Button btnReload;
     private System.Windows.Forms.Button btnExcel;
     private System.Windows.Forms.DateTimePicker dtpNgaySinh;
-    private System.Windows.Forms.TextBox txtGioiTinh;
     private System.Windows.Forms.TextBox txtTenNV;
     private System.Windows.Forms.TextBox txtMaNV;
     private System.Windows.Forms.TextBox txtSDT;
     private System.Windows.Forms.TextBox txtDiaChi;
-    private System.Windows.Forms.TextBox txtMaCV;
     private System.Windows.Forms.GroupBox groupBox2;
 
     private System.Windows.Forms.Button btnTimKiem;
 
-    private System.Windows.Forms.TextBox txtTimKiem;
+    private System.Windows.Forms.TextBox txtSearch;
 
     private System.Windows.Forms.Label label9;
 
@@ -470,10 +504,6 @@ partial class UserControl_NhanVien
     private System.Windows.Forms.GroupBox groupBox6;
 
     private System.Windows.Forms.GroupBox groupBox3;
-
-    private System.Windows.Forms.Label label1;
-
-    private System.Windows.Forms.GroupBox groupBox1;
 
     #endregion
 }

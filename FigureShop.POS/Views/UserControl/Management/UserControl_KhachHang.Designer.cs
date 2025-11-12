@@ -31,14 +31,12 @@ partial class UserControl_KhachHang
     /// </summary>
     private void InitializeComponent()
     {
-        groupBox1 = new System.Windows.Forms.GroupBox();
-        label1 = new System.Windows.Forms.Label();
         groupBox2 = new System.Windows.Forms.GroupBox();
+        cboGioiTinh = new System.Windows.Forms.ComboBox();
         txtDiaChi = new System.Windows.Forms.TextBox();
         txtSDT = new System.Windows.Forms.TextBox();
         txtMaKH = new System.Windows.Forms.TextBox();
-        txtKH = new System.Windows.Forms.TextBox();
-        txtGioiTinh = new System.Windows.Forms.TextBox();
+        txtTenKH = new System.Windows.Forms.TextBox();
         dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
         groupBox5 = new System.Windows.Forms.GroupBox();
         btnExcel = new System.Windows.Forms.Button();
@@ -59,9 +57,8 @@ partial class UserControl_KhachHang
         dgvKhachHang = new System.Windows.Forms.DataGridView();
         groupBox6 = new System.Windows.Forms.GroupBox();
         btnTimKiem = new System.Windows.Forms.Button();
-        txtTimKiem = new System.Windows.Forms.TextBox();
+        txtSearch = new System.Windows.Forms.TextBox();
         label9 = new System.Windows.Forms.Label();
-        groupBox1.SuspendLayout();
         groupBox2.SuspendLayout();
         groupBox5.SuspendLayout();
         groupBox3.SuspendLayout();
@@ -69,34 +66,13 @@ partial class UserControl_KhachHang
         groupBox6.SuspendLayout();
         SuspendLayout();
         // 
-        // groupBox1
-        // 
-        groupBox1.Controls.Add(label1);
-        groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-        groupBox1.Location = new System.Drawing.Point(0, 0);
-        groupBox1.Name = "groupBox1";
-        groupBox1.Size = new System.Drawing.Size(1021, 105);
-        groupBox1.TabIndex = 0;
-        groupBox1.TabStop = false;
-        // 
-        // label1
-        // 
-        label1.Dock = System.Windows.Forms.DockStyle.Fill;
-        label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label1.Location = new System.Drawing.Point(3, 23);
-        label1.Name = "label1";
-        label1.Size = new System.Drawing.Size(1015, 79);
-        label1.TabIndex = 0;
-        label1.Text = "Khách hàng";
-        label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        // 
         // groupBox2
         // 
+        groupBox2.Controls.Add(cboGioiTinh);
         groupBox2.Controls.Add(txtDiaChi);
         groupBox2.Controls.Add(txtSDT);
         groupBox2.Controls.Add(txtMaKH);
-        groupBox2.Controls.Add(txtKH);
-        groupBox2.Controls.Add(txtGioiTinh);
+        groupBox2.Controls.Add(txtTenKH);
         groupBox2.Controls.Add(dtpNgaySinh);
         groupBox2.Controls.Add(groupBox5);
         groupBox2.Controls.Add(label7);
@@ -108,25 +84,34 @@ partial class UserControl_KhachHang
         groupBox2.Controls.Add(splitter1);
         groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
         groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox2.Location = new System.Drawing.Point(0, 105);
+        groupBox2.Location = new System.Drawing.Point(0, 0);
         groupBox2.Name = "groupBox2";
-        groupBox2.Size = new System.Drawing.Size(263, 628);
+        groupBox2.Size = new System.Drawing.Size(263, 733);
         groupBox2.TabIndex = 1;
         groupBox2.TabStop = false;
         groupBox2.Text = "Thông tin khách hàng";
         // 
+        // cboGioiTinh
+        // 
+        cboGioiTinh.FormattingEnabled = true;
+        cboGioiTinh.Location = new System.Drawing.Point(89, 126);
+        cboGioiTinh.Name = "cboGioiTinh";
+        cboGioiTinh.Size = new System.Drawing.Size(148, 31);
+        cboGioiTinh.TabIndex = 15;
+        // 
         // txtDiaChi
         // 
         txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtDiaChi.Location = new System.Drawing.Point(89, 217);
+        txtDiaChi.Location = new System.Drawing.Point(89, 269);
+        txtDiaChi.Multiline = true;
         txtDiaChi.Name = "txtDiaChi";
-        txtDiaChi.Size = new System.Drawing.Size(149, 27);
+        txtDiaChi.Size = new System.Drawing.Size(149, 112);
         txtDiaChi.TabIndex = 14;
         // 
         // txtSDT
         // 
         txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtSDT.Location = new System.Drawing.Point(89, 182);
+        txtSDT.Location = new System.Drawing.Point(89, 224);
         txtSDT.Name = "txtSDT";
         txtSDT.Size = new System.Drawing.Size(149, 27);
         txtSDT.TabIndex = 13;
@@ -139,28 +124,20 @@ partial class UserControl_KhachHang
         txtMaKH.Size = new System.Drawing.Size(149, 27);
         txtMaKH.TabIndex = 12;
         // 
-        // txtKH
+        // txtTenKH
         // 
-        txtKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtKH.Location = new System.Drawing.Point(89, 71);
-        txtKH.Name = "txtKH";
-        txtKH.Size = new System.Drawing.Size(149, 27);
-        txtKH.TabIndex = 11;
-        // 
-        // txtGioiTinh
-        // 
-        txtGioiTinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        txtGioiTinh.Location = new System.Drawing.Point(89, 106);
-        txtGioiTinh.Name = "txtGioiTinh";
-        txtGioiTinh.Size = new System.Drawing.Size(149, 27);
-        txtGioiTinh.TabIndex = 10;
+        txtTenKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+        txtTenKH.Location = new System.Drawing.Point(89, 82);
+        txtTenKH.Name = "txtTenKH";
+        txtTenKH.Size = new System.Drawing.Size(149, 27);
+        txtTenKH.TabIndex = 11;
         // 
         // dtpNgaySinh
         // 
         dtpNgaySinh.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-        dtpNgaySinh.Location = new System.Drawing.Point(89, 143);
+        dtpNgaySinh.Location = new System.Drawing.Point(89, 176);
         dtpNgaySinh.Name = "dtpNgaySinh";
         dtpNgaySinh.Size = new System.Drawing.Size(150, 27);
         dtpNgaySinh.TabIndex = 9;
@@ -175,7 +152,7 @@ partial class UserControl_KhachHang
         groupBox5.Controls.Add(btnSua);
         groupBox5.Controls.Add(btnLuu);
         groupBox5.Controls.Add(btnThem);
-        groupBox5.Location = new System.Drawing.Point(3, 337);
+        groupBox5.Location = new System.Drawing.Point(3, 442);
         groupBox5.Name = "groupBox5";
         groupBox5.Size = new System.Drawing.Size(241, 287);
         groupBox5.TabIndex = 8;
@@ -203,6 +180,7 @@ partial class UserControl_KhachHang
         btnReload.TabIndex = 5;
         btnReload.Text = "Reload";
         btnReload.UseVisualStyleBackColor = true;
+        btnReload.Click += btnReload_Click;
         // 
         // btnXoa
         // 
@@ -213,6 +191,7 @@ partial class UserControl_KhachHang
         btnXoa.TabIndex = 4;
         btnXoa.Text = "Xóa";
         btnXoa.UseVisualStyleBackColor = true;
+        btnXoa.Click += btnXoa_Click;
         // 
         // btnBoQua
         // 
@@ -223,6 +202,7 @@ partial class UserControl_KhachHang
         btnBoQua.TabIndex = 3;
         btnBoQua.Text = "Bỏ qua";
         btnBoQua.UseVisualStyleBackColor = true;
+        btnBoQua.Click += btnBoQua_Click;
         // 
         // btnSua
         // 
@@ -233,6 +213,7 @@ partial class UserControl_KhachHang
         btnSua.TabIndex = 2;
         btnSua.Text = "Sửa";
         btnSua.UseVisualStyleBackColor = true;
+        btnSua.Click += btnSua_Click;
         // 
         // btnLuu
         // 
@@ -243,6 +224,7 @@ partial class UserControl_KhachHang
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
         btnLuu.UseVisualStyleBackColor = true;
+        btnLuu.Click += btnLuu_Click;
         // 
         // btnThem
         // 
@@ -253,11 +235,12 @@ partial class UserControl_KhachHang
         btnThem.TabIndex = 0;
         btnThem.Text = "Thêm";
         btnThem.UseVisualStyleBackColor = true;
+        btnThem.Click += btnThem_Click;
         // 
         // label7
         // 
         label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label7.Location = new System.Drawing.Point(6, 220);
+        label7.Location = new System.Drawing.Point(6, 272);
         label7.Name = "label7";
         label7.Size = new System.Drawing.Size(77, 25);
         label7.TabIndex = 6;
@@ -266,7 +249,7 @@ partial class UserControl_KhachHang
         // label6
         // 
         label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label6.Location = new System.Drawing.Point(6, 185);
+        label6.Location = new System.Drawing.Point(6, 227);
         label6.Name = "label6";
         label6.Size = new System.Drawing.Size(77, 25);
         label6.TabIndex = 5;
@@ -275,7 +258,7 @@ partial class UserControl_KhachHang
         // label5
         // 
         label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label5.Location = new System.Drawing.Point(6, 145);
+        label5.Location = new System.Drawing.Point(6, 178);
         label5.Name = "label5";
         label5.Size = new System.Drawing.Size(77, 25);
         label5.TabIndex = 4;
@@ -284,7 +267,7 @@ partial class UserControl_KhachHang
         // label4
         // 
         label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label4.Location = new System.Drawing.Point(6, 109);
+        label4.Location = new System.Drawing.Point(6, 131);
         label4.Name = "label4";
         label4.Size = new System.Drawing.Size(77, 25);
         label4.TabIndex = 3;
@@ -293,7 +276,7 @@ partial class UserControl_KhachHang
         // label3
         // 
         label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        label3.Location = new System.Drawing.Point(6, 74);
+        label3.Location = new System.Drawing.Point(6, 85);
         label3.Name = "label3";
         label3.Size = new System.Drawing.Size(77, 25);
         label3.TabIndex = 2;
@@ -314,7 +297,7 @@ partial class UserControl_KhachHang
         splitter1.Dock = System.Windows.Forms.DockStyle.Right;
         splitter1.Location = new System.Drawing.Point(250, 26);
         splitter1.Name = "splitter1";
-        splitter1.Size = new System.Drawing.Size(10, 599);
+        splitter1.Size = new System.Drawing.Size(10, 704);
         splitter1.TabIndex = 0;
         splitter1.TabStop = false;
         // 
@@ -324,9 +307,9 @@ partial class UserControl_KhachHang
         groupBox3.Controls.Add(groupBox6);
         groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
         groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        groupBox3.Location = new System.Drawing.Point(263, 105);
+        groupBox3.Location = new System.Drawing.Point(263, 0);
         groupBox3.Name = "groupBox3";
-        groupBox3.Size = new System.Drawing.Size(758, 628);
+        groupBox3.Size = new System.Drawing.Size(758, 733);
         groupBox3.TabIndex = 2;
         groupBox3.TabStop = false;
         groupBox3.Text = "Tìm kiếm khách hàng";
@@ -338,13 +321,14 @@ partial class UserControl_KhachHang
         dgvKhachHang.Location = new System.Drawing.Point(3, 128);
         dgvKhachHang.Name = "dgvKhachHang";
         dgvKhachHang.RowHeadersWidth = 51;
-        dgvKhachHang.Size = new System.Drawing.Size(752, 497);
+        dgvKhachHang.Size = new System.Drawing.Size(752, 602);
         dgvKhachHang.TabIndex = 1;
+        dgvKhachHang.CellClick += dgvKhachHang_CellClick;
         // 
         // groupBox6
         // 
         groupBox6.Controls.Add(btnTimKiem);
-        groupBox6.Controls.Add(txtTimKiem);
+        groupBox6.Controls.Add(txtSearch);
         groupBox6.Controls.Add(label9);
         groupBox6.Dock = System.Windows.Forms.DockStyle.Top;
         groupBox6.Location = new System.Drawing.Point(3, 26);
@@ -364,13 +348,14 @@ partial class UserControl_KhachHang
         btnTimKiem.TabIndex = 2;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
+        btnTimKiem.Click += btnTimKiem_Click;
         // 
-        // txtTimKiem
+        // txtSearch
         // 
-        txtTimKiem.Location = new System.Drawing.Point(253, 43);
-        txtTimKiem.Name = "txtTimKiem";
-        txtTimKiem.Size = new System.Drawing.Size(286, 30);
-        txtTimKiem.TabIndex = 1;
+        txtSearch.Location = new System.Drawing.Point(253, 43);
+        txtSearch.Name = "txtSearch";
+        txtSearch.Size = new System.Drawing.Size(286, 30);
+        txtSearch.TabIndex = 1;
         // 
         // label9
         // 
@@ -387,9 +372,8 @@ partial class UserControl_KhachHang
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         Controls.Add(groupBox3);
         Controls.Add(groupBox2);
-        Controls.Add(groupBox1);
         Size = new System.Drawing.Size(1021, 733);
-        groupBox1.ResumeLayout(false);
+        Load += UserControl_KhachHang_Load;
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();
         groupBox5.ResumeLayout(false);
@@ -400,14 +384,15 @@ partial class UserControl_KhachHang
         ResumeLayout(false);
     }
 
-    private System.Windows.Forms.TextBox txtKH;
+    private System.Windows.Forms.ComboBox cboGioiTinh;
+
+    private System.Windows.Forms.TextBox txtTenKH;
     private System.Windows.Forms.TextBox txtMaKH;
     private System.Windows.Forms.TextBox txtSDT;
     private System.Windows.Forms.TextBox txtDiaChi;
-    private System.Windows.Forms.TextBox txtGioiTinh;
     private System.Windows.Forms.DateTimePicker dtpNgaySinh;
     private System.Windows.Forms.Button btnTimKiem;
-    private System.Windows.Forms.TextBox txtTimKiem;
+    private System.Windows.Forms.TextBox txtSearch;
     private System.Windows.Forms.Label label9;
     private System.Windows.Forms.DataGridView dgvKhachHang;
     private System.Windows.Forms.GroupBox groupBox6;
@@ -428,8 +413,6 @@ partial class UserControl_KhachHang
     private System.Windows.Forms.Splitter splitter1;
     private System.Windows.Forms.GroupBox groupBox3;
     private System.Windows.Forms.GroupBox groupBox2;
-    private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.GroupBox groupBox1;
 
     #endregion
 }
