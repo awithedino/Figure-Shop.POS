@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace FigureShop.POS.Models;
+﻿namespace FigureShop.POS.Data.Models;
 
 public partial class Role
 {

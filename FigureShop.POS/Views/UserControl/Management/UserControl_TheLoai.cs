@@ -1,6 +1,7 @@
 ﻿// ReSharper disable LocalizableElement
 
-using FigureShop.POS.Models;
+using FigureShop.POS.Data;
+using FigureShop.POS.Data.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FigureShop.POS.Views.UserControl.Management;
