@@ -1,6 +1,7 @@
 ﻿using FigureShop.POS.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System;
 
 namespace FigureShop.POS.Data;
 
@@ -103,6 +104,21 @@ public partial class FigureShopDbContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
-
+    
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            // If not, it builds its own configuration to find appsettings.json
+            IConfigurationRoot configuration = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json")
+                .Build();
+        
+            // And then it connects!
+            optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
+        }
+    }
+    
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
