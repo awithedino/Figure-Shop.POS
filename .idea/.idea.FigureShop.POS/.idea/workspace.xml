@@ -8,20 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabd7a02-8fc4-4fef-8684-d56d889aa95d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/23cd5e2f-f2f2-475a-b6ac-dbb6d5bad0e2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/23cd5e2f-f2f2-475a-b6ac-dbb6d5bad0e2/storage_v2/_src_/database/FigureShopDb.OA7f7Q.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/23cd5e2f-f2f2-475a-b6ac-dbb6d5bad0e2/storage_v2/_src_/database/FigureShopDb.OA7f7Q/schema/INFORMATION_SCHEMA.NBgcMw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/23cd5e2f-f2f2-475a-b6ac-dbb6d5bad0e2/storage_v2/_src_/database/FigureShopDb.OA7f7Q/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_Hang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_Hang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_Hang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_Hang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_SanPham.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_SanPham.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_SanPham.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl/Management/UserControl_SanPham.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/UserControl/Operations/UserControl_BanHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/UserControl/Operations/UserControl_BanHang.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Form_Menu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Ari__Coding",
+    "git-widget-placeholder": "Mạnh",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -140,6 +130,7 @@
       <workItem from="1762507401135" duration="9909000" />
       <workItem from="1762524154695" duration="161000" />
       <workItem from="1762524404781" duration="12926000" />
+      <workItem from="1762869107861" duration="8906000" />
     </task>
     <task id="LOCAL-00001" summary="Adding models and linking usercontrols">
       <option name="closed" value="true" />
