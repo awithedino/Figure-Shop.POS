@@ -75,4 +75,15 @@ public partial class Form_Menu : Form
         clickedButton = (Button)sender;
         LoadControl(new UserControl_SanPham(), clickedButton.Text);
     }
+
+    private void btnQuanLy_Click(object sender, EventArgs e)
+    {
+        flpManagementSubmenu.Visible = !flpManagementSubmenu.Visible;
+    }
+
+    private void btnNghiepVu_Click(object sender, EventArgs e)
+    {
+        flpOperationsSubmenu.Visible = !flpOperationsSubmenu.Visible;
+    }
+    
 }
