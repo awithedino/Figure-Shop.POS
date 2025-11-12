@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore; // Make sure to import this!
 
 namespace FigureShop.POS
 {
-    public partial class UserControl_SanPham : UserControl
+    public partial class UserControl_SanPham : System.Windows.Forms.UserControl
     {
         // === Form-level variables ===
         private FigureShopDbContext context;
@@ -35,11 +35,7 @@ namespace FigureShop.POS
             ClearFields();
         }
 
-        // === 2. HELPER FUNCTIONS (To keep code clean) ===
-
-        /// <summary>
-        /// Loads (or reloads) all data from the Figures table into the grid
-        /// </summary>
+        // Helper functions
         private void LoadData()
         {
             try
@@ -116,10 +112,7 @@ namespace FigureShop.POS
             btnXoa.Enabled = !isEditing;
             btnTimKiem.Enabled = !isEditing;
         }
-
-        /// <summary>
-        /// Clears all input fields
-        /// </summary>
+        
         private void ClearFields()
         {
             txtName.Text = "";
@@ -137,20 +130,14 @@ namespace FigureShop.POS
             selectedImagePath = null;
         }
 
-        // === 3. DataGridView EVENT ===
-
-        /// <summary>
-        /// Fires when the user clicks a row in the grid
-        /// </summary>
+        // DataGridViews
         private void dgvFigures_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Make sure the user isn't clicking the header (e.RowIndex < 0)
-            // and we are not in "Edit/Add" mode
             if (e.RowIndex >= 0 && !btnLuu.Enabled)
             {
                 // Get the ID from the clicked row
                 var figureId = (Guid)dgvFigures.Rows[e.RowIndex].Cells["Id"].Value;
-                selectedFigureId = figureId; // Store this ID
+                selectedFigureId = figureId;
 
                 // Load the FULL figure object from the database
                 var figure = context.Figures.Find(figureId);

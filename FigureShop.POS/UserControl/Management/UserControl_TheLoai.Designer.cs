@@ -153,6 +153,7 @@ partial class UserControl_TheLoai
         btnReload.TabIndex = 5;
         btnReload.Text = "Reload";
         btnReload.UseVisualStyleBackColor = true;
+        btnReload.Click += btnReload_Click;
         // 
         // btnXoa
         // 
@@ -163,6 +164,7 @@ partial class UserControl_TheLoai
         btnXoa.TabIndex = 4;
         btnXoa.Text = "Xóa";
         btnXoa.UseVisualStyleBackColor = true;
+        btnXoa.Click += btnXoa_Click;
         // 
         // btnBoQua
         // 
@@ -173,6 +175,7 @@ partial class UserControl_TheLoai
         btnBoQua.TabIndex = 3;
         btnBoQua.Text = "Bỏ qua";
         btnBoQua.UseVisualStyleBackColor = true;
+        btnBoQua.Click += btnBoQua_Click;
         // 
         // btnSua
         // 
@@ -183,6 +186,7 @@ partial class UserControl_TheLoai
         btnSua.TabIndex = 2;
         btnSua.Text = "Sửa";
         btnSua.UseVisualStyleBackColor = true;
+        btnSua.Click += btnSua_Click;
         // 
         // btnLuu
         // 
@@ -193,6 +197,7 @@ partial class UserControl_TheLoai
         btnLuu.TabIndex = 1;
         btnLuu.Text = "Lưu";
         btnLuu.UseVisualStyleBackColor = true;
+        btnLuu.Click += btnLuu_Click;
         // 
         // btnThem
         // 
@@ -203,6 +208,7 @@ partial class UserControl_TheLoai
         btnThem.TabIndex = 0;
         btnThem.Text = "Thêm";
         btnThem.UseVisualStyleBackColor = true;
+        btnThem.Click += btnThem_Click;
         // 
         // label3
         // 
@@ -254,6 +260,7 @@ partial class UserControl_TheLoai
         dgvTheLoai.RowHeadersWidth = 51;
         dgvTheLoai.Size = new System.Drawing.Size(752, 497);
         dgvTheLoai.TabIndex = 1;
+        dgvTheLoai.CellClick += dgvTheLoai_CellClick;
         // 
         // groupBox6
         // 
@@ -278,6 +285,7 @@ partial class UserControl_TheLoai
         btnTimKiem.TabIndex = 2;
         btnTimKiem.Text = "Tìm kiếm";
         btnTimKiem.UseVisualStyleBackColor = false;
+        btnTimKiem.Click += btnTimKiem_Click;
         // 
         // txtTimKiem
         // 
@@ -303,6 +311,7 @@ partial class UserControl_TheLoai
         Controls.Add(groupBox2);
         Controls.Add(groupBox1);
         Size = new System.Drawing.Size(1021, 733);
+        Load += UserControl_TheLoai_Load;
         groupBox1.ResumeLayout(false);
         groupBox2.ResumeLayout(false);
         groupBox2.PerformLayout();

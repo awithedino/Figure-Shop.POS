@@ -7,7 +7,7 @@ using FigureShop.POS.Models;
 
 namespace FigureShop.POS
 {
-    public partial class UserControl_Hang : UserControl
+    public partial class UserControl_Hang : System.Windows.Forms.UserControl
     {
         private FigureShopDbContext context;
         private bool isAdding = false;

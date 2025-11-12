@@ -41,6 +41,7 @@ partial class Form_Menu
         btnHang = new System.Windows.Forms.Button();
         btnCongViec = new System.Windows.Forms.Button();
         btnTheLoai = new System.Windows.Forms.Button();
+        btnHoaDon = new System.Windows.Forms.Button();
         pictureBox1 = new System.Windows.Forms.PictureBox();
         panel2 = new System.Windows.Forms.Panel();
         label1 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ partial class Form_Menu
         label3 = new System.Windows.Forms.Label();
         label2 = new System.Windows.Forms.Label();
         panelMainContent = new System.Windows.Forms.Panel();
-        btnHoaDon = new System.Windows.Forms.Button();
         panel1.SuspendLayout();
         flowLayoutPanel1.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -169,6 +169,15 @@ partial class Form_Menu
         btnTheLoai.UseVisualStyleBackColor = true;
         btnTheLoai.Click += btnTheLoai_Click;
         // 
+        // btnHoaDon
+        // 
+        btnHoaDon.Location = new System.Drawing.Point(3, 451);
+        btnHoaDon.Name = "btnHoaDon";
+        btnHoaDon.Size = new System.Drawing.Size(145, 50);
+        btnHoaDon.TabIndex = 11;
+        btnHoaDon.Text = "Hóa Đơn";
+        btnHoaDon.UseVisualStyleBackColor = true;
+        // 
         // pictureBox1
         // 
         pictureBox1.BackColor = System.Drawing.SystemColors.Control;
@@ -216,6 +225,7 @@ partial class Form_Menu
         // 
         // dateTimePicker1
         // 
+        dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Right));
         dateTimePicker1.Enabled = false;
         dateTimePicker1.Location = new System.Drawing.Point(995, 0);
         dateTimePicker1.Name = "dateTimePicker1";
@@ -253,15 +263,6 @@ partial class Form_Menu
         panelMainContent.Name = "panelMainContent";
         panelMainContent.Size = new System.Drawing.Size(1306, 742);
         panelMainContent.TabIndex = 3;
-        // 
-        // btnHoaDon
-        // 
-        btnHoaDon.Location = new System.Drawing.Point(3, 451);
-        btnHoaDon.Name = "btnHoaDon";
-        btnHoaDon.Size = new System.Drawing.Size(145, 50);
-        btnHoaDon.TabIndex = 11;
-        btnHoaDon.Text = "Hóa Đơn";
-        btnHoaDon.UseVisualStyleBackColor = true;
         // 
         // Form_Menu
         // 

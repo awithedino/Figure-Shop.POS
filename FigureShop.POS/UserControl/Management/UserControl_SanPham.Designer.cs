@@ -467,6 +467,7 @@ namespace FigureShop.POS
             dgvFigures.RowHeadersWidth = 51;
             dgvFigures.Size = new System.Drawing.Size(1029, 343);
             dgvFigures.TabIndex = 3;
+            dgvFigures.CellClick += dgvFigures_CellClick;
             // 
             // panel1
             // 

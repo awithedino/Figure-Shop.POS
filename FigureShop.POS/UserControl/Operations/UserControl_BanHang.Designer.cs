@@ -1,7 +1,7 @@
-﻿using System.ComponentModel;
-
+﻿//
+// This is the CORRECTED designer file with Anchor fixes.
+//
 namespace FigureShop.POS
-
 {
     partial class UserControl_BanHang
     {
@@ -56,7 +56,6 @@ namespace FigureShop.POS
             lblMaSanPham = new System.Windows.Forms.Label();
             groupBoxThongTinChung = new System.Windows.Forms.GroupBox();
             txtTenNhanVien = new System.Windows.Forms.TextBox();
-            lblTenNhanVien = new System.Windows.Forms.Label();
             btnThemKhachHang = new System.Windows.Forms.Button();
             cboKhachHang = new System.Windows.Forms.ComboBox();
             lblKhachHang = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@ namespace FigureShop.POS
             txtMaHoaDon = new System.Windows.Forms.TextBox();
             lblMaHoaDon = new System.Windows.Forms.Label();
             dgvGioHang = new System.Windows.Forms.DataGridView();
+            label1 = new System.Windows.Forms.Label();
             groupBoxThongTinChiTiet.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numSoLuong).BeginInit();
             groupBoxThongTinChung.SuspendLayout();
@@ -100,20 +100,21 @@ namespace FigureShop.POS
             groupBoxThongTinChiTiet.Controls.Add(lblMaSanPham);
             groupBoxThongTinChiTiet.Dock = System.Windows.Forms.DockStyle.Right;
             groupBoxThongTinChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            groupBoxThongTinChiTiet.Location = new System.Drawing.Point(855, 0);
+            groupBoxThongTinChiTiet.Location = new System.Drawing.Point(884, 0);
             groupBoxThongTinChiTiet.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             groupBoxThongTinChiTiet.Name = "groupBoxThongTinChiTiet";
             groupBoxThongTinChiTiet.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            groupBoxThongTinChiTiet.Size = new System.Drawing.Size(626, 927);
+            groupBoxThongTinChiTiet.Size = new System.Drawing.Size(597, 927);
             groupBoxThongTinChiTiet.TabIndex = 3;
             groupBoxThongTinChiTiet.TabStop = false;
             groupBoxThongTinChiTiet.Text = "Thông tin chi tiết";
             // 
             // lblGiaTriTienThua
             // 
+            lblGiaTriTienThua.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
             lblGiaTriTienThua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             lblGiaTriTienThua.ForeColor = System.Drawing.Color.Red;
-            lblGiaTriTienThua.Location = new System.Drawing.Point(448, 760);
+            lblGiaTriTienThua.Location = new System.Drawing.Point(419, 758);
             lblGiaTriTienThua.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiaTriTienThua.Name = "lblGiaTriTienThua";
             lblGiaTriTienThua.Size = new System.Drawing.Size(148, 31);
@@ -123,9 +124,10 @@ namespace FigureShop.POS
             // 
             // lblTienThua
             // 
+            lblTienThua.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
             lblTienThua.AutoSize = true;
             lblTienThua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            lblTienThua.Location = new System.Drawing.Point(38, 760);
+            lblTienThua.Location = new System.Drawing.Point(38, 758);
             lblTienThua.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTienThua.Name = "lblTienThua";
             lblTienThua.Size = new System.Drawing.Size(157, 20);
@@ -134,19 +136,22 @@ namespace FigureShop.POS
             // 
             // txtKhachThanhToan
             // 
+            txtKhachThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
             txtKhachThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            txtKhachThanhToan.Location = new System.Drawing.Point(432, 683);
+            txtKhachThanhToan.Location = new System.Drawing.Point(403, 708);
             txtKhachThanhToan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtKhachThanhToan.Name = "txtKhachThanhToan";
             txtKhachThanhToan.Size = new System.Drawing.Size(164, 26);
             txtKhachThanhToan.TabIndex = 20;
             txtKhachThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            txtKhachThanhToan.TextChanged += txtKhachThanhToan_TextChanged;
             // 
             // lblKhachThanhToan
             // 
+            lblKhachThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
             lblKhachThanhToan.AutoSize = true;
             lblKhachThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            lblKhachThanhToan.Location = new System.Drawing.Point(38, 688);
+            lblKhachThanhToan.Location = new System.Drawing.Point(38, 713);
             lblKhachThanhToan.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblKhachThanhToan.Name = "lblKhachThanhToan";
             lblKhachThanhToan.Size = new System.Drawing.Size(144, 20);
@@ -155,9 +160,10 @@ namespace FigureShop.POS
             // 
             // lblGiaTriTongCong
             // 
+            lblGiaTriTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
             lblGiaTriTongCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             lblGiaTriTongCong.ForeColor = System.Drawing.Color.Red;
-            lblGiaTriTongCong.Location = new System.Drawing.Point(403, 613);
+            lblGiaTriTongCong.Location = new System.Drawing.Point(374, 648);
             lblGiaTriTongCong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiaTriTongCong.Name = "lblGiaTriTongCong";
             lblGiaTriTongCong.Size = new System.Drawing.Size(193, 38);
@@ -167,9 +173,10 @@ namespace FigureShop.POS
             // 
             // lblTongCong
             // 
+            lblTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
             lblTongCong.AutoSize = true;
             lblTongCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            lblTongCong.Location = new System.Drawing.Point(37, 613);
+            lblTongCong.Location = new System.Drawing.Point(37, 648);
             lblTongCong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTongCong.Name = "lblTongCong";
             lblTongCong.Size = new System.Drawing.Size(122, 25);
@@ -178,63 +185,72 @@ namespace FigureShop.POS
             // 
             // btnExcel
             // 
+            btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
             btnExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
             btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btnExcel.ForeColor = System.Drawing.Color.White;
-            btnExcel.Location = new System.Drawing.Point(448, 857);
+            btnExcel.Location = new System.Drawing.Point(389, 841);
             btnExcel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnExcel.Name = "btnExcel";
             btnExcel.Size = new System.Drawing.Size(178, 58);
             btnExcel.TabIndex = 16;
             btnExcel.Text = "Excel";
             btnExcel.UseVisualStyleBackColor = false;
+            btnExcel.Click += btnExcel_Click;
             // 
             // btnThanhToan
             // 
+            btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             btnThanhToan.BackColor = System.Drawing.Color.MediumSeaGreen;
             btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btnThanhToan.ForeColor = System.Drawing.Color.White;
-            btnThanhToan.Location = new System.Drawing.Point(37, 849);
+            btnThanhToan.Location = new System.Drawing.Point(37, 841);
             btnThanhToan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new System.Drawing.Size(232, 58);
             btnThanhToan.TabIndex = 15;
             btnThanhToan.Text = "Thanh Toán";
             btnThanhToan.UseVisualStyleBackColor = false;
+            btnThanhToan.Click += btnThanhToan_Click;
             // 
             // btnXoa
             // 
+            btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             btnXoa.BackColor = System.Drawing.Color.LightCoral;
             btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btnXoa.ForeColor = System.Drawing.Color.White;
-            btnXoa.Location = new System.Drawing.Point(486, 456);
+            btnXoa.Location = new System.Drawing.Point(389, 368);
             btnXoa.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new System.Drawing.Size(140, 56);
+            btnXoa.Size = new System.Drawing.Size(178, 56);
             btnXoa.TabIndex = 14;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThem
             // 
+            btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             btnThem.BackColor = System.Drawing.Color.DodgerBlue;
             btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btnThem.ForeColor = System.Drawing.Color.White;
-            btnThem.Location = new System.Drawing.Point(38, 456);
+            btnThem.Location = new System.Drawing.Point(33, 368);
             btnThem.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnThem.Name = "btnThem";
-            btnThem.Size = new System.Drawing.Size(140, 56);
+            btnThem.Size = new System.Drawing.Size(236, 56);
             btnThem.TabIndex = 13;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
             // 
             // lblGiaTriThanhTien
             // 
-            lblGiaTriThanhTien.Location = new System.Drawing.Point(448, 366);
+            lblGiaTriThanhTien.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            lblGiaTriThanhTien.Location = new System.Drawing.Point(419, 296);
             lblGiaTriThanhTien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiaTriThanhTien.Name = "lblGiaTriThanhTien";
             lblGiaTriThanhTien.Size = new System.Drawing.Size(148, 29);
@@ -245,7 +261,7 @@ namespace FigureShop.POS
             // lblThanhTien
             // 
             lblThanhTien.AutoSize = true;
-            lblThanhTien.Location = new System.Drawing.Point(38, 369);
+            lblThanhTien.Location = new System.Drawing.Point(38, 299);
             lblThanhTien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblThanhTien.Name = "lblThanhTien";
             lblThanhTien.Size = new System.Drawing.Size(76, 18);
@@ -254,7 +270,8 @@ namespace FigureShop.POS
             // 
             // lblGiaTriGiamGia
             // 
-            lblGiaTriGiamGia.Location = new System.Drawing.Point(448, 307);
+            lblGiaTriGiamGia.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            lblGiaTriGiamGia.Location = new System.Drawing.Point(419, 237);
             lblGiaTriGiamGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiaTriGiamGia.Name = "lblGiaTriGiamGia";
             lblGiaTriGiamGia.Size = new System.Drawing.Size(148, 29);
@@ -265,7 +282,7 @@ namespace FigureShop.POS
             // lblGiamGia
             // 
             lblGiamGia.AutoSize = true;
-            lblGiamGia.Location = new System.Drawing.Point(38, 310);
+            lblGiamGia.Location = new System.Drawing.Point(38, 240);
             lblGiamGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiamGia.Name = "lblGiamGia";
             lblGiamGia.Size = new System.Drawing.Size(67, 18);
@@ -274,7 +291,8 @@ namespace FigureShop.POS
             // 
             // lblGiaTriDonGia
             // 
-            lblGiaTriDonGia.Location = new System.Drawing.Point(448, 252);
+            lblGiaTriDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            lblGiaTriDonGia.Location = new System.Drawing.Point(419, 182);
             lblGiaTriDonGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblGiaTriDonGia.Name = "lblGiaTriDonGia";
             lblGiaTriDonGia.Size = new System.Drawing.Size(148, 29);
@@ -284,8 +302,9 @@ namespace FigureShop.POS
             // 
             // lblDonGia
             // 
+            lblDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             lblDonGia.AutoSize = true;
-            lblDonGia.Location = new System.Drawing.Point(308, 252);
+            lblDonGia.Location = new System.Drawing.Point(350, 182);
             lblDonGia.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblDonGia.Name = "lblDonGia";
             lblDonGia.Size = new System.Drawing.Size(59, 18);
@@ -294,16 +313,17 @@ namespace FigureShop.POS
             // 
             // numSoLuong
             // 
-            numSoLuong.Location = new System.Drawing.Point(142, 250);
+            numSoLuong.Location = new System.Drawing.Point(142, 180);
             numSoLuong.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             numSoLuong.Name = "numSoLuong";
             numSoLuong.Size = new System.Drawing.Size(127, 24);
             numSoLuong.TabIndex = 6;
+            numSoLuong.ValueChanged += numSoLuong_ValueChanged;
             // 
             // lblSoLuong
             // 
             lblSoLuong.AutoSize = true;
-            lblSoLuong.Location = new System.Drawing.Point(38, 252);
+            lblSoLuong.Location = new System.Drawing.Point(38, 182);
             lblSoLuong.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblSoLuong.Name = "lblSoLuong";
             lblSoLuong.Size = new System.Drawing.Size(67, 18);
@@ -312,17 +332,18 @@ namespace FigureShop.POS
             // 
             // txtTenSanPham
             // 
-            txtTenSanPham.Location = new System.Drawing.Point(185, 144);
+            txtTenSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
+            txtTenSanPham.Location = new System.Drawing.Point(185, 118);
             txtTenSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtTenSanPham.Name = "txtTenSanPham";
             txtTenSanPham.ReadOnly = true;
-            txtTenSanPham.Size = new System.Drawing.Size(393, 24);
+            txtTenSanPham.Size = new System.Drawing.Size(364, 24);
             txtTenSanPham.TabIndex = 4;
             // 
             // lblTenSanPham
             // 
             lblTenSanPham.AutoSize = true;
-            lblTenSanPham.Location = new System.Drawing.Point(33, 150);
+            lblTenSanPham.Location = new System.Drawing.Point(33, 124);
             lblTenSanPham.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblTenSanPham.Name = "lblTenSanPham";
             lblTenSanPham.Size = new System.Drawing.Size(106, 18);
@@ -331,12 +352,14 @@ namespace FigureShop.POS
             // 
             // cboMaSanPham
             // 
+            cboMaSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             cboMaSanPham.FormattingEnabled = true;
             cboMaSanPham.Location = new System.Drawing.Point(185, 62);
             cboMaSanPham.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboMaSanPham.Name = "cboMaSanPham";
-            cboMaSanPham.Size = new System.Drawing.Size(393, 26);
+            cboMaSanPham.Size = new System.Drawing.Size(364, 26);
             cboMaSanPham.TabIndex = 1;
+            cboMaSanPham.SelectedIndexChanged += cboMaSanPham_SelectedIndexChanged;
             // 
             // lblMaSanPham
             // 
@@ -351,8 +374,8 @@ namespace FigureShop.POS
             // groupBoxThongTinChung
             // 
             groupBoxThongTinChung.BackColor = System.Drawing.SystemColors.Control;
+            groupBoxThongTinChung.Controls.Add(label1);
             groupBoxThongTinChung.Controls.Add(txtTenNhanVien);
-            groupBoxThongTinChung.Controls.Add(lblTenNhanVien);
             groupBoxThongTinChung.Controls.Add(btnThemKhachHang);
             groupBoxThongTinChung.Controls.Add(cboKhachHang);
             groupBoxThongTinChung.Controls.Add(lblKhachHang);
@@ -368,56 +391,51 @@ namespace FigureShop.POS
             groupBoxThongTinChung.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             groupBoxThongTinChung.Name = "groupBoxThongTinChung";
             groupBoxThongTinChung.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            groupBoxThongTinChung.Size = new System.Drawing.Size(855, 325);
+            groupBoxThongTinChung.Size = new System.Drawing.Size(884, 325);
             groupBoxThongTinChung.TabIndex = 4;
             groupBoxThongTinChung.TabStop = false;
             groupBoxThongTinChung.Text = "Thông tin chung";
             // 
             // txtTenNhanVien
             // 
-            txtTenNhanVien.Location = new System.Drawing.Point(580, 226);
+            txtTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            txtTenNhanVien.Location = new System.Drawing.Point(570, 228);
             txtTenNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtTenNhanVien.Name = "txtTenNhanVien";
             txtTenNhanVien.ReadOnly = true;
-            txtTenNhanVien.Size = new System.Drawing.Size(244, 24);
+            txtTenNhanVien.Size = new System.Drawing.Size(304, 24);
             txtTenNhanVien.TabIndex = 10;
-            // 
-            // lblTenNhanVien
-            // 
-            lblTenNhanVien.AutoSize = true;
-            lblTenNhanVien.Location = new System.Drawing.Point(419, 229);
-            lblTenNhanVien.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            lblTenNhanVien.Name = "lblTenNhanVien";
-            lblTenNhanVien.Size = new System.Drawing.Size(104, 18);
-            lblTenNhanVien.TabIndex = 9;
-            lblTenNhanVien.Text = "Tên Nhân Viên";
             // 
             // btnThemKhachHang
             // 
+            btnThemKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             btnThemKhachHang.BackColor = System.Drawing.Color.DodgerBlue;
             btnThemKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
             btnThemKhachHang.ForeColor = System.Drawing.Color.White;
-            btnThemKhachHang.Location = new System.Drawing.Point(793, 144);
+            btnThemKhachHang.Location = new System.Drawing.Point(831, 138);
             btnThemKhachHang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnThemKhachHang.Name = "btnThemKhachHang";
             btnThemKhachHang.Size = new System.Drawing.Size(43, 44);
             btnThemKhachHang.TabIndex = 8;
             btnThemKhachHang.Text = "+";
             btnThemKhachHang.UseVisualStyleBackColor = false;
+            btnThemKhachHang.Click += btnThemKhachHang_Click;
             // 
             // cboKhachHang
             // 
+            cboKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             cboKhachHang.FormattingEnabled = true;
-            cboKhachHang.Location = new System.Drawing.Point(580, 148);
+            cboKhachHang.Location = new System.Drawing.Point(570, 148);
             cboKhachHang.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboKhachHang.Name = "cboKhachHang";
-            cboKhachHang.Size = new System.Drawing.Size(191, 26);
+            cboKhachHang.Size = new System.Drawing.Size(251, 26);
             cboKhachHang.TabIndex = 7;
             // 
             // lblKhachHang
             // 
+            lblKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             lblKhachHang.AutoSize = true;
-            lblKhachHang.Location = new System.Drawing.Point(428, 150);
+            lblKhachHang.Location = new System.Drawing.Point(450, 151);
             lblKhachHang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             lblKhachHang.Name = "lblKhachHang";
             lblKhachHang.Size = new System.Drawing.Size(86, 18);
@@ -426,11 +444,12 @@ namespace FigureShop.POS
             // 
             // cboMaNhanVien
             // 
+            cboMaNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             cboMaNhanVien.FormattingEnabled = true;
-            cboMaNhanVien.Location = new System.Drawing.Point(147, 226);
+            cboMaNhanVien.Location = new System.Drawing.Point(120, 226);
             cboMaNhanVien.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             cboMaNhanVien.Name = "cboMaNhanVien";
-            cboMaNhanVien.Size = new System.Drawing.Size(247, 26);
+            cboMaNhanVien.Size = new System.Drawing.Size(276, 26);
             cboMaNhanVien.TabIndex = 5;
             // 
             // lblMaNhanVien
@@ -445,11 +464,12 @@ namespace FigureShop.POS
             // 
             // dtpNgayBan
             // 
+            dtpNgayBan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
             dtpNgayBan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            dtpNgayBan.Location = new System.Drawing.Point(147, 146);
+            dtpNgayBan.Location = new System.Drawing.Point(120, 148);
             dtpNgayBan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             dtpNgayBan.Name = "dtpNgayBan";
-            dtpNgayBan.Size = new System.Drawing.Size(247, 24);
+            dtpNgayBan.Size = new System.Drawing.Size(276, 24);
             dtpNgayBan.TabIndex = 3;
             // 
             // lblNgayBan
@@ -464,11 +484,11 @@ namespace FigureShop.POS
             // 
             // txtMaHoaDon
             // 
-            txtMaHoaDon.Location = new System.Drawing.Point(147, 62);
+            txtMaHoaDon.Location = new System.Drawing.Point(120, 61);
             txtMaHoaDon.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             txtMaHoaDon.Name = "txtMaHoaDon";
             txtMaHoaDon.ReadOnly = true;
-            txtMaHoaDon.Size = new System.Drawing.Size(247, 24);
+            txtMaHoaDon.Size = new System.Drawing.Size(276, 24);
             txtMaHoaDon.TabIndex = 1;
             txtMaHoaDon.Text = "HDB171120220007";
             // 
@@ -495,8 +515,17 @@ namespace FigureShop.POS
             dgvGioHang.Name = "dgvGioHang";
             dgvGioHang.ReadOnly = true;
             dgvGioHang.RowHeadersWidth = 51;
-            dgvGioHang.Size = new System.Drawing.Size(855, 602);
+            dgvGioHang.Size = new System.Drawing.Size(884, 602);
             dgvGioHang.TabIndex = 6;
+            // 
+            // label1
+            // 
+            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            label1.Location = new System.Drawing.Point(450, 228);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(102, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Tên nhân viên";
             // 
             // UserControl_BanHang
             // 
@@ -508,6 +537,7 @@ namespace FigureShop.POS
             Controls.Add(groupBoxThongTinChiTiet);
             Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             Size = new System.Drawing.Size(1481, 927);
+            Load += UserControl_BanHang_Load;
             groupBoxThongTinChiTiet.ResumeLayout(false);
             groupBoxThongTinChiTiet.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numSoLuong).EndInit();
@@ -516,6 +546,8 @@ namespace FigureShop.POS
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
             ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label label1;
 
         #endregion
 
@@ -530,7 +562,6 @@ namespace FigureShop.POS
         private System.Windows.Forms.Label lblKhachHang;
         private System.Windows.Forms.Button btnThemKhachHang;
         private System.Windows.Forms.TextBox txtTenNhanVien;
-        private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.DataGridView dgvGioHang;
         private System.Windows.Forms.GroupBox groupBoxThongTinChiTiet;
         private System.Windows.Forms.ComboBox cboMaSanPham;

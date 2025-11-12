@@ -1,4 +1,6 @@
-﻿namespace FigureShop.POS;
+﻿using FigureShop.POS.UserControl.Operations;
+
+namespace FigureShop.POS;
 
 public partial class Form_Menu : Form
 {
@@ -15,7 +17,7 @@ public partial class Form_Menu : Form
         label1.Text = label;
     }
 
-    private void LoadControl(UserControl control, string headerText)
+    private void LoadControl(System.Windows.Forms.UserControl control, string headerText)
     {
         // Update the label
         GetHeaderLabel(headerText);
