@@ -1,3 +1,5 @@
+using FigureShop.POS.Views;
+
 namespace FigureShop.POS;
 
 static class Program

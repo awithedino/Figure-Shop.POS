@@ -1,0 +1,7 @@
+﻿services:
+  figureshop.pos:
+    image: figureshop.pos
+    build:
+      context: .
+      dockerfile: FigureShop.POS/Dockerfile
+

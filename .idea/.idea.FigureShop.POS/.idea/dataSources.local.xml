@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="RD-252.26199.154">
+  <component name="dataSourceStorageLocal" created-in="RD-252.27397.121">
     <data-source name="FigureShopDb@localhost" uuid="23cd5e2f-f2f2-475a-b6ac-dbb6d5bad0e2">
       <database-info product="Microsoft SQL Server" version="16.00.4215" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.4215" exact-driver-version="1.0">
         <extra-name-characters>$#@</extra-name-characters>
