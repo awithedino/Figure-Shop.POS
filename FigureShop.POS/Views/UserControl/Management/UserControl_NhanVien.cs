@@ -4,7 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using FigureShop.POS.Data;
 using Microsoft.EntityFrameworkCore;
-using FigureShop.POS.Data.Models; // Make sure this is your Models path
+using FigureShop.POS.Data.Models;
 
 namespace FigureShop.POS.Views.UserControl.Management;
 

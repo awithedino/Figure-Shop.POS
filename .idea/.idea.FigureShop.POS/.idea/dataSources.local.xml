@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="RD-252.27397.121">
-    <data-source name="FigureShopDb@localhost" uuid="e1fc5934-69aa-4ddf-9d82-80bea84da34a">
+    <data-source name="FigureShopDb@localhost" uuid="82314d6e-562d-4b5c-a850-5d4e37af73f1">
       <database-info product="Microsoft SQL Server" version="16.00.4215" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.4215" exact-driver-version="1.0">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>

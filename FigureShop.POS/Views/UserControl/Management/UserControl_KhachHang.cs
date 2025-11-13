@@ -16,7 +16,7 @@ public partial class UserControl_KhachHang : System.Windows.Forms.UserControl
             InitializeComponent();
         }
 
-        // === 1. LOAD EVENT ===
+        // Load event
         private void UserControl_KhachHang_Load(object sender, EventArgs e)
         {
             context = new FigureShopDbContext();
@@ -32,7 +32,6 @@ public partial class UserControl_KhachHang : System.Windows.Forms.UserControl
         }
 
         // Helper functions
-        
         private void LoadGenderComboBox()
         {
             cboGioiTinh.Items.Add("Nam");

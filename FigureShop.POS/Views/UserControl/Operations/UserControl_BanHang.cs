@@ -1,4 +1,5 @@
 ﻿// ReSharper disable LocalizableElement
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using FigureShop.POS.Data;
 using FigureShop.POS.Data.Models;
@@ -40,26 +41,38 @@ namespace FigureShop.POS.Views.UserControl.Operations
         // Helper
         private void LoadComboBoxes()
         {
-            // Load Staff (Users)
-            cboMaNhanVien.DataSource = context.Users.ToList(); // TODO: Filter by Role="Staff" later
-            cboMaNhanVien.DisplayMember = "Email";
+            // === Load Staff (Users with 'Admin' or 'Staff' role) ===
+            var staffRoles = new[] { "Admin", "Staff" };
+            var staffList = context.Users
+                .Include(u => u.RolesNames) // Join with the Roles table
+                .Where(u => u.RolesNames.Any(r => staffRoles.Contains(r.Name)))
+                .ToList();
+        
+            cboMaNhanVien.DataSource = staffList;
+            cboMaNhanVien.DisplayMember = "FullName"; // Use the correct property
             cboMaNhanVien.ValueMember = "Id";
 
-            // Load Customers (Users)
-            cboKhachHang.DataSource = context.Users.ToList(); // TODO: Filter by Role="Customer" later
-            cboKhachHang.DisplayMember = "Email";
+            // === Load Customers (Users with 'Customer' role) ===
+            var customerList = context.Users
+                .Include(u => u.RolesNames) // Join with the Roles table
+                .Where(u => u.RolesNames.Any(r => r.Name == "Customer"))
+                .ToList();
+        
+            cboKhachHang.DataSource = customerList;
+            cboKhachHang.DisplayMember = "FullName"; // <-- FIX: Was "Fullname" (typo)
             cboKhachHang.ValueMember = "Id";
 
-            // Load Products (Figures)
-            cboMaSanPham.DataSource = context.Figures.Where(f => f.Quantity > 0).ToList();
-            cboMaSanPham.DisplayMember = "Name";
-            cboMaSanPham.ValueMember = "Id";
-            
-            // Set to "blank" selection
+            // === Load Products (Figures) ===
+            // (This part was already correct!)
+            cboTenSanPham.DataSource = context.Figures.Where(f => f.Quantity > 0).ToList();
+            cboTenSanPham.DisplayMember = "Name";
+            cboTenSanPham.ValueMember = "Id";
+    
+            // === Set defaults ===
             cboMaNhanVien.SelectedItem = null;
             cboKhachHang.SelectedItem = null;
-            cboMaSanPham.SelectedItem = null;
-            
+            cboTenSanPham.SelectedItem = null;
+    
             // Pre-select the logged-in staff member
             if (loggedInUser != null)
             {
@@ -89,8 +102,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
         
         private void ClearItemSelection()
         {
-            cboMaSanPham.SelectedItem = null;
-            txtTenSanPham.Text = "";
+            cboTenSanPham.SelectedItem = null;
             numSoLuong.Value = 1;
             lblGiaTriDonGia.Text = "0";
             lblGiaTriGiamGia.Text = "0";
@@ -102,9 +114,8 @@ namespace FigureShop.POS.Views.UserControl.Operations
         private void cboMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
         {
             // When user picks a product, fill in its details
-            if (cboMaSanPham.SelectedItem is Figure selectedFigure)
+            if (cboTenSanPham.SelectedItem is Figure selectedFigure)
             {
-                txtTenSanPham.Text = selectedFigure.Name;
                 lblGiaTriDonGia.Text = selectedFigure.Price.ToString("N0"); // "N0" formats 150000 as "150,000"
 
                 // Check for active sale
@@ -140,7 +151,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (cboMaSanPham.SelectedItem is not Figure selectedFigure)
+            if (cboTenSanPham.SelectedItem is not Figure selectedFigure)
             {
                 MessageBox.Show("Vui lòng chọn một sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

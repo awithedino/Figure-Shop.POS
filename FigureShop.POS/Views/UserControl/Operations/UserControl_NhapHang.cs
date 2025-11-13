@@ -1,5 +1,6 @@
 ﻿// ReSharper disable LocalizableElement
 using System.ComponentModel;
+using Microsoft.EntityFrameworkCore;
 using FigureShop.POS.Data;
 using FigureShop.POS.Data.Models;
 using FigureShop.POS.ViewModels;
@@ -53,24 +54,34 @@ namespace FigureShop.POS.Views.UserControl.Operations
         // Helper
         private void LoadComboBoxes()
         {
-            // Load Staff
-            cboMaNhanVien.DataSource = context.Users.ToList(); // TODO: Filter by Role
-            cboMaNhanVien.DisplayMember = "Email";
-            cboMaNhanVien.ValueMember = "Id";
+            // === Load Staff (Users with 'Admin' or 'Staff' role) ===
+            var staffRoles = new[] { "Admin", "Staff" };
+            var staffList = context.Users
+                .Include(u => u.RolesNames) // Join with the Roles table
+                .Where(u => u.RolesNames.Any(r => staffRoles.Contains(r.Name)))
+                .ToList();
+        
+            cboTenNhanVien.DataSource = staffList;
+            cboTenNhanVien.DisplayMember = "FullName"; // <-- CHANGED
+            cboTenNhanVien.ValueMember = "Id";
 
-            // Load Branches (Hãng)
-            cboMaHang.DataSource = context.Branches.ToList();
-            cboMaHang.DisplayMember = "Name";
-            cboMaHang.ValueMember = "Id";
+            // === Load Brands (Hãng) ===
+            cboTenHang.DataSource = context.Branches.ToList();
+            cboTenHang.DisplayMember = "Name"; // <-- CHANGED
+            cboTenHang.ValueMember = "Id";
+    
+            // === Load Products (Figures) ===
+            cboTenSanPham.DataSource = context.Figures.ToList();
+            cboTenSanPham.DisplayMember = "Name"; // <-- CHANGED
+            cboTenSanPham.ValueMember = "Id";
             
-            // Load Products
-            cboMaSanPham.DataSource = context.Figures.ToList();
-            cboMaSanPham.DisplayMember = "Name";
-            cboMaSanPham.ValueMember = "Id";
-
-            // Set logged-in user
             if (loggedInUser != null)
-                cboMaNhanVien.SelectedValue = loggedInUser.Id;
+            {
+                cboTenNhanVien.SelectedValue = loggedInUser.Id;
+            }
+    
+            cboTenHang.SelectedItem = null;
+            cboTenSanPham.SelectedItem = null;
         }
 
         private void StartNewImportBill()
@@ -83,8 +94,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
 
         private void ClearItemFields()
         {
-            cboMaSanPham.SelectedItem = null;
-            txtTenSanPham.Text = "";
+            cboTenSanPham.SelectedItem = null;
             numSoLuong.Value = 1;
             txtDonGia.Text = "0";
             txtThanhTien.Text = "0";
@@ -105,32 +115,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
         }
 
         // Combo Box event
-        private void cboMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboMaNhanVien.SelectedItem is User selectedUser)
-            {
-                txtTenNhanVien.Text = selectedUser.Email; 
-            }
-        }
-        
-        private void cboMaHang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboMaHang.SelectedItem is Branch selectedBranch)
-            {
-                txtTenHang.Text = selectedBranch.Name;
-            }
-        }
 
-        private void cboMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboMaSanPham.SelectedItem is Figure selectedFigure)
-            {
-                txtTenSanPham.Text = selectedFigure.Name;
-                // Set cost price to 0
-                txtDonGia.Text = "0"; 
-                numSoLuong.Value = 1;
-            }
-        }
         
         // Updated frame
         private void numSoLuong_ValueChanged(object sender, EventArgs e)
@@ -146,7 +131,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
         // Detailed button
         private void btnThemSanPham_Click(object sender, EventArgs e)
         {
-            if (cboMaSanPham.SelectedItem is not Figure selectedFigure)
+            if (cboTenSanPham.SelectedItem is not Figure selectedFigure)
             {
                 MessageBox.Show("Vui lòng chọn một sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -201,8 +186,7 @@ namespace FigureShop.POS.Views.UserControl.Operations
             var selectedItem = dgvNhapHang.CurrentRow.DataBoundItem as ImportItemViewModel;
             
             // Move data back up
-            cboMaSanPham.SelectedValue = selectedItem.MaSP;
-            txtTenSanPham.Text = selectedItem.TenSP;
+            cboTenSanPham.SelectedValue = selectedItem.MaSP;
             numSoLuong.Value = selectedItem.SoLuong;
             txtDonGia.Text = selectedItem.DonGiaNhap.ToString("N0");
             
@@ -259,7 +243,6 @@ namespace FigureShop.POS.Views.UserControl.Operations
             }
         }
         
-
         protected override void OnHandleDestroyed(EventArgs e)
         {
             context?.Dispose();
