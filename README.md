@@ -36,6 +36,7 @@ The following NuGet packages are used in this project:
 *   `Microsoft.EntityFrameworkCore.Design`
 *   `Microsoft.EntityFrameworkCore.SqlServer`
 *   `Microsoft.Extensions.Hosting`
+*   `ClosedXML`
 
 These packages will be restored automatically when you build the project.
 
