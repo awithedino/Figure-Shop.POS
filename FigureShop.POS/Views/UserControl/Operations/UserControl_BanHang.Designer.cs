@@ -52,7 +52,7 @@
             cboMaSanPham = new System.Windows.Forms.ComboBox();
             lblMaSanPham = new System.Windows.Forms.Label();
             groupBoxThongTinChung = new System.Windows.Forms.GroupBox();
-            label1 = new System.Windows.Forms.Label();
+            lblTenNhanVien = new System.Windows.Forms.Label();
             txtTenNhanVien = new System.Windows.Forms.TextBox();
             btnThemKhachHang = new System.Windows.Forms.Button();
             cboKhachHang = new System.Windows.Forms.ComboBox();
@@ -371,7 +371,7 @@
             // groupBoxThongTinChung
             // 
             groupBoxThongTinChung.BackColor = System.Drawing.SystemColors.Control;
-            groupBoxThongTinChung.Controls.Add(label1);
+            groupBoxThongTinChung.Controls.Add(lblTenNhanVien);
             groupBoxThongTinChung.Controls.Add(txtTenNhanVien);
             groupBoxThongTinChung.Controls.Add(btnThemKhachHang);
             groupBoxThongTinChung.Controls.Add(cboKhachHang);
@@ -393,14 +393,14 @@
             groupBoxThongTinChung.TabStop = false;
             groupBoxThongTinChung.Text = "Thông tin chung";
             // 
-            // label1
+            // lblTenNhanVien
             // 
-            label1.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
-            label1.Location = new System.Drawing.Point(290, 228);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(102, 25);
-            label1.TabIndex = 11;
-            label1.Text = "Tên nhân viên";
+            lblTenNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
+            lblTenNhanVien.Location = new System.Drawing.Point(290, 228);
+            lblTenNhanVien.Name = "lblTenNhanVien";
+            lblTenNhanVien.Size = new System.Drawing.Size(102, 25);
+            lblTenNhanVien.TabIndex = 11;
+            lblTenNhanVien.Text = "Tên nhân viên";
             // 
             // txtTenNhanVien
             // 
@@ -541,7 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)dgvGioHang).EndInit();
             ResumeLayout(false);
         }
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTenNhanVien;
 
         #endregion
 

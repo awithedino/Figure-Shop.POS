@@ -10,6 +10,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="ClosedXML" Version="0.105.0" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.21">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -65,6 +66,9 @@
         <SubType>UserControl</SubType>
       </Compile>
       <Compile Update="Views\Form_Menu.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Views\Form_Login.cs">
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>

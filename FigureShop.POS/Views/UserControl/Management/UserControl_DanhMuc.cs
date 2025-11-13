@@ -6,12 +6,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FigureShop.POS.Views.UserControl.Management;
 
-public partial class UserControl_TheLoai : System.Windows.Forms.UserControl
+public partial class UserControl_DanhMuc : System.Windows.Forms.UserControl
 {
     private FigureShopDbContext context;
     private bool isAdding = false;
     
-    public UserControl_TheLoai()
+    public UserControl_DanhMuc()
     {
         InitializeComponent();
     }
@@ -38,8 +38,8 @@ public partial class UserControl_TheLoai : System.Windows.Forms.UserControl
             
             if (dgvTheLoai.Columns.Count > 0)
             {
-                dgvTheLoai.Columns["Id"].HeaderText = "Mã Thể Loại";
-                dgvTheLoai.Columns["Name"].HeaderText = "Tên Thể Loại";
+                dgvTheLoai.Columns["Id"].HeaderText = "Mã Danh Mục";
+                dgvTheLoai.Columns["Name"].HeaderText = "Tên Danh Mục";
 
                 if (dgvTheLoai.Columns.Contains("Name"))
                 {

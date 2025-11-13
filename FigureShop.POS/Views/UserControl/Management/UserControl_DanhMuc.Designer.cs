@@ -2,7 +2,7 @@
 
 namespace FigureShop.POS.Views.UserControl.Management;
 
-partial class UserControl_TheLoai
+partial class UserControl_DanhMuc
 {
     /// <summary> 
     /// Required designer variable.
@@ -191,9 +191,9 @@ partial class UserControl_TheLoai
         label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
         label3.Location = new System.Drawing.Point(6, 74);
         label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(77, 25);
+        label3.Size = new System.Drawing.Size(90, 25);
         label3.TabIndex = 2;
-        label3.Text = "Thể loại:";
+        label3.Text = "Danh mục:";
         // 
         // label2
         // 
@@ -277,9 +277,9 @@ partial class UserControl_TheLoai
         label9.Name = "label9";
         label9.Size = new System.Drawing.Size(159, 24);
         label9.TabIndex = 0;
-        label9.Text = "Tên/ID thể loại:";
+        label9.Text = "Tên/ID danh mục:";
         // 
-        // UserControl_TheLoai
+        // UserControl_DanhMucDanhMuc
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

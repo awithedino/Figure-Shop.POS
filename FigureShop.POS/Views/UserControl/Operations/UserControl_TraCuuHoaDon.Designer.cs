@@ -46,7 +46,7 @@
             // 
             // panelTimKiem
             // 
-            panelTimKiem.BackColor = System.Drawing.Color.DodgerBlue;
+            panelTimKiem.BackColor = System.Drawing.SystemColors.Control;
             panelTimKiem.Controls.Add(cboMaKH);
             panelTimKiem.Controls.Add(cboMaNV);
             panelTimKiem.Controls.Add(btnHienThiChiTiet);

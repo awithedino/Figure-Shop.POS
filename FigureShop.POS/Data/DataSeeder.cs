@@ -27,7 +27,8 @@ namespace FigureShop.POS.Data
                 var cust3Id = Guid.NewGuid(); // Nguyen Van A
                 var cust4Id = Guid.NewGuid(); // Le Thi B
                 var cust5Id = Guid.NewGuid(); // Khach vang lai
-                var cust6Id = Guid.NewGuid(); // Banned user
+                var cust6Id = Guid.NewGuid();
+                var cust7Id = Guid.NewGuid();// Banned user
 
                 // === 2. Roles ===
                 var roleAdmin = new Role { Name = "Admin" };
@@ -92,6 +93,13 @@ namespace FigureShop.POS.Data
                     FullName = "Staff Member 2", PhoneNumber = "0900000003", Address = "Shop Floor",
                     CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, CreatedBy = adminId, UpdatedBy = adminId,
                     RolesNames = new List<Role> { roleStaff }
+                };
+                var userCust7 = new User
+                {
+                    Id = cust7Id, Email = "admin", Password = "admin", Status = "Active",
+                    FullName = "Ari_2", PhoneNumber = null, Address = null,
+                    CreatedAt = DateTime.Now, UpdatedAt = DateTime.Now, CreatedBy = adminId, UpdatedBy = adminId,
+                    RolesNames = new List<Role> { roleAdmin }
                 };
                 context.Users.AddRange(userAdmin, userStaff, userCust1, userCust2, userCust3, userCust4, userCust5, userCust6);
 

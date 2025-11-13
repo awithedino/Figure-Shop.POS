@@ -1,38 +1,53 @@
+using Microsoft.Extensions.Configuration;
+using Microsoft.EntityFrameworkCore;
 using FigureShop.POS.Data;
 using FigureShop.POS.Views;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using FigureShop.POS.Data.Models;
 
-namespace FigureShop.POS;
-
-static class Program
+namespace FigureShop.POS
 {
-    [STAThread]
-    static void Main()
+    internal static class Program
     {
-        Application.SetHighDpiMode(HighDpiMode.SystemAware);
-        Application.EnableVisualStyles();
-        Application.SetCompatibleTextRenderingDefault(false);
+        public static User CurrentUser { get; set; }
         
-        var host = Host.CreateDefaultBuilder()
-            .ConfigureServices((context, services) =>
-            {
-                services.AddDbContext<FigureShopDbContext>(options =>
-                    options.UseSqlServer(context.Configuration.GetConnectionString("DefaultConnection")));
-            })
-            .Build();
-        
-        using (var scope = host.Services.CreateScope())
+        [STAThread]
+        static void Main()
         {
-            var services = scope.ServiceProvider;
-            var context = services.GetRequiredService<FigureShopDbContext>();
-            context.Database.Migrate(); 
-            
-            DataSeeder.Initialize(context);
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+
+            var configuration = builder.Build();
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+
+            var options = new DbContextOptionsBuilder<FigureShopDbContext>()
+                .UseSqlServer(connectionString)
+                .Options;
+
+            using (var context = new FigureShopDbContext(options))
+            {
+                try
+                {
+                    context.Database.Migrate();
+                    DataSeeder.Initialize(context);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi khởi động database: {ex.Message}", "Lỗi nghiêm trọng", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+            }
+
+            ApplicationConfiguration.Initialize();
+
+            using (Form_Login loginForm = new Form_Login())
+            {
+                if (loginForm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Run(new Form_Menu());
+                }
+                
+            }
         }
-        
-        Application.Run(new Form_Menu());
     }
 }

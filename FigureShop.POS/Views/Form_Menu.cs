@@ -67,7 +67,7 @@ public partial class Form_Menu : Form
     private void btnTheLoai_Click(object sender, EventArgs e)
     {
         clickedButton = (Button)sender;
-        LoadControl(new UserControl_TheLoai(), clickedButton.Text);
+        LoadControl(new UserControl_DanhMuc(), clickedButton.Text);
     }
 
     private void btnSanPham_Click(object sender, EventArgs e)
@@ -90,5 +90,23 @@ public partial class Form_Menu : Form
     private void btnNghiepVu_Click(object sender, EventArgs e)
     {
         flpOperationsSubmenu.Visible = !flpOperationsSubmenu.Visible;
+    }
+
+    private void Form_Menu_Load(object sender, EventArgs e)
+    {
+        var currentUser = Program.CurrentUser;
+        
+        if (currentUser == null) 
+        {
+            lblXinChao.Text = "Xin chào: Guest";
+            lblQuyen.Text = "Quyền: Unknown";
+            return;
+        }
+        
+        string displayName = string.IsNullOrEmpty(currentUser.FullName) ? currentUser.Email : currentUser.FullName;
+        lblXinChao.Text = $"Xin chào: {displayName}";
+        
+        string role = currentUser.RolesNames.FirstOrDefault()?.Name;
+        lblQuyen.Text = $"Quyền: {role ?? "N/A"}";
     }
 }
