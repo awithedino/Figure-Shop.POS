@@ -1,15 +1,16 @@
-﻿using FigureShop.POS.Views.UserControl.Operations;
-using FigureShop.POS.Views.UserControl.Management;
+﻿using FigureShop.POS.Views.UserControl.Management;
+using FigureShop.POS.Views.UserControl.Operations;
+
 namespace FigureShop.POS.Views;
 
 public partial class Form_Menu : Form
 {
     private Button clickedButton;
-    
+
     public Form_Menu()
     {
         InitializeComponent();
-        GetHeaderLabel("Trang chủ");
+        LoadControl(new UserControl_BanHang(), "Bán hàng");
     }
 
     private void GetHeaderLabel(string label)
@@ -21,7 +22,7 @@ public partial class Form_Menu : Form
     {
         // Update the label
         GetHeaderLabel(headerText);
-        
+
         panelMainContent.Controls.Clear();
         control.Dock = DockStyle.Fill;
         panelMainContent.Controls.Add(control);
@@ -30,7 +31,7 @@ public partial class Form_Menu : Form
     private void btnNhanVien_Click(object sender, EventArgs e)
     {
         clickedButton = (Button)sender;
-        LoadControl(new UserControl_NhanVien(),  clickedButton.Text);
+        LoadControl(new UserControl_NhanVien(), clickedButton.Text);
     }
 
     private void btnBanHang_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ public partial class Form_Menu : Form
     private void btnTheLoai_Click(object sender, EventArgs e)
     {
         clickedButton = (Button)sender;
-        LoadControl(new UserControl_TheLoai(), clickedButton.Text);
+        LoadControl(new UserControl_DanhMuc(), clickedButton.Text);
     }
 
     private void btnSanPham_Click(object sender, EventArgs e)
@@ -75,13 +76,13 @@ public partial class Form_Menu : Form
         clickedButton = (Button)sender;
         LoadControl(new UserControl_SanPham(), clickedButton.Text);
     }
-    
+
     private void btnHoaDon_Click(object sender, EventArgs e)
     {
         clickedButton = (Button)sender;
         LoadControl(new UserControl_TraCuuHoaDon(), clickedButton.Text);
     }
-    
+
     private void btnQuanLy_Click(object sender, EventArgs e)
     {
         flpManagementSubmenu.Visible = !flpManagementSubmenu.Visible;
@@ -90,5 +91,23 @@ public partial class Form_Menu : Form
     private void btnNghiepVu_Click(object sender, EventArgs e)
     {
         flpOperationsSubmenu.Visible = !flpOperationsSubmenu.Visible;
+    }
+
+    private void Form_Menu_Load(object sender, EventArgs e)
+    {
+        var currentUser = Program.CurrentUser;
+
+        if (currentUser == null)
+        {
+            lblXinChao.Text = "Xin chào: Guest";
+            lblQuyen.Text = "Quyền: Unknown";
+            return;
+        }
+
+        var displayName = string.IsNullOrEmpty(currentUser.FullName) ? currentUser.Email : currentUser.FullName;
+        lblXinChao.Text = $"Xin chào: {displayName}";
+
+        var role = currentUser.RolesNames.FirstOrDefault()?.Name;
+        lblQuyen.Text = $"Quyền: {role ?? "N/A"}";
     }
 }

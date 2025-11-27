@@ -51,10 +51,9 @@ partial class Form_Menu
         panel2 = new System.Windows.Forms.Panel();
         label1 = new System.Windows.Forms.Label();
         panel3 = new System.Windows.Forms.Panel();
+        lblQuyen = new System.Windows.Forms.Label();
+        lblXinChao = new System.Windows.Forms.Label();
         dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-        label4 = new System.Windows.Forms.Label();
-        label3 = new System.Windows.Forms.Label();
-        label2 = new System.Windows.Forms.Label();
         panelMainContent = new System.Windows.Forms.Panel();
         panel1.SuspendLayout();
         flpMenu.SuspendLayout();
@@ -193,7 +192,7 @@ partial class Form_Menu
         btnTheLoai.Name = "btnTheLoai";
         btnTheLoai.Size = new System.Drawing.Size(146, 45);
         btnTheLoai.TabIndex = 5;
-        btnTheLoai.Text = "Thể Loại";
+        btnTheLoai.Text = "Danh Mục";
         btnTheLoai.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
         btnTheLoai.UseVisualStyleBackColor = true;
         btnTheLoai.Click += btnTheLoai_Click;
@@ -356,16 +355,31 @@ partial class Form_Menu
         // panel3
         // 
         panel3.BackColor = System.Drawing.Color.DodgerBlue;
+        panel3.Controls.Add(lblQuyen);
+        panel3.Controls.Add(lblXinChao);
         panel3.Controls.Add(dateTimePicker1);
-        panel3.Controls.Add(label4);
-        panel3.Controls.Add(label3);
-        panel3.Controls.Add(label2);
         panel3.Dock = System.Windows.Forms.DockStyle.Top;
         panel3.ForeColor = System.Drawing.Color.White;
         panel3.Location = new System.Drawing.Point(152, 86);
         panel3.Name = "panel3";
         panel3.Size = new System.Drawing.Size(1306, 66);
         panel3.TabIndex = 2;
+        // 
+        // lblQuyen
+        // 
+        lblQuyen.Location = new System.Drawing.Point(6, 34);
+        lblQuyen.Name = "lblQuyen";
+        lblQuyen.Size = new System.Drawing.Size(139, 23);
+        lblQuyen.TabIndex = 2;
+        lblQuyen.Text = "Quyền: <text>";
+        // 
+        // lblXinChao
+        // 
+        lblXinChao.Location = new System.Drawing.Point(6, 3);
+        lblXinChao.Name = "lblXinChao";
+        lblXinChao.Size = new System.Drawing.Size(210, 23);
+        lblXinChao.TabIndex = 0;
+        lblXinChao.Text = "Xin chào: <text>";
         // 
         // dateTimePicker1
         // 
@@ -375,30 +389,6 @@ partial class Form_Menu
         dateTimePicker1.Name = "dateTimePicker1";
         dateTimePicker1.Size = new System.Drawing.Size(311, 27);
         dateTimePicker1.TabIndex = 4;
-        // 
-        // label4
-        // 
-        label4.Location = new System.Drawing.Point(6, 34);
-        label4.Name = "label4";
-        label4.Size = new System.Drawing.Size(139, 23);
-        label4.TabIndex = 2;
-        label4.Text = "Quyền: <text>";
-        // 
-        // label3
-        // 
-        label3.Location = new System.Drawing.Point(259, 3);
-        label3.Name = "label3";
-        label3.Size = new System.Drawing.Size(141, 23);
-        label3.TabIndex = 1;
-        label3.Text = "Email: <text>";
-        // 
-        // label2
-        // 
-        label2.Location = new System.Drawing.Point(6, 3);
-        label2.Name = "label2";
-        label2.Size = new System.Drawing.Size(210, 23);
-        label2.TabIndex = 0;
-        label2.Text = "Xin chào: <text>";
         // 
         // panelMainContent
         // 
@@ -419,6 +409,7 @@ partial class Form_Menu
         Controls.Add(panel1);
         Margin = new System.Windows.Forms.Padding(2);
         Text = "Menu";
+        Load += Form_Menu_Load;
         panel1.ResumeLayout(false);
         flpMenu.ResumeLayout(false);
         flpMenu.PerformLayout();
@@ -459,9 +450,8 @@ partial class Form_Menu
     private System.Windows.Forms.Panel panelMainContent;
 
     private System.Windows.Forms.Label label1;
-    private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label lblXinChao;
+    private System.Windows.Forms.Label lblQuyen;
     private System.Windows.Forms.DateTimePicker dateTimePicker1;
 
     private System.Windows.Forms.FlowLayoutPanel flpMenu;

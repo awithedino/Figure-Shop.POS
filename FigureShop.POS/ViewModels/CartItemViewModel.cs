@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-namespace FigureShop.POS.ViewModels;
+﻿namespace FigureShop.POS.ViewModels;
 
 public class CartItemViewModel
 {

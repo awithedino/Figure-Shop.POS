@@ -1,6 +1,6 @@
 ﻿namespace FigureShop.POS.Data.Models;
 
-public partial class Order
+public class Order
 {
     public Guid Id { get; set; }
 

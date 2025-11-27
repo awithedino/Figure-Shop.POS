@@ -1,6 +1,6 @@
 ﻿namespace FigureShop.POS.Data.Models;
 
-public partial class Branch
+public class Branch
 {
     public Guid Id { get; set; }
 
