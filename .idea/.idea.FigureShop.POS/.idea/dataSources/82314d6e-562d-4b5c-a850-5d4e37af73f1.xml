@@ -16572,16 +16572,16 @@
       <ObjectId>1</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5512" parent="1" name="model">
+    <database id="5512" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
+    </database>
+    <database id="5513" parent="1" name="model">
       <ObjectId>3</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
-    <database id="5513" parent="1" name="msdb">
+    <database id="5514" parent="1" name="msdb">
       <ObjectId>4</ObjectId>
-      <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
-    </database>
-    <database id="5514" parent="1" name="tempdb">
-      <ObjectId>2</ObjectId>
       <CollationName>SQL_Latin1_General_CP1_CI_AS</CollationName>
     </database>
     <linked-server id="5515" parent="1" name="60356bf702e2">

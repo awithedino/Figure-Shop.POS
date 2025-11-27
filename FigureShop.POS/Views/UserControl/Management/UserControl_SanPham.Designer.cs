@@ -1,7 +1,4 @@
-﻿// Paste this code into your UserControl_SanPham.Designer.cs file
-// THIS IS THE CORRECTED VERSION (Nov 8, 2025)
-
-namespace FigureShop.POS.Views.UserControl.Management 
+﻿namespace FigureShop.POS.Views.UserControl.Management 
 {
     partial class UserControl_SanPham
     {

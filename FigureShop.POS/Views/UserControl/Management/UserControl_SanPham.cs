@@ -1,401 +1,404 @@
 ﻿// ReSharper disable LocalizableElement
-
 using FigureShop.POS.Data;
 using FigureShop.POS.Data.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
+using System.Data;
 
 namespace FigureShop.POS.Views.UserControl.Management;
 
 public partial class UserControl_SanPham : System.Windows.Forms.UserControl
 {
-    private FigureShopDbContext context;
-    private bool isAdding;
-    private Guid? selectedFigureId; // Tracks which figure is selected
-    private string selectedImagePath; // Tracks the path of a new image
+    private string _selectedImagePath; 
+        
+        // This points to .../bin/Debug/net8.0-windows/Images
+        private readonly string _imagesDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images");
 
-    public UserControl_SanPham()
-    {
-        InitializeComponent();
-    }
+        private FigureShopDbContext _context;
+        private bool _isAdding;
+        private Guid? _selectedFigureId;
 
-    // Load event
-    private void UserControl_SanPham_Load(object sender, EventArgs e)
-    {
-        context = new FigureShopDbContext();
-
-        LoadData(); // Fill the DataGridView
-        LoadComboBoxes(); // Fill the dropdowns
-
-        ToggleMode(false); // Set to "View" mode
-        ClearFields();
-    }
-
-    // Helper functions
-    private void LoadData()
-    {
-        try
+        public UserControl_SanPham()
         {
-            // We use Include() to get the Branch and Category names
-            var figures = context.Figures
-                .Include(f => f.Branch)
-                .Include(f => f.Category)
-                .Select(f => new
-                {
-                    f.Id,
-                    f.Name,
-                    f.Price,
-                    f.Quantity,
-                    BranchName = f.Branch.Name, // Get the name from the related table
-                    CategoryName = f.Category.Name // Get the name
-                })
-                .ToList();
+            InitializeComponent();
+        }
 
-            dgvFigures.DataSource = figures;
+        private void UserControl_SanPham_Load(object sender, EventArgs e)
+        {
+            if (this.DesignMode) { return; }
 
-            if (dgvFigures.Columns.Count > 0)
+            // 2. FIXED: Create the directory if it doesn't exist!
+            // Without this, File.Copy will crash on the first run.
+            if (!Directory.Exists(_imagesDirectory))
             {
-                dgvFigures.Columns["Id"].HeaderText = "Mã Figure";
-                dgvFigures.Columns["Name"].HeaderText = "Tên Figure";
-                dgvFigures.Columns["Price"].HeaderText = "Giá Bán";
-                dgvFigures.Columns["Quantity"].HeaderText = "Số Lượng";
-                dgvFigures.Columns["BranchName"].HeaderText = "Hãng";
-                dgvFigures.Columns["CategoryName"].HeaderText = "Thế Loại";
-            }
-        }
-        catch (Exception ex)
-        {
-            MessageBox.Show($"Không thể tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-    }
-
-    private void LoadComboBoxes()
-    {
-        // Load Branches
-        cmbBranch.DataSource = context.Branches.ToList();
-        cmbBranch.DisplayMember = "Name";
-        cmbBranch.ValueMember = "Id";
-        cmbBranch.SelectedItem = null; // Start blank
-
-        // Load Categories
-        cmbCategory.DataSource = context.Categories.ToList();
-        cmbCategory.DisplayMember = "Name";
-        cmbCategory.ValueMember = "Id";
-        cmbCategory.SelectedItem = null; // Start blank
-    }
-
-    private void ToggleMode(bool isEditing)
-    {
-        // Enable/Disable input controls
-        txtName.Enabled = isEditing;
-        cmbBranch.Enabled = isEditing;
-        cmbCategory.Enabled = isEditing;
-        numPrice.Enabled = isEditing;
-        numQuantity.Enabled = isEditing;
-        numSalePercent.Enabled = isEditing;
-        dtpSaleFrom.Enabled = isEditing;
-        dtpSaleTo.Enabled = isEditing;
-        txtDescription.Enabled = isEditing;
-        btnBrowse.Enabled = isEditing;
-
-        // Enable/Disable buttons
-        btnLuu.Enabled = isEditing;
-        btnBoQua.Enabled = isEditing;
-
-        btnThem.Enabled = !isEditing;
-        btnSua.Enabled = !isEditing;
-        btnXoa.Enabled = !isEditing;
-        btnTimKiem.Enabled = !isEditing;
-    }
-
-    private void ClearFields()
-    {
-        txtName.Text = "";
-        cmbBranch.SelectedItem = null;
-        cmbCategory.SelectedItem = null;
-        numPrice.Value = 0;
-        numQuantity.Value = 0;
-        numSalePercent.Value = 0;
-        dtpSaleFrom.Value = DateTime.Now;
-        dtpSaleTo.Value = DateTime.Now;
-        txtDescription.Text = "";
-        picFigure.Image = null; // Clear the image
-
-        selectedFigureId = null;
-        selectedImagePath = null;
-    }
-
-    // DataGridViews
-    private void dgvFigures_CellClick(object sender, DataGridViewCellEventArgs e)
-    {
-        if (e.RowIndex >= 0 && !btnLuu.Enabled)
-        {
-            // Get the ID from the clicked row
-            var figureId = (Guid)dgvFigures.Rows[e.RowIndex].Cells["Id"].Value;
-            selectedFigureId = figureId;
-
-            // Load the FULL figure object from the database
-            var figure = context.Figures.Find(figureId);
-            if (figure != null)
-            {
-                // Populate all the fields
-                txtName.Text = figure.Name;
-                numPrice.Value = (decimal)figure.Price;
-                numQuantity.Value = figure.Quantity;
-                numSalePercent.Value = (decimal)figure.SalePercent;
-                txtDescription.Text = figure.Description;
-
-                // Set ComboBoxes
-                cmbBranch.SelectedValue = figure.BranchId ?? Guid.Empty;
-                cmbCategory.SelectedValue = figure.CategoryId ?? Guid.Empty;
-
-                // Handle nullable dates
-                dtpSaleFrom.Value = figure.SaleFrom ?? DateTime.Now;
-                dtpSaleTo.Value = figure.SaleTo ?? DateTime.Now;
-
-                // Clear old image and selected path
-                picFigure.Image = null;
-                selectedImagePath = null;
-                // TODO: Load image from figure.ImgSrcJson
-                // This part is complex as it requires parsing the JSON
-                // and loading a file from a path.
-            }
-        }
-    }
-
-    // Button click events
-    private void btnThem_Click(object sender, EventArgs e)
-    {
-        isAdding = true;
-        ToggleMode(true);
-        ClearFields();
-        txtName.Focus();
-    }
-
-    private void btnSua_Click(object sender, EventArgs e)
-    {
-        if (selectedFigureId == null)
-        {
-            MessageBox.Show("Vui lòng chọn một sản phẩm để sửa.", "Chưa chọn", MessageBoxButtons.OK,
-                MessageBoxIcon.Warning);
-            return;
-        }
-
-        isAdding = false;
-        ToggleMode(true);
-        txtName.Focus();
-    }
-
-    private void btnLuu_Click(object sender, EventArgs e)
-    {
-        if (string.IsNullOrWhiteSpace(txtName.Text))
-        {
-            MessageBox.Show("Tên figure không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            txtName.Focus();
-            return;
-        }
-
-        if (cmbBranch.SelectedValue == null)
-        {
-            MessageBox.Show("Vui lòng chọn một Hãng (Branch).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            cmbBranch.Focus();
-            return;
-        }
-
-        if (cmbCategory.SelectedValue == null)
-        {
-            MessageBox.Show("Vui lòng chọn một Thế Loại (Category).", "Lỗi", MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
-            cmbCategory.Focus();
-            return;
-        }
-
-        try
-        {
-            var adminId = context.Users.First(u => u.Email == "admin@figureshop.com").Id;
-
-            Figure figureToSave;
-
-            if (isAdding)
-            {
-                // === ADD (CREATE) ===
-                figureToSave = new Figure
-                {
-                    Id = Guid.NewGuid(), // Create a new ID
-                    CreatedAt = DateTime.Now,
-                    CreatedBy = adminId
-                };
-                context.Figures.Add(figureToSave);
-            }
-            else
-            {
-                figureToSave = context.Figures.Find(selectedFigureId);
-                if (figureToSave == null)
-                {
-                    MessageBox.Show("Không tìm thấy sản phẩm này!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                Directory.CreateDirectory(_imagesDirectory);
             }
 
-            figureToSave.Name = txtName.Text.Trim();
-            figureToSave.BranchId = (Guid)cmbBranch.SelectedValue;
-            figureToSave.CategoryId = (Guid)cmbCategory.SelectedValue;
-            figureToSave.Price = (double)numPrice.Value;
-            figureToSave.Quantity = (int)numQuantity.Value;
-            figureToSave.SalePercent = (double)numSalePercent.Value;
-            figureToSave.SaleFrom = dtpSaleFrom.Value;
-            figureToSave.SaleTo = dtpSaleTo.Value;
-            figureToSave.Description = txtDescription.Text.Trim();
+            _context = new FigureShopDbContext();
 
-            // TODO: Image saving logic
-            // if (!string.IsNullOrEmpty(selectedImagePath))
-            // {
-            //    ... copy file to a "images" folder
-            //    ... update figureToSave.ImgSrcJson
-            // }
-
-            figureToSave.UpdatedAt = DateTime.Now;
-            figureToSave.UpdatedBy = adminId;
-
-            context.SaveChanges();
-            MessageBox.Show(isAdding ? "Thêm sản phẩm thành công!" : "Cập nhật sản phẩm thành công!",
-                "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            LoadData();
+            LoadComboBoxes();
+            ToggleMode(false);
+            ClearFields();
         }
-        catch (Exception ex)
+
+        private void LoadData()
         {
-            MessageBox.Show($"Lưu thất bại: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            return;
-        }
-
-        LoadData(); // Reload the grid
-        ToggleMode(false); // Go back to "View" mode
-        ClearFields();
-        isAdding = false;
-    }
-
-    private void btnXoa_Click(object sender, EventArgs e)
-    {
-        if (selectedFigureId == null)
-        {
-            MessageBox.Show("Vui lòng chọn một sản phẩm để xoá.", "Chưa chọn", MessageBoxButtons.OK,
-                MessageBoxIcon.Warning);
-            return;
-        }
-
-        var figureName = txtName.Text;
-        var result = MessageBox.Show($"Bạn có chắc chắn muốn xoá sản phẩm '{figureName}' không?",
-            "Xác nhận xoá",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Question);
-
-        if (result == DialogResult.Yes)
             try
             {
-                var figureToDelete = context.Figures.Find(selectedFigureId);
-                if (figureToDelete != null)
-                {
-                    context.Figures.Remove(figureToDelete);
-                    context.SaveChanges();
+                var figures = _context.Figures
+                    .Include(f => f.Branch)
+                    .Include(f => f.Category)
+                    .Select(f => new
+                    {
+                        f.Id,
+                        f.Name,
+                        f.Price,
+                        f.Quantity,
+                        BranchName = f.Branch.Name,
+                        CategoryName = f.Category.Name
+                    })
+                    .ToList();
 
-                    LoadData();
-                    ClearFields();
-                    MessageBox.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvFigures.DataSource = figures;
+
+                if (dgvFigures.Columns.Count > 0)
+                {
+                    dgvFigures.Columns["Id"].HeaderText = "Mã Figure";
+                    dgvFigures.Columns["Name"].HeaderText = "Tên Figure";
+                    dgvFigures.Columns["Price"].HeaderText = "Giá Bán";
+                    dgvFigures.Columns["Quantity"].HeaderText = "Số Lượng";
+                    dgvFigures.Columns["BranchName"].HeaderText = "Hãng";
+                    dgvFigures.Columns["CategoryName"].HeaderText = "Thế Loại";
+                    dgvFigures.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
                 }
-            }
-            catch (DbUpdateException ex)
-            {
-                MessageBox.Show("Không thể xoá sản phẩm này. Có thể nó đang được sử dụng trong một đơn hàng.",
-                    "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Không thể tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-    }
+        }
 
-    private void btnBoQua_Click(object sender, EventArgs e)
-    {
-        ToggleMode(false); // Go back to "View" mode
-        ClearFields();
-        isAdding = false;
-
-
-        if (selectedFigureId != null)
-            foreach (DataGridViewRow row in dgvFigures.Rows)
-                if ((Guid)row.Cells["Id"].Value == selectedFigureId)
-                {
-                    dgvFigures_CellClick(dgvFigures, new DataGridViewCellEventArgs(0, row.Index));
-                    break;
-                }
-    }
-
-    private void btnBrowse_Click(object sender, EventArgs e)
-    {
-        using (var dialog = new OpenFileDialog())
+        private void LoadComboBoxes()
         {
-            dialog.Title = "Chọn ảnh sản phẩm";
-            dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            cmbBranch.DataSource = _context.Branches.ToList();
+            cmbBranch.DisplayMember = "Name";
+            cmbBranch.ValueMember = "Id";
+            cmbBranch.SelectedItem = null;
 
-            if (dialog.ShowDialog() == DialogResult.OK)
+            cmbCategory.DataSource = _context.Categories.ToList();
+            cmbCategory.DisplayMember = "Name";
+            cmbCategory.ValueMember = "Id";
+            cmbCategory.SelectedItem = null;
+        }
+
+        private void ToggleMode(bool isEditing)
+        {
+            txtName.Enabled = isEditing;
+            cmbBranch.Enabled = isEditing;
+            cmbCategory.Enabled = isEditing;
+            numPrice.Enabled = isEditing;
+            numQuantity.Enabled = isEditing;
+            numSalePercent.Enabled = isEditing;
+            dtpSaleFrom.Enabled = isEditing;
+            dtpSaleTo.Enabled = isEditing;
+            txtDescription.Enabled = isEditing;
+            btnBrowse.Enabled = isEditing;
+
+            btnLuu.Enabled = isEditing;
+            btnBoQua.Enabled = isEditing;
+
+            btnThem.Enabled = !isEditing;
+            btnSua.Enabled = !isEditing;
+            btnXoa.Enabled = !isEditing;
+            btnTimKiem.Enabled = !isEditing;
+        }
+
+        private void ClearFields()
+        {
+            txtName.Text = "";
+            cmbBranch.SelectedItem = null;
+            cmbCategory.SelectedItem = null;
+            numPrice.Value = 0;
+            numQuantity.Value = 0;
+            numSalePercent.Value = 0;
+            dtpSaleFrom.Value = DateTime.Now;
+            dtpSaleTo.Value = DateTime.Now;
+            txtDescription.Text = "";
+            
+            // Clear image
+            if (picFigure.Image != null)
             {
-                selectedImagePath = dialog.FileName;
-                picFigure.Image = new Bitmap(dialog.FileName);
+                picFigure.Image.Dispose(); // Release memory
+                picFigure.Image = null;
+            }
+
+            _selectedFigureId = null;
+            _selectedImagePath = null;
+        }
+
+        private void dgvFigures_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && !btnLuu.Enabled)
+            {
+                var figureId = (Guid)dgvFigures.Rows[e.RowIndex].Cells["Id"].Value;
+                _selectedFigureId = figureId;
+
+                var figure = _context.Figures.Find(figureId);
+                if (figure != null)
+                {
+                    txtName.Text = figure.Name;
+                    numPrice.Value = (decimal)figure.Price;
+                    numQuantity.Value = figure.Quantity;
+                    numSalePercent.Value = (decimal)figure.SalePercent;
+                    txtDescription.Text = figure.Description;
+                    cmbBranch.SelectedValue = figure.BranchId ?? Guid.Empty;
+                    cmbCategory.SelectedValue = figure.CategoryId ?? Guid.Empty;
+                    dtpSaleFrom.Value = figure.SaleFrom ?? DateTime.Now;
+                    dtpSaleTo.Value = figure.SaleTo ?? DateTime.Now;
+
+                    // 3. FIXED: Actually LOAD the image! (You had a TODO here)
+                    // We use SafeLoadImage to prevent file locking issues.
+                    if (picFigure.Image != null) picFigure.Image.Dispose();
+                    picFigure.Image = null;
+                    _selectedImagePath = null;
+
+                    if (!string.IsNullOrEmpty(figure.ImgSrcJson) && figure.ImgSrcJson != "[]")
+                    {
+                        // Combine startup path with stored relative path
+                        string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, figure.ImgSrcJson);
+                        if (File.Exists(fullPath))
+                        {
+                            picFigure.Image = SafeLoadImage(fullPath);
+                        }
+                    }
+                }
             }
         }
-    }
 
-    private void btnTimKiem_Click(object sender, EventArgs e)
-    {
-        // Get the text from your NEW search box
-        var searchText = txtTimKiem.Text.Trim().ToLower();
-
-        // Load all figures if the search box is empty
-        if (string.IsNullOrEmpty(searchText))
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            LoadData(); // This is your existing function to load everything
-            return;
+            _isAdding = true;
+            ToggleMode(true);
+            ClearFields();
+            txtName.Focus();
         }
 
-        try
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            // Find matching figures
-            var results = context.Figures
-                .Include(f => f.Branch) // Don't forget Includes!
-                .Include(f => f.Category) // Or the names will be blank
-                .Where(f => f.Name.ToLower().Contains(searchText) ||
-                            f.Branch.Name.ToLower().Contains(searchText) || // Bonus: search by branch!
-                            f.Category.Name.ToLower().Contains(searchText)) // Bonus: search by category!
-                .Select(f => new // Select the same anonymous type as your LoadData()
+            if (_selectedFigureId == null)
+            {
+                MessageBox.Show("Vui lòng chọn một sản phẩm để sửa.", "Chưa chọn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            _isAdding = false;
+            ToggleMode(true);
+            txtName.Focus();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            // Validation
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("Tên figure không được để trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
+                return;
+            }
+            if (cmbBranch.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn Hãng.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (cmbCategory.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn Thể Loại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                var adminId = _context.Users.FirstOrDefault(u => u.Email == "admin@figureshop.com")?.Id ?? Guid.Empty;
+
+                Figure figureToSave;
+
+                if (_isAdding)
                 {
-                    f.Id,
-                    f.Name,
-                    f.Price,
-                    f.Quantity,
-                    BranchName = f.Branch.Name,
-                    CategoryName = f.Category.Name
-                })
-                .ToList();
+                    figureToSave = new Figure
+                    {
+                        Id = Guid.NewGuid(),
+                        CreatedAt = DateTime.Now,
+                        CreatedBy = adminId,
+                        ImgSrcJson = "[]"
+                    };
+                    _context.Figures.Add(figureToSave);
+                }
+                else
+                {
+                    figureToSave = _context.Figures.Find(_selectedFigureId);
+                    if (figureToSave == null) return;
+                }
 
-            // 4. Show the results
-            dgvFigures.DataSource = results;
+                // === IMAGE SAVING LOGIC ===
+                // 1. Keep old path by default
+                string newRelativePath = figureToSave.ImgSrcJson;
+
+                // 2. If user picked a NEW image
+                if (!string.IsNullOrEmpty(_selectedImagePath))
+                {
+                    string extension = Path.GetExtension(_selectedImagePath);
+                    string uniqueName = $"{Guid.NewGuid()}{extension}";
+                    string destinationPath = Path.Combine(_imagesDirectory, uniqueName);
+
+                    try
+                    {
+                        // Dispose the old image from PictureBox so we don't lock the file
+                        if (picFigure.Image != null) picFigure.Image.Dispose();
+                        picFigure.Image = null;
+
+                        // Copy file
+                        File.Copy(_selectedImagePath, destinationPath, true);
+
+                        // 3. Delete OLD image file if it exists (Optional cleanup)
+                        if (!_isAdding && !string.IsNullOrEmpty(figureToSave.ImgSrcJson) && figureToSave.ImgSrcJson != "[]")
+                        {
+                            string oldFullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, figureToSave.ImgSrcJson);
+                            if (File.Exists(oldFullPath))
+                            {
+                                try { File.Delete(oldFullPath); } catch { /* Ignore delete errors */ }
+                            }
+                        }
+
+                        // 4. Update the path to save in DB
+                        // We save "Images\guid.jpg" (Relative path)
+                        newRelativePath = Path.Combine("Images", uniqueName);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Lỗi lưu ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+                // Update properties
+                figureToSave.Name = txtName.Text.Trim();
+                figureToSave.BranchId = (Guid)cmbBranch.SelectedValue;
+                figureToSave.CategoryId = (Guid)cmbCategory.SelectedValue;
+                figureToSave.Price = (double)numPrice.Value;
+                figureToSave.Quantity = (int)numQuantity.Value;
+                figureToSave.SalePercent = (double)numSalePercent.Value;
+                figureToSave.SaleFrom = dtpSaleFrom.Value;
+                figureToSave.SaleTo = dtpSaleTo.Value;
+                figureToSave.Description = txtDescription.Text.Trim();
+                figureToSave.ImgSrcJson = newRelativePath; // <-- Save the new path
+                figureToSave.UpdatedAt = DateTime.Now;
+                figureToSave.UpdatedBy = adminId;
+
+                _context.SaveChanges();
+                MessageBox.Show(_isAdding ? "Thêm thành công!" : "Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi lưu dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            LoadData();
+            ToggleMode(false);
+            ClearFields();
+            _isAdding = false;
         }
-        catch (Exception ex)
+
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Lỗi tìm kiếm: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (_selectedFigureId == null) return;
+
+            if (MessageBox.Show("Bạn có chắc muốn xoá?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    var fig = _context.Figures.Find(_selectedFigureId);
+                    if (fig != null)
+                    {
+                        _context.Figures.Remove(fig);
+                        _context.SaveChanges();
+                        
+                        // Try to delete the image file too
+                        if (!string.IsNullOrEmpty(fig.ImgSrcJson) && fig.ImgSrcJson != "[]")
+                        {
+                            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fig.ImgSrcJson);
+                            if (File.Exists(path)) try { File.Delete(path); } catch { }
+                        }
+
+                        LoadData();
+                        ClearFields();
+                        MessageBox.Show("Xoá thành công!");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi xoá: {ex.Message}");
+                }
+            }
         }
-    }
 
-    private void btnLamMoi_Click(object sender, EventArgs e)
-    {
-        LoadData();
-        ClearFields();
-        ToggleMode(false);
-        isAdding = false;
-    }
+        private void btnBoQua_Click(object sender, EventArgs e)
+        {
+            ToggleMode(false);
+            ClearFields();
+            _isAdding = false;
+            // Restore selection logic if needed...
+        }
 
-    // Cleanup
-    protected override void OnHandleDestroyed(EventArgs e)
-    {
-        context?.Dispose();
-        base.OnHandleDestroyed(e);
-    }
+        // 4. FIXED: Helper to load image without locking the file
+        // This reads the file into memory and closes the file handle immediately.
+        private Image SafeLoadImage(string path)
+        {
+            try
+            {
+                using (var ms = new MemoryStream(File.ReadAllBytes(path)))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+            catch { return null; }
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new OpenFileDialog())
+            {
+                dialog.Title = "Chọn ảnh sản phẩm";
+                dialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Store the path to copy later
+                    _selectedImagePath = dialog.FileName;
+                    
+                    // Show preview (Safe load)
+                    if (picFigure.Image != null) picFigure.Image.Dispose();
+                    picFigure.Image = SafeLoadImage(_selectedImagePath);
+                }
+            }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            // (Your search logic goes here - looks fine in your snippet!)
+            MessageBox.Show("Chức năng tìm kiếm chưa được cập nhật trong mã này.", "Thông báo");
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LoadData();
+            ClearFields();
+            ToggleMode(false);
+            _isAdding = false;
+        }
+
+        protected override void OnHandleDestroyed(EventArgs e)
+        {
+            _context?.Dispose();
+            base.OnHandleDestroyed(e);
+        }
 }

@@ -36,9 +36,9 @@
             lblEmail.Location = new System.Drawing.Point(60, 60);
             lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new System.Drawing.Size(55, 23);
+            lblEmail.Size = new System.Drawing.Size(128, 23);
             lblEmail.TabIndex = 0;
-            lblEmail.Text = "Email:";
+            lblEmail.Text = "Tên đăng nhập:";
             // 
             // txtEmail
             // 
