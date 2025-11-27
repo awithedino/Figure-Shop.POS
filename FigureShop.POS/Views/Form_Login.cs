@@ -47,7 +47,7 @@ public partial class Form_Login : Form
             }
 
             // 3. Check if user is Staff or Admin
-            bool isStaffOrAdmin = user.RolesNames.Any(r => r.Name == "Admin" || r.Name == "Staff");
+            var isStaffOrAdmin = user.RolesNames.Any(r => r.Name == "Admin" || r.Name == "Staff");
             if (!isStaffOrAdmin)
             {
                 MessageBox.Show("Bạn không có quyền đăng nhập vào hệ thống POS.", "Lỗi", MessageBoxButtons.OK,
@@ -57,8 +57,8 @@ public partial class Form_Login : Form
 
             // === SUCCESS! ===
             Program.CurrentUser = user; // Store the logged-in user globally
-            this.DialogResult = DialogResult.OK; // Tell Program.cs it was successful
-            this.Close(); // Close this login form
+            DialogResult = DialogResult.OK; // Tell Program.cs it was successful
+            Close(); // Close this login form
         }
         catch (Exception ex)
         {
@@ -69,8 +69,8 @@ public partial class Form_Login : Form
 
     private void btnCancel_Click(object sender, EventArgs e)
     {
-        this.DialogResult = DialogResult.Cancel;
-        this.Close();
+        DialogResult = DialogResult.Cancel;
+        Close();
     }
 
     // Cleanup

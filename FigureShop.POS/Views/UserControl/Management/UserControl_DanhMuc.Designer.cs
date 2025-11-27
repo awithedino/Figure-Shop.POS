@@ -35,7 +35,6 @@ partial class UserControl_DanhMuc
         txtTheLoai = new System.Windows.Forms.TextBox();
         txtID = new System.Windows.Forms.TextBox();
         groupBox5 = new System.Windows.Forms.GroupBox();
-        btnExcel = new System.Windows.Forms.Button();
         btnReload = new System.Windows.Forms.Button();
         btnXoa = new System.Windows.Forms.Button();
         btnBoQua = new System.Windows.Forms.Button();
@@ -94,7 +93,6 @@ partial class UserControl_DanhMuc
         // groupBox5
         // 
         groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
-        groupBox5.Controls.Add(btnExcel);
         groupBox5.Controls.Add(btnReload);
         groupBox5.Controls.Add(btnXoa);
         groupBox5.Controls.Add(btnBoQua);
@@ -107,18 +105,6 @@ partial class UserControl_DanhMuc
         groupBox5.TabIndex = 8;
         groupBox5.TabStop = false;
         groupBox5.Text = "Công cụ";
-        // 
-        // btnExcel
-        // 
-        btnExcel.BackColor = System.Drawing.Color.SeaGreen;
-        btnExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-        btnExcel.ForeColor = System.Drawing.Color.Transparent;
-        btnExcel.Location = new System.Drawing.Point(151, 196);
-        btnExcel.Name = "btnExcel";
-        btnExcel.Size = new System.Drawing.Size(68, 33);
-        btnExcel.TabIndex = 6;
-        btnExcel.Text = "Excel";
-        btnExcel.UseVisualStyleBackColor = false;
         // 
         // btnReload
         // 
@@ -279,7 +265,7 @@ partial class UserControl_DanhMuc
         label9.TabIndex = 0;
         label9.Text = "Tên/ID danh mục:";
         // 
-        // UserControl_DanhMucDanhMuc
+        // UserControl_DanhMuc
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -304,7 +290,6 @@ partial class UserControl_DanhMuc
     private System.Windows.Forms.Label label9;
     private System.Windows.Forms.DataGridView dgvTheLoai;
     private System.Windows.Forms.GroupBox groupBox6;
-    private System.Windows.Forms.Button btnExcel;
     private System.Windows.Forms.Button btnReload;
     private System.Windows.Forms.Button btnXoa;
     private System.Windows.Forms.Button btnBoQua;

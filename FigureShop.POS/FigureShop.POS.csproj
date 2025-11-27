@@ -10,81 +10,81 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="ClosedXML" Version="0.105.0" />
-      <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="5.0.0-2.final" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.21" />
-      <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
-      <PackageReference Include="Microsoft.SqlServer.Types" Version="170.700.9-ctp2p0" />
+        <PackageReference Include="ClosedXML" Version="0.105.0"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="5.0.0-2.final"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.21"/>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1"/>
+        <PackageReference Include="Microsoft.SqlServer.Types" Version="170.700.9-ctp2p0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Done\UserControl_NoiSX.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_TyLe.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_TheLoai.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_Series.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_HienThiMatHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_KhachHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_ChatLieu.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_CongViec.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_NhanVien.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_NhaCungCap.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_BanHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_NhapHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Done\UserControl_TraCuuHoaDon.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl\Management\UserControl_SanPham.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="UserControl\Operations\UserControl_BanHang.cs">
-        <SubType>UserControl</SubType>
-      </Compile>
-      <Compile Update="Views\Form_Menu.cs">
-        <SubType>Form</SubType>
-      </Compile>
-      <Compile Update="Views\Form_Login.cs">
-        <SubType>Form</SubType>
-      </Compile>
+        <Compile Update="Done\UserControl_NoiSX.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_TyLe.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_TheLoai.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_Series.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_HienThiMatHang.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_KhachHang.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_ChatLieu.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_CongViec.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_NhanVien.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_NhaCungCap.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_BanHang.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_NhapHang.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Done\UserControl_TraCuuHoaDon.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="UserControl\Management\UserControl_SanPham.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="UserControl\Operations\UserControl_BanHang.cs">
+            <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Update="Views\Form_Menu.cs">
+            <SubType>Form</SubType>
+        </Compile>
+        <Compile Update="Views\Form_Login.cs">
+            <SubType>Form</SubType>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="appsettings.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
     <ItemGroup>

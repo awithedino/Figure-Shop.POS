@@ -239,6 +239,7 @@ partial class UserControl_NhanVien
         btnExcel.TabIndex = 6;
         btnExcel.Text = "Excel";
         btnExcel.UseVisualStyleBackColor = false;
+        btnExcel.Click += btnExcel_Click;
         // 
         // btnReload
         // 

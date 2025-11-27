@@ -1,6 +1,6 @@
 ﻿namespace FigureShop.POS.Data.Models;
 
-public partial class Comment
+public class Comment
 {
     public Guid UserId { get; set; }
 

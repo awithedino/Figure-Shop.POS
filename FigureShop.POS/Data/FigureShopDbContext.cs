@@ -1,7 +1,6 @@
 ﻿using FigureShop.POS.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System;
 
 namespace FigureShop.POS.Data;
 
@@ -26,7 +25,7 @@ public partial class FigureShopDbContext : DbContext
     public virtual DbSet<ShoppingCart> ShoppingCarts { get; set; }
     public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Voucher> Vouchers { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         // We'll let EF Core handle Branch and Category by default.
@@ -35,11 +34,11 @@ public partial class FigureShopDbContext : DbContext
         modelBuilder.Entity<Comment>(entity =>
         {
             entity.HasKey(e => new { e.FigureId, e.UserId });
-            
+
             entity.HasOne(d => d.Figure).WithMany(p => p.Comments).HasForeignKey(d => d.FigureId);
             entity.HasOne(d => d.User).WithMany(p => p.Comments).HasForeignKey(d => d.UserId);
         });
-        
+
         modelBuilder.Entity<User>(entity =>
         {
             entity.Property(e => e.Email).IsRequired(false);
@@ -49,25 +48,25 @@ public partial class FigureShopDbContext : DbContext
         modelBuilder.Entity<Figure>(entity =>
         {
             entity.Property(e => e.ImgSrcJson).HasDefaultValue("[]");
-            
+
             entity.Property(e => e.Name).HasMaxLength(255);
-            
+
             entity.HasOne(d => d.Branch).WithMany(p => p.Figures)
                 .HasForeignKey(d => d.BranchId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             entity.HasOne(d => d.Category).WithMany(p => p.Figures)
                 .HasForeignKey(d => d.CategoryId)
-                .OnDelete(DeleteBehavior.SetNull);  
+                .OnDelete(DeleteBehavior.SetNull);
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
             entity.Property(e => e.Address).HasMaxLength(255);
             entity.Property(e => e.PhoneNumber).HasMaxLength(20);
-            
+
             entity.HasOne(d => d.User).WithMany(p => p.Orders).HasForeignKey(d => d.UserId);
-            
+
             entity.HasOne(d => d.Voucher).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.VoucherId)
                 .OnDelete(DeleteBehavior.Cascade);
@@ -76,7 +75,7 @@ public partial class FigureShopDbContext : DbContext
         modelBuilder.Entity<OrderFigure>(entity =>
         {
             entity.HasKey(e => new { e.FigureId, e.UserId });
-            
+
             entity.HasOne(d => d.Figure).WithMany(p => p.OrderFigures).HasForeignKey(d => d.FigureId);
             entity.HasOne(d => d.Order).WithMany(p => p.OrderFigures).HasForeignKey(d => d.OrderId);
         });
@@ -85,7 +84,7 @@ public partial class FigureShopDbContext : DbContext
         {
             entity.HasKey(e => e.Name);
             entity.Property(e => e.Name).HasMaxLength(50);
-            
+
             entity.HasMany(d => d.Users).WithMany(p => p.RolesNames)
                 .UsingEntity<Dictionary<string, object>>(
                     "UserRole",
@@ -110,21 +109,21 @@ public partial class FigureShopDbContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
-    
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         if (!optionsBuilder.IsConfigured)
         {
             // If not, it builds its own configuration to find appsettings.json
-            IConfigurationRoot configuration = new ConfigurationBuilder()
+            var configuration = new ConfigurationBuilder()
                 .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
                 .AddJsonFile("appsettings.json")
                 .Build();
-        
+
             // And then it connects!
             optionsBuilder.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         }
     }
-    
+
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

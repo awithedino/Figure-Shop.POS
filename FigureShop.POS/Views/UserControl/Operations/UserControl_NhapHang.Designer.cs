@@ -255,6 +255,7 @@
             btnExcel.TabIndex = 15;
             btnExcel.Text = "Excel";
             btnExcel.UseVisualStyleBackColor = false;
+            btnExcel.Click += btnExcel_Click;
             // 
             // btnThemSanPham
             // 

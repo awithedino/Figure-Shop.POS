@@ -30,6 +30,7 @@
         private void InitializeComponent()
         {
             panelTimKiem = new System.Windows.Forms.Panel();
+            btnExcel = new System.Windows.Forms.Button();
             cboMaKH = new System.Windows.Forms.ComboBox();
             cboMaNV = new System.Windows.Forms.ComboBox();
             btnHienThiChiTiet = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             // panelTimKiem
             // 
             panelTimKiem.BackColor = System.Drawing.SystemColors.Control;
+            panelTimKiem.Controls.Add(btnExcel);
             panelTimKiem.Controls.Add(cboMaKH);
             panelTimKiem.Controls.Add(cboMaNV);
             panelTimKiem.Controls.Add(btnHienThiChiTiet);
@@ -62,6 +64,18 @@
             panelTimKiem.Name = "panelTimKiem";
             panelTimKiem.Size = new System.Drawing.Size(1419, 250);
             panelTimKiem.TabIndex = 0;
+            // 
+            // btnExcel
+            // 
+            btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+            btnExcel.Location = new System.Drawing.Point(401, 105);
+            btnExcel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new System.Drawing.Size(158, 46);
+            btnExcel.TabIndex = 11;
+            btnExcel.Text = "Excel";
+            btnExcel.UseVisualStyleBackColor = true;
+            btnExcel.Click += btnExcel_Click;
             // 
             // cboMaKH
             // 
@@ -106,7 +120,7 @@
             // btnLamMoi
             // 
             btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            btnLamMoi.Location = new System.Drawing.Point(401, 98);
+            btnLamMoi.Location = new System.Drawing.Point(401, 47);
             btnLamMoi.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnLamMoi.Name = "btnLamMoi";
             btnLamMoi.Size = new System.Drawing.Size(158, 46);
@@ -187,6 +201,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvHoaDon).EndInit();
             ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Button btnExcel;
 
         private System.Windows.Forms.ComboBox cboMaNV;
         private System.Windows.Forms.ComboBox cboMaKH;

@@ -1,6 +1,6 @@
 ﻿namespace FigureShop.POS.Data.Models;
 
-public partial class Voucher
+public class Voucher
 {
     public Guid Id { get; set; }
 

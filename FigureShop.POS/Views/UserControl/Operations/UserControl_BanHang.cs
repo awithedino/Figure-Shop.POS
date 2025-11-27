@@ -1,359 +1,356 @@
 ﻿// ReSharper disable LocalizableElement
-using Microsoft.EntityFrameworkCore;
+
 using System.ComponentModel;
 using FigureShop.POS.Data;
 using FigureShop.POS.Data.Models;
 using FigureShop.POS.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
-namespace FigureShop.POS.Views.UserControl.Operations
+namespace FigureShop.POS.Views.UserControl.Operations;
+
+public partial class UserControl_BanHang : System.Windows.Forms.UserControl
 {
-    public partial class UserControl_BanHang : System.Windows.Forms.UserControl
+    private BindingList<CartItemViewModel> cart;
+    private FigureShopDbContext context;
+
+    private User loggedInUser;
+
+    public UserControl_BanHang()
     {
-        private FigureShopDbContext context;
-        private BindingList<CartItemViewModel> cart;
+        InitializeComponent();
+    }
 
-        private User loggedInUser;
+    // Load events
+    private void UserControl_BanHang_Load(object sender, EventArgs e)
+    {
+        context = new FigureShopDbContext();
 
-        public UserControl_BanHang()
+        // Get the logged-in user
+        loggedInUser = context.Users.FirstOrDefault(u => u.Email == "admin@figureshop.com");
+
+        // Setup the shopping cart
+        cart = new BindingList<CartItemViewModel>();
+        dgvGioHang.DataSource = cart; // <-- Bind the list to the grid
+
+        // Load all ComboBoxes
+        LoadComboBoxes();
+
+        // Start a new, fresh bill
+        StartNewBill();
+    }
+
+    // Helper
+    private void LoadComboBoxes()
+    {
+        // === Load Staff (Users with 'Admin' or 'Staff' role) ===
+        var staffRoles = new[] { "Admin", "Staff" };
+        var staffList = context.Users
+            .Include(u => u.RolesNames) // Join with the Roles table
+            .Where(u => u.RolesNames.Any(r => staffRoles.Contains(r.Name)))
+            .ToList();
+
+        cboMaNhanVien.DataSource = staffList;
+        cboMaNhanVien.DisplayMember = "FullName"; // Use the correct property
+        cboMaNhanVien.ValueMember = "Id";
+
+        // === Load Customers (Users with 'Customer' role) ===
+        var customerList = context.Users
+            .Include(u => u.RolesNames) // Join with the Roles table
+            .Where(u => u.RolesNames.Any(r => r.Name == "Customer"))
+            .ToList();
+
+        cboKhachHang.DataSource = customerList;
+        cboKhachHang.DisplayMember = "FullName"; // <-- FIX: Was "Fullname" (typo)
+        cboKhachHang.ValueMember = "Id";
+
+        // === Load Products (Figures) ===
+        // (This part was already correct!)
+        cboTenSanPham.DataSource = context.Figures.Where(f => f.Quantity > 0).ToList();
+        cboTenSanPham.DisplayMember = "Name";
+        cboTenSanPham.ValueMember = "Id";
+
+        // === Set defaults ===
+        cboMaNhanVien.SelectedItem = null;
+        cboKhachHang.SelectedItem = null;
+        cboTenSanPham.SelectedItem = null;
+
+        // Pre-select the logged-in staff member
+        if (loggedInUser != null) cboMaNhanVien.SelectedValue = loggedInUser.Id;
+    }
+
+    private void StartNewBill()
+    {
+        // Generate a new, unique bill ID
+        txtMaHoaDon.Text = $"HD-{DateTime.Now:yyyyMMdd}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}";
+        dtpNgayBan.Value = DateTime.Now;
+
+        // Clear the cart
+        cart.Clear();
+
+        // Clear customer/payment
+        cboKhachHang.SelectedItem = null;
+        txtKhachThanhToan.Text = "0";
+
+        // Clear item selection
+        ClearItemSelection();
+
+        // Recalculate totals (which will be 0)
+        UpdateBillTotal();
+    }
+
+    private void ClearItemSelection()
+    {
+        cboTenSanPham.SelectedItem = null;
+        numSoLuong.Value = 1;
+        lblGiaTriDonGia.Text = "0";
+        lblGiaTriGiamGia.Text = "0";
+        lblGiaTriThanhTien.Text = "0";
+    }
+
+    // Item selection
+
+    private void cboMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        // When user picks a product, fill in its details
+        if (cboTenSanPham.SelectedItem is Figure selectedFigure)
         {
-            InitializeComponent();
-        }
+            lblGiaTriDonGia.Text = selectedFigure.Price.ToString("N0"); // "N0" formats 150000 as "150,000"
 
-        // Load events
-        private void UserControl_BanHang_Load(object sender, EventArgs e)
-        {
-            context = new FigureShopDbContext();
-            
-            // Get the logged-in user
-            loggedInUser = context.Users.FirstOrDefault(u => u.Email == "admin@figureshop.com");
+            // Check for active sale
+            double giamGia = 0;
+            if (selectedFigure.SaleFrom <= DateTime.Now && selectedFigure.SaleTo >= DateTime.Now)
+                giamGia = selectedFigure.Price * (selectedFigure.SalePercent / 100);
+            lblGiaTriGiamGia.Text = giamGia.ToString("N0");
 
-            // Setup the shopping cart
-            cart = new BindingList<CartItemViewModel>();
-            dgvGioHang.DataSource = cart; // <-- Bind the list to the grid
-            
-            // Load all ComboBoxes
-            LoadComboBoxes();
-            
-            // Start a new, fresh bill
-            StartNewBill();
-        }
-
-        // Helper
-        private void LoadComboBoxes()
-        {
-            // === Load Staff (Users with 'Admin' or 'Staff' role) ===
-            var staffRoles = new[] { "Admin", "Staff" };
-            var staffList = context.Users
-                .Include(u => u.RolesNames) // Join with the Roles table
-                .Where(u => u.RolesNames.Any(r => staffRoles.Contains(r.Name)))
-                .ToList();
-        
-            cboMaNhanVien.DataSource = staffList;
-            cboMaNhanVien.DisplayMember = "FullName"; // Use the correct property
-            cboMaNhanVien.ValueMember = "Id";
-
-            // === Load Customers (Users with 'Customer' role) ===
-            var customerList = context.Users
-                .Include(u => u.RolesNames) // Join with the Roles table
-                .Where(u => u.RolesNames.Any(r => r.Name == "Customer"))
-                .ToList();
-        
-            cboKhachHang.DataSource = customerList;
-            cboKhachHang.DisplayMember = "FullName"; // <-- FIX: Was "Fullname" (typo)
-            cboKhachHang.ValueMember = "Id";
-
-            // === Load Products (Figures) ===
-            // (This part was already correct!)
-            cboTenSanPham.DataSource = context.Figures.Where(f => f.Quantity > 0).ToList();
-            cboTenSanPham.DisplayMember = "Name";
-            cboTenSanPham.ValueMember = "Id";
-    
-            // === Set defaults ===
-            cboMaNhanVien.SelectedItem = null;
-            cboKhachHang.SelectedItem = null;
-            cboTenSanPham.SelectedItem = null;
-    
-            // Pre-select the logged-in staff member
-            if (loggedInUser != null)
-            {
-                cboMaNhanVien.SelectedValue = loggedInUser.Id;
-            }
-        }
-        
-        private void StartNewBill()
-        {
-            // Generate a new, unique bill ID
-            txtMaHoaDon.Text = $"HD-{DateTime.Now:yyyyMMdd}-{Guid.NewGuid().ToString().Substring(0, 4).ToUpper()}";
-            dtpNgayBan.Value = DateTime.Now;
-            
-            // Clear the cart
-            cart.Clear();
-            
-            // Clear customer/payment
-            cboKhachHang.SelectedItem = null;
-            txtKhachThanhToan.Text = "0";
-            
-            // Clear item selection
-            ClearItemSelection();
-            
-            // Recalculate totals (which will be 0)
-            UpdateBillTotal();
-        }
-        
-        private void ClearItemSelection()
-        {
-            cboTenSanPham.SelectedItem = null;
             numSoLuong.Value = 1;
-            lblGiaTriDonGia.Text = "0";
-            lblGiaTriGiamGia.Text = "0";
-            lblGiaTriThanhTien.Text = "0";
+            UpdateItemTotal();
+        }
+    }
+
+    private void numSoLuong_ValueChanged(object sender, EventArgs e)
+    {
+        UpdateItemTotal(); // Recalculate anytime the quantity changes
+    }
+
+    private void UpdateItemTotal()
+    {
+        // Calculate the total
+        double.TryParse(lblGiaTriDonGia.Text.Replace(",", ""), out var donGia);
+        double.TryParse(lblGiaTriGiamGia.Text.Replace(",", ""), out var giamGia);
+        var soLuong = (int)numSoLuong.Value;
+
+        var thanhTien = (donGia - giamGia) * soLuong;
+        lblGiaTriThanhTien.Text = thanhTien.ToString("N0");
+    }
+
+    // Cart management logic
+
+    private void btnThem_Click(object sender, EventArgs e)
+    {
+        if (cboTenSanPham.SelectedItem is not Figure selectedFigure)
+        {
+            MessageBox.Show("Vui lòng chọn một sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        // Item selection
-
-        private void cboMaSanPham_SelectedIndexChanged(object sender, EventArgs e)
+        var soLuong = (int)numSoLuong.Value;
+        if (soLuong <= 0)
         {
-            // When user picks a product, fill in its details
-            if (cboTenSanPham.SelectedItem is Figure selectedFigure)
-            {
-                lblGiaTriDonGia.Text = selectedFigure.Price.ToString("N0"); // "N0" formats 150000 as "150,000"
-
-                // Check for active sale
-                double giamGia = 0;
-                if (selectedFigure.SaleFrom <= DateTime.Now && selectedFigure.SaleTo >= DateTime.Now)
-                {
-                    giamGia = selectedFigure.Price * (selectedFigure.SalePercent / 100);
-                }
-                lblGiaTriGiamGia.Text = giamGia.ToString("N0");
-                
-                numSoLuong.Value = 1;
-                UpdateItemTotal();
-            }
+            MessageBox.Show("Số lượng phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        private void numSoLuong_ValueChanged(object sender, EventArgs e)
+        // Check stock!
+        if (soLuong > selectedFigure.Quantity)
         {
-            UpdateItemTotal(); // Recalculate anytime the quantity changes
+            MessageBox.Show($"Không đủ hàng! Chỉ còn {selectedFigure.Quantity} sản phẩm trong kho.", "Lỗi",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
         }
 
-        private void UpdateItemTotal()
+        // Check if item is already in the cart
+        var itemInCart = cart.FirstOrDefault(item => item.MaSP == selectedFigure.Id);
+
+        double.TryParse(lblGiaTriDonGia.Text.Replace(",", ""), out var donGia);
+        double.TryParse(lblGiaTriGiamGia.Text.Replace(",", ""), out var giamGia);
+
+        if (itemInCart != null)
+            // Item exists: just update its quantity
+            itemInCart.SoLuong += soLuong;
+        else
+            // Item is new: add it to the cart
+            cart.Add(new CartItemViewModel
+            {
+                MaSP = selectedFigure.Id,
+                TenSP = selectedFigure.Name,
+                SoLuong = soLuong,
+                DonGia = donGia,
+                GiamGia = giamGia
+            });
+
+        // Refresh the grid (to show new ThanhTien) and update total bill
+        cart.ResetBindings();
+        UpdateBillTotal();
+        ClearItemSelection();
+    }
+
+    private void btnXoa_Click(object sender, EventArgs e)
+    {
+        if (dgvGioHang.CurrentRow == null)
         {
-            // Calculate the total
-            double.TryParse(lblGiaTriDonGia.Text.Replace(",", ""), out double donGia);
-            double.TryParse(lblGiaTriGiamGia.Text.Replace(",", ""), out double giamGia);
-            int soLuong = (int)numSoLuong.Value;
-            
-            double thanhTien = (donGia - giamGia) * soLuong;
-            lblGiaTriThanhTien.Text = thanhTien.ToString("N0");
+            MessageBox.Show("Vui lòng chọn một sản phẩm trong giỏ hàng để xoá.", "Chưa chọn", MessageBoxButtons.OK,
+                MessageBoxIcon.Warning);
+            return;
         }
 
-        // Cart management logic
+        // Get the item from the selected row and remove it from the cart
+        var selectedItem = dgvGioHang.CurrentRow.DataBoundItem as CartItemViewModel;
+        cart.Remove(selectedItem);
 
-        private void btnThem_Click(object sender, EventArgs e)
+        UpdateBillTotal(); // Recalculate
+    }
+
+    // Bill total
+
+    private void UpdateBillTotal()
+    {
+        // Calculate total by summing up ThanhTien from everything in the cart
+        var tongCong = cart.Sum(item => item.ThanhTien);
+        lblGiaTriTongCong.Text = tongCong.ToString("N0");
+
+        UpdateChange();
+    }
+
+    private void txtKhachThanhToan_TextChanged(object sender, EventArgs e)
+    {
+        UpdateChange();
+    }
+
+    private void UpdateChange()
+    {
+        double.TryParse(lblGiaTriTongCong.Text.Replace(",", ""), out var tongCong);
+        double.TryParse(txtKhachThanhToan.Text.Replace(",", ""), out var khachDua);
+
+        var tienThua = khachDua - tongCong;
+        lblGiaTriTienThua.Text = tienThua.ToString("N0");
+
+        // Change color if not enough money
+        lblGiaTriTienThua.ForeColor = tienThua < 0 ? Color.Red : Color.Green;
+    }
+
+    // Buttons
+    private void btnThanhToan_Click(object sender, EventArgs e)
+    {
+        if (cart.Count == 0)
         {
-            if (cboTenSanPham.SelectedItem is not Figure selectedFigure)
-            {
-                MessageBox.Show("Vui lòng chọn một sản phẩm!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            
-            int soLuong = (int)numSoLuong.Value;
-            if (soLuong <= 0)
-            {
-                MessageBox.Show("Số lượng phải lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Check stock!
-            if (soLuong > selectedFigure.Quantity)
-            {
-                MessageBox.Show($"Không đủ hàng! Chỉ còn {selectedFigure.Quantity} sản phẩm trong kho.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Check if item is already in the cart
-            var itemInCart = cart.FirstOrDefault(item => item.MaSP == selectedFigure.Id);
-            
-            double.TryParse(lblGiaTriDonGia.Text.Replace(",", ""), out double donGia);
-            double.TryParse(lblGiaTriGiamGia.Text.Replace(",", ""), out double giamGia);
-
-            if (itemInCart != null)
-            {
-                // Item exists: just update its quantity
-                itemInCart.SoLuong += soLuong;
-            }
-            else
-            {
-                // Item is new: add it to the cart
-                cart.Add(new CartItemViewModel
-                {
-                    MaSP = selectedFigure.Id,
-                    TenSP = selectedFigure.Name,
-                    SoLuong = soLuong,
-                    DonGia = donGia,
-                    GiamGia = giamGia
-                });
-            }
-
-            // Refresh the grid (to show new ThanhTien) and update total bill
-            cart.ResetBindings(); 
-            UpdateBillTotal();
-            ClearItemSelection();
+            MessageBox.Show("Giỏ hàng đang trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        if (cboMaNhanVien.SelectedValue == null)
         {
-            if (dgvGioHang.CurrentRow == null)
-            {
-                MessageBox.Show("Vui lòng chọn một sản phẩm trong giỏ hàng để xoá.", "Chưa chọn", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Get the item from the selected row and remove it from the cart
-            var selectedItem = dgvGioHang.CurrentRow.DataBoundItem as CartItemViewModel;
-            cart.Remove(selectedItem);
-            
-            UpdateBillTotal(); // Recalculate
+            MessageBox.Show("Vui lòng chọn nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        // Bill total
-
-        private void UpdateBillTotal()
+        if (cboKhachHang.SelectedValue == null)
         {
-            // Calculate total by summing up ThanhTien from everything in the cart
-            double tongCong = cart.Sum(item => item.ThanhTien);
-            lblGiaTriTongCong.Text = tongCong.ToString("N0");
-            
-            UpdateChange();
+            MessageBox.Show("Vui lòng chọn khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        private void txtKhachThanhToan_TextChanged(object sender, EventArgs e)
+        double.TryParse(lblGiaTriTienThua.Text.Replace(",", ""), out var tienThua);
+        if (tienThua < 0)
         {
-            UpdateChange();
+            MessageBox.Show("Khách chưa thanh toán đủ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return;
         }
 
-        private void UpdateChange()
+        // === SAVE TO DATABASE ===
+        try
         {
-            double.TryParse(lblGiaTriTongCong.Text.Replace(",", ""), out double tongCong);
-            double.TryParse(txtKhachThanhToan.Text.Replace(",", ""), out double khachDua);
+            double.TryParse(lblGiaTriTongCong.Text.Replace(",", ""), out var tongCong);
+            double.TryParse(txtKhachThanhToan.Text.Replace(",", ""), out var khachDua);
 
-            double tienThua = khachDua - tongCong;
-            lblGiaTriTienThua.Text = tienThua.ToString("N0");
+            // Create the main Order
+            var newOrder = new Order
+            {
+                Id = Guid.NewGuid(),
+                UserId = (Guid)cboKhachHang.SelectedValue,
+                VoucherId = null, // TODO: Add voucher logic later
+                Status = "Completed",
+                TotalPrice = tongCong,
+                PaidPrice = khachDua,
+                PhoneNumber = "0900000000", // TODO: Get this from customer info
+                Address = "Tại quầy", // TODO: Get this from customer info
+                CreatedAt = dtpNgayBan.Value,
+                CreatedBy = loggedInUser.Id,
+                UpdatedAt = DateTime.Now,
+                UpdatedBy = loggedInUser.Id
+            };
+            context.Orders.Add(newOrder);
 
-            // Change color if not enough money
-            lblGiaTriTienThua.ForeColor = tienThua < 0 ? Color.Red : Color.Green;
-        }
-
-        // Buttons
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            if (cart.Count == 0)
+            // Add all items from the cart to OrderFigures
+            foreach (var item in cart)
             {
-                MessageBox.Show("Giỏ hàng đang trống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cboMaNhanVien.SelectedValue == null)
-            {
-                MessageBox.Show("Vui lòng chọn nhân viên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            if (cboKhachHang.SelectedValue == null)
-            {
-                MessageBox.Show("Vui lòng chọn khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            double.TryParse(lblGiaTriTienThua.Text.Replace(",", ""), out double tienThua);
-            if (tienThua < 0)
-            {
-                 MessageBox.Show("Khách chưa thanh toán đủ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                 return;
-            }
-
-            // === SAVE TO DATABASE ===
-            try
-            {
-                double.TryParse(lblGiaTriTongCong.Text.Replace(",", ""), out double tongCong);
-                double.TryParse(txtKhachThanhToan.Text.Replace(",", ""), out double khachDua);
-
-                // Create the main Order
-                var newOrder = new Order
+                context.OrderFigures.Add(new OrderFigure
                 {
                     Id = Guid.NewGuid(),
+                    OrderId = newOrder.Id,
+                    FigureId = item.MaSP,
                     UserId = (Guid)cboKhachHang.SelectedValue,
-                    VoucherId = null, // TODO: Add voucher logic later
-                    Status = "Completed",
-                    TotalPrice = tongCong,
-                    PaidPrice = khachDua,
-                    PhoneNumber = "0900000000", // TODO: Get this from customer info
-                    Address = "Tại quầy",  // TODO: Get this from customer info
-                    CreatedAt = dtpNgayBan.Value,
+                    Quantity = item.SoLuong,
+                    Price = item.DonGia - item.GiamGia, // Save the final price per item
+                    CreatedAt = DateTime.Now,
                     CreatedBy = loggedInUser.Id,
                     UpdatedAt = DateTime.Now,
                     UpdatedBy = loggedInUser.Id
-                };
-                context.Orders.Add(newOrder);
+                });
 
-                // Add all items from the cart to OrderFigures
-                foreach (var item in cart)
-                {
-                    context.OrderFigures.Add(new OrderFigure
-                    {
-                        Id = Guid.NewGuid(),
-                        OrderId = newOrder.Id,
-                        FigureId = item.MaSP,
-                        UserId = (Guid)cboKhachHang.SelectedValue,
-                        Quantity = item.SoLuong,
-                        Price = item.DonGia - item.GiamGia, // Save the final price per item
-                        CreatedAt = DateTime.Now,
-                        CreatedBy = loggedInUser.Id,
-                        UpdatedAt = DateTime.Now,
-                        UpdatedBy = loggedInUser.Id
-                    });
-
-                    // Update stock quantity
-                    var figureInDb = context.Figures.Find(item.MaSP);
-                    if (figureInDb != null)
-                    {
-                        figureInDb.Quantity -= item.SoLuong;
-                    }
-                }
-                
-                // Save everything in one transaction
-                context.SaveChanges();
-                
-                MessageBox.Show("Thanh toán thành công! Đã lưu hoá đơn.", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                // Start a new bill
-                StartNewBill();
-                LoadComboBoxes(); // Refresh product list
+                // Update stock quantity
+                var figureInDb = context.Figures.Find(item.MaSP);
+                if (figureInDb != null) figureInDb.Quantity -= item.SoLuong;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lưu hoá đơn thất bại: {ex.Message}", "Lỗi nghiêm trọng", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        
-        private void btnThemKhachHang_Click(object sender, EventArgs e)
-        {
-            // This button should open a new Form
-            // Form_ThemKhachHang addCustomerForm = new Form_ThemKhachHang();
-            // if (addCustomerForm.ShowDialog() == DialogResult.OK)
-            // {
-            //    LoadComboBoxes(); // Refresh customer list
-            // }
-            MessageBox.Show("Chức năng này cần một Form 'Thêm Khách Hàng' mới!", "Đang phát triển", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void btnExcel_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Chức năng Excel sẽ được thêm sau!", "Đang phát triển", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+            // Save everything in one transaction
+            context.SaveChanges();
 
-        // === 7. CLEANUP ===
-        protected override void OnHandleDestroyed(EventArgs e)
-        {
-            context?.Dispose();
-            base.OnHandleDestroyed(e);
+            MessageBox.Show("Thanh toán thành công! Đã lưu hoá đơn.", "Thành công", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+
+            // Start a new bill
+            StartNewBill();
+            LoadComboBoxes(); // Refresh product list
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Lưu hoá đơn thất bại: {ex.Message}", "Lỗi nghiêm trọng", MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
+        }
+    }
+
+    private void btnThemKhachHang_Click(object sender, EventArgs e)
+    {
+        // This button should open a new Form
+        // Form_ThemKhachHang addCustomerForm = new Form_ThemKhachHang();
+        // if (addCustomerForm.ShowDialog() == DialogResult.OK)
+        // {
+        //    LoadComboBoxes(); // Refresh customer list
+        // }
+        MessageBox.Show("Chức năng này cần một Form 'Thêm Khách Hàng' mới!", "Đang phát triển", MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    private void btnExcel_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show("Chức năng Excel sẽ được thêm sau!", "Đang phát triển", MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+    }
+
+    // === 7. CLEANUP ===
+    protected override void OnHandleDestroyed(EventArgs e)
+    {
+        context?.Dispose();
+        base.OnHandleDestroyed(e);
     }
 }

@@ -170,6 +170,7 @@ partial class UserControl_KhachHang
         btnExcel.TabIndex = 6;
         btnExcel.Text = "Excel";
         btnExcel.UseVisualStyleBackColor = false;
+        btnExcel.Click += btnExcel_Click;
         // 
         // btnReload
         // 
