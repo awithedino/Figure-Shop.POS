@@ -35,7 +35,6 @@
             lblKhachThanhToan = new System.Windows.Forms.Label();
             lblGiaTriTongCong = new System.Windows.Forms.Label();
             lblTongCong = new System.Windows.Forms.Label();
-            btnExcel = new System.Windows.Forms.Button();
             btnThanhToan = new System.Windows.Forms.Button();
             btnXoa = new System.Windows.Forms.Button();
             btnThem = new System.Windows.Forms.Button();
@@ -74,7 +73,6 @@
             groupBoxThongTinChiTiet.Controls.Add(lblKhachThanhToan);
             groupBoxThongTinChiTiet.Controls.Add(lblGiaTriTongCong);
             groupBoxThongTinChiTiet.Controls.Add(lblTongCong);
-            groupBoxThongTinChiTiet.Controls.Add(btnExcel);
             groupBoxThongTinChiTiet.Controls.Add(btnThanhToan);
             groupBoxThongTinChiTiet.Controls.Add(btnXoa);
             groupBoxThongTinChiTiet.Controls.Add(btnThem);
@@ -173,22 +171,6 @@
             lblTongCong.TabIndex = 17;
             lblTongCong.Text = "Tổng cộng:";
             // 
-            // btnExcel
-            // 
-            btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
-            btnExcel.BackColor = System.Drawing.Color.MediumSeaGreen;
-            btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)0));
-            btnExcel.ForeColor = System.Drawing.Color.White;
-            btnExcel.Location = new System.Drawing.Point(389, 698);
-            btnExcel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            btnExcel.Name = "btnExcel";
-            btnExcel.Size = new System.Drawing.Size(178, 58);
-            btnExcel.TabIndex = 16;
-            btnExcel.Text = "Excel";
-            btnExcel.UseVisualStyleBackColor = false;
-            btnExcel.Click += btnExcel_Click;
-            // 
             // btnThanhToan
             // 
             btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right));
@@ -199,7 +181,7 @@
             btnThanhToan.Location = new System.Drawing.Point(37, 698);
             btnThanhToan.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             btnThanhToan.Name = "btnThanhToan";
-            btnThanhToan.Size = new System.Drawing.Size(232, 58);
+            btnThanhToan.Size = new System.Drawing.Size(530, 58);
             btnThanhToan.TabIndex = 15;
             btnThanhToan.Text = "Thanh Toán";
             btnThanhToan.UseVisualStyleBackColor = false;
@@ -501,7 +483,6 @@
         private System.Windows.Forms.Label lblGiamGia;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.Button btnThanhToan;
         private System.Windows.Forms.Label lblGiaTriTongCong;
         private System.Windows.Forms.Label lblTongCong;

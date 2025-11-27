@@ -341,12 +341,6 @@ public partial class UserControl_BanHang : System.Windows.Forms.UserControl
             MessageBoxIcon.Information);
     }
 
-    private void btnExcel_Click(object sender, EventArgs e)
-    {
-        MessageBox.Show("Chức năng Excel sẽ được thêm sau!", "Đang phát triển", MessageBoxButtons.OK,
-            MessageBoxIcon.Information);
-    }
-
     // === 7. CLEANUP ===
     protected override void OnHandleDestroyed(EventArgs e)
     {

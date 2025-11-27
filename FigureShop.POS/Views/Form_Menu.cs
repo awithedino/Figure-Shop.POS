@@ -10,7 +10,7 @@ public partial class Form_Menu : Form
     public Form_Menu()
     {
         InitializeComponent();
-        GetHeaderLabel("Trang chủ");
+        LoadControl(new UserControl_BanHang(), "Bán hàng");
     }
 
     private void GetHeaderLabel(string label)

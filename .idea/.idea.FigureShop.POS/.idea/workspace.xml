@@ -8,47 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fabd7a02-8fc4-4fef-8684-d56d889aa95d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/82314d6e-562d-4b5c-a850-5d4e37af73f1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/dataSources/82314d6e-562d-4b5c-a850-5d4e37af73f1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FigureShop.POS/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/DataSeeder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/DataSeeder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/FigureShopDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/FigureShopDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Branch.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Branch.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Category.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Category.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/ChatLieu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/ChatLieu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Comment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Comment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Figure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Figure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/OrderFigure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/OrderFigure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Role.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Role.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/ShoppingCart.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/ShoppingCart.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Voucher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Data/Models/Voucher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj.DotSettings" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/FigureShop.POS.csproj.DotSettings" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/ViewModels/CartItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/ViewModels/CartItemViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/ViewModels/ImportItemViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/ViewModels/ImportItemViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Login.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Menu.resx" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/Form_Menu.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_CongViec.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_CongViec.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_CongViec.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_CongViec.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_DanhMuc.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_DanhMuc.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_DanhMuc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_DanhMuc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_Hang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_Hang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_Hang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_Hang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_KhachHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_KhachHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_KhachHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_KhachHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_NhanVien.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_NhanVien.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_NhanVien.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_NhanVien.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_SanPham.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Management/UserControl_SanPham.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_BanHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_BanHang.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_BanHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_BanHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_NhapHang.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_NhapHang.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_NhapHang.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_NhapHang.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_TraCuuHoaDon.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_TraCuuHoaDon.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_TraCuuHoaDon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FigureShop.POS/Views/UserControl/Operations/UserControl_TraCuuHoaDon.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +205,7 @@
       <workItem from="1763628557211" duration="1610000" />
       <workItem from="1763649185017" duration="3421000" />
       <workItem from="1764203107235" duration="82000" />
-      <workItem from="1764235352122" duration="1737000" />
+      <workItem from="1764235352122" duration="2359000" />
     </task>
     <task id="LOCAL-00001" summary="Adding models and linking usercontrols">
       <option name="closed" value="true" />
@@ -260,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762538659666</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Adding Excel buttons">
+      <option name="closed" value="true" />
+      <created>1764237212074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764237212074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +243,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Adding models and linking usercontrols" />
     <MESSAGE value="Some of the forms that are not bugged." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some of the forms that are not bugged." />
+    <MESSAGE value="Adding Excel buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Excel buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
