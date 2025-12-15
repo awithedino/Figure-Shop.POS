@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace FigureShop.POS.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialCreate_Oracle : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,12 +15,12 @@ namespace FigureShop.POS.Migrations
                 name: "Branches",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Name = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -31,12 +31,12 @@ namespace FigureShop.POS.Migrations
                 name: "Categories",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Name = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -47,7 +47,7 @@ namespace FigureShop.POS.Migrations
                 name: "Roles",
                 columns: table => new
                 {
-                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
+                    Name = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -58,19 +58,19 @@ namespace FigureShop.POS.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    Gender = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: true),
-                    Birthday = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Email = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
+                    Password = table.Column<string>(type: "NVARCHAR2(2000)", nullable: true),
+                    Status = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    FullName = table.Column<string>(type: "NVARCHAR2(100)", maxLength: 100, nullable: true),
+                    Gender = table.Column<string>(type: "NVARCHAR2(10)", maxLength: 10, nullable: true),
+                    Birthday = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: true),
+                    Address = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -81,20 +81,20 @@ namespace FigureShop.POS.Migrations
                 name: "Vouchers",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    MinPriceCanUse = table.Column<double>(type: "float", nullable: true),
-                    MaxPriceCanDiscount = table.Column<double>(type: "float", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                    SalePercent = table.Column<double>(type: "float", nullable: false),
-                    UsedFrom = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UsedTo = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    FiguresAvailable = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    MinPriceCanUse = table.Column<double>(type: "BINARY_DOUBLE", nullable: true),
+                    MaxPriceCanDiscount = table.Column<double>(type: "BINARY_DOUBLE", nullable: true),
+                    Description = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    Quantity = table.Column<int>(type: "NUMBER(10)", nullable: false),
+                    IsActive = table.Column<bool>(type: "BOOLEAN", nullable: false),
+                    SalePercent = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    UsedFrom = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UsedTo = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    FiguresAvailable = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,22 +105,22 @@ namespace FigureShop.POS.Migrations
                 name: "Figures",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    CategoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    ImgSrcJson = table.Column<string>(type: "nvarchar(max)", nullable: false, defaultValue: "[]"),
-                    SalePercent = table.Column<double>(type: "float", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    SaleFrom = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    SaleTo = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Vote = table.Column<double>(type: "float", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    BranchId = table.Column<Guid>(type: "RAW(16)", nullable: true),
+                    CategoryId = table.Column<Guid>(type: "RAW(16)", nullable: true),
+                    Price = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    ImgSrcJson = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    SalePercent = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    Quantity = table.Column<int>(type: "NUMBER(10)", nullable: false),
+                    SaleFrom = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
+                    SaleTo = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: true),
+                    Description = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    Vote = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    Name = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -143,8 +143,8 @@ namespace FigureShop.POS.Migrations
                 name: "UserRole",
                 columns: table => new
                 {
-                    RolesName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    RolesName = table.Column<string>(type: "NVARCHAR2(50)", maxLength: 50, nullable: false),
+                    UserId = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -167,18 +167,18 @@ namespace FigureShop.POS.Migrations
                 name: "Orders",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    VoucherId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TotalPrice = table.Column<double>(type: "float", nullable: false),
-                    PaidPrice = table.Column<double>(type: "float", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    Address = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UserId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    VoucherId = table.Column<Guid>(type: "RAW(16)", nullable: true),
+                    Status = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    TotalPrice = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    PaidPrice = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "NVARCHAR2(20)", maxLength: 20, nullable: false),
+                    Address = table.Column<string>(type: "NVARCHAR2(255)", maxLength: 255, nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -201,15 +201,15 @@ namespace FigureShop.POS.Migrations
                 name: "Comments",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FigureId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Vote = table.Column<int>(type: "int", nullable: false),
-                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UserId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    FigureId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Vote = table.Column<int>(type: "NUMBER(10)", nullable: false),
+                    Content = table.Column<string>(type: "NVARCHAR2(2000)", nullable: false),
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -232,9 +232,9 @@ namespace FigureShop.POS.Migrations
                 name: "ShoppingCarts",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FigureId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    FigureId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Quantity = table.Column<int>(type: "NUMBER(10)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -257,16 +257,16 @@ namespace FigureShop.POS.Migrations
                 name: "OrderFigures",
                 columns: table => new
                 {
-                    UserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    FigureId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    OrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Quantity = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<double>(type: "float", nullable: false),
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CreatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    UserId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    FigureId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    OrderId = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    Quantity = table.Column<int>(type: "NUMBER(10)", nullable: false),
+                    Price = table.Column<double>(type: "BINARY_DOUBLE", nullable: false),
+                    Id = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    CreatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "TIMESTAMP(7)", nullable: false),
+                    UpdatedBy = table.Column<Guid>(type: "RAW(16)", nullable: false)
                 },
                 constraints: table =>
                 {

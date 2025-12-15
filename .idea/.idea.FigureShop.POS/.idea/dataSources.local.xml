@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="RD-252.27397.121">
-    <data-source name="FigureShopDb@localhost" uuid="82314d6e-562d-4b5c-a850-5d4e37af73f1">
-      <database-info product="Microsoft SQL Server" version="16.00.4225" jdbc-version="4.2" driver-name="JetBrains JDBC Driver for SQL Server" driver-version="1.0" dbms="MSSQL" exact-version="16.0.4225" exact-driver-version="1.0">
-        <extra-name-characters>$#@</extra-name-characters>
+    <data-source name="@localhost [2]" uuid="e66e4ae8-0999-46a4-a49c-69c44a0de42a">
+      <database-info product="Oracle" version="Oracle AI Database 26ai Free Release 23.26.0.0.0 - Develop, Learn, and Run for Free&#10;Version 23.26.0.0.0" jdbc-version="4.3" driver-name="Oracle JDBC driver" driver-version="23.5.0.24.07" dbms="ORACLE" exact-version="23.26.0.0.0" exact-driver-version="23.5">
+        <extra-name-characters>$#</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <auth-provider>no-auth</auth-provider>
+      <user-name>app_user</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="PUBLIC" />
           </node>
         </introspection-scope>
       </schema-mapping>

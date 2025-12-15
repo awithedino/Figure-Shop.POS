@@ -10,6 +10,10 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="4.8.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.8.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.8.0" />
+        <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.Common" Version="4.8.0" />
         <PackageReference Include="ClosedXML" Version="0.105.0"/>
         <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="5.0.0-2.final"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
@@ -19,6 +23,7 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.21"/>
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1"/>
         <PackageReference Include="Microsoft.SqlServer.Types" Version="170.700.9-ctp2p0"/>
+        <PackageReference Include="Oracle.EntityFrameworkCore" Version="8.23.26000" />
     </ItemGroup>
 
     <ItemGroup>

@@ -15,21 +15,25 @@ internal static class Program
     {
         var builder = new ConfigurationBuilder()
             .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-            .AddJsonFile("appsettings.json", false, true);
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
         var configuration = builder.Build();
         var connectionString = configuration.GetConnectionString("DefaultConnection");
-
+        
         var options = new DbContextOptionsBuilder<FigureShopDbContext>()
-            .UseSqlServer(connectionString)
+            .UseOracle(connectionString) 
             .Options;
 
         using (var context = new FigureShopDbContext(options))
         {
             try
             {
+                Console.WriteLine("Applying Migrations...");
                 context.Database.Migrate();
+                Console.WriteLine("Migrations Applied. Seeding Data...");
+                
                 DataSeeder.Initialize(context);
+                Console.WriteLine("Data Seeded.");
             }
             catch (Exception ex)
             {

@@ -1,19 +1,15 @@
 ﻿version: '3.8'
-
 services:
   db:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: figureshop-db
+    image: gvenzl/oracle-free:latest
+    container_name: figureshop-oracle
     environment:
-      ACCEPT_EULA: 'Y'
-      
-      SA_PASSWORD: 'P@ssw0rd123'
-      
-      MSSQL_PID: 'Developer'
+      ORACLE_PASSWORD: 'P@ssw0rd123'      # For SYS/SYSTEM
+      APP_USER: 'figureshop'              # Creates this user automatically!
+      APP_USER_PASSWORD: 'P@ssw0rd123'    # Password for the app user
     ports:
-      - '1433:1433'
+      - '1521:1521'
     volumes:
-      - mssql-data:/var/opt/mssql
-
+      - oracle-data:/opt/oracle/oradata
 volumes:
-  mssql-data:
+  oracle-data:

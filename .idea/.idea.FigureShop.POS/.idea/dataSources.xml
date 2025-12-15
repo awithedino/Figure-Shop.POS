@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="FigureShopDb@localhost" uuid="82314d6e-562d-4b5c-a850-5d4e37af73f1">
-      <driver-ref>sqlserver.jb</driver-ref>
+    <data-source source="LOCAL" name="@localhost [2]" uuid="e66e4ae8-0999-46a4-a49c-69c44a0de42a">
+      <driver-ref>oracle.19</driver-ref>
       <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>com.jetbrains.jdbc.sqlserver.SqlServerDriver</jdbc-driver>
-      <jdbc-url>Server=localhost;Database=FigureShopDb;User=sa;Password=P@ssw0rd123;Encrypt=False;TrustServerCertificate=True;</jdbc-url>
+      <auto-commit>false</auto-commit>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@localhost:1521:FREE</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

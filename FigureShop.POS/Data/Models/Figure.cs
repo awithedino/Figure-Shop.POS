@@ -10,7 +10,7 @@ public class Figure
 
     public double Price { get; set; }
 
-    public string ImgSrcJson { get; set; } = null!;
+    public string? ImgSrcJson { get; set; }
 
     public double SalePercent { get; set; }
 
